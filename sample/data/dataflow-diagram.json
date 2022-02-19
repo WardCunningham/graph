@@ -1,0 +1,722 @@
+[
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Delta Graham scan"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Cone algorithm",
+    "to": "Delta PageRank"
+  },
+  {
+    "type": "rest",
+    "from": "Lambda Trapezoidal rule (differential equations)",
+    "to": "Delta General Problem Solver"
+  },
+  {
+    "type": "rest",
+    "from": "Alpha Differential evolution",
+    "to": "Delta Sparse matrix"
+  },
+  {
+    "type": "rest",
+    "from": "Mu OPTICS",
+    "to": "Delta Spline interpolation"
+  },
+  {
+    "type": "rest",
+    "from": "Epsilon Levenberg–Marquardt algorithm",
+    "to": "Delta Evolutionary computation"
+  },
+  {
+    "type": "rest",
+    "from": "Iota Nicholl–Lee–Nicholl",
+    "to": "Epsilon Simple precedence parser"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Epsilon WHIRLPOOL"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Epsilon Sieve of Eratosthenes"
+  },
+  {
+    "type": "rest",
+    "from": "Delta Evolutionary computation",
+    "to": "Epsilon Gaussian elimination"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma lattice basis in polynomial time",
+    "to": "Epsilon Levenberg–Marquardt algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Gamma Coppersmith–Winograd algorithm",
+    "to": "Nu Longest common substring problem"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Nu Steinhaus–Johnson–Trotter algorithm"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Nu Laplacian smoothing"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma Lempel–Ziv–Oberhumer",
+    "to": "Upsilon Earley parser"
+  },
+  {
+    "type": "rest",
+    "from": "Alpha BFGS method",
+    "to": "Upsilon SUBCLU"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Upsilon Binary search algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Delta Sparse matrix",
+    "to": "Sigma SURF (Speeded Up Robust Features)"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Sigma Kruskal's algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Alpha Gaussian elimination",
+    "to": "Sigma Flashsort"
+  },
+  {
+    "type": "queue",
+    "queue": "method_squared_deviation",
+    "write": "Gamma root mean squared deviation between two protein structures."
+  },
+  {
+    "type": "queue",
+    "queue": "method_squared_deviation",
+    "read": "Sigma Crank-Nicolson method"
+  },
+  {
+    "type": "queue",
+    "queue": "ridder_s_sigma",
+    "write": "Mu Antipodal"
+  },
+  {
+    "type": "queue",
+    "queue": "ridder_s_sigma",
+    "read": "Sigma Ridder's method"
+  },
+  {
+    "type": "store",
+    "store": "redis",
+    "from": "Sigma lattice basis in polynomial time"
+  },
+  {
+    "type": "queue",
+    "queue": "computation_calculus_index",
+    "write": "Delta Evolutionary computation"
+  },
+  {
+    "type": "queue",
+    "queue": "computation_calculus_index",
+    "read": "Gamma Index calculus algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Mu OPTICS",
+    "to": "Gamma Grover's algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "exponentiation_layout_layout",
+    "write": "Iota Addition-chain exponentiation"
+  },
+  {
+    "type": "queue",
+    "queue": "exponentiation_layout_layout",
+    "read": "Gamma Spectral layout"
+  },
+  {
+    "type": "rest",
+    "from": "Mu OPTICS",
+    "to": "Gamma root mean squared deviation between two protein structures."
+  },
+  {
+    "type": "store",
+    "store": "redis",
+    "from": "Gamma Multi level feedback queue"
+  },
+  {
+    "type": "rest",
+    "from": "Rho Video compression",
+    "to": "Gamma Watershed transformation"
+  },
+  {
+    "type": "queue",
+    "queue": "smoothsort_delta_id3",
+    "write": "Upsilon Smoothsort"
+  },
+  {
+    "type": "queue",
+    "queue": "smoothsort_delta_id3",
+    "read": "Delta ID3 algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma SURF (Speeded Up Robust Features)",
+    "to": "Delta Sethi-Ullman algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Gamma Index calculus algorithm",
+    "to": "Delta Shoelace algorithm"
+  },
+  {
+    "type": "store",
+    "store": "neo4j",
+    "from": "Delta Mu-law algorithm"
+  },
+  {
+    "type": "site",
+    "site": "apple",
+    "from": "Delta Perceptron"
+  },
+  {
+    "type": "rest",
+    "from": "Gamma Spectral layout",
+    "to": "Psi Kosaraju's algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "index_match_index",
+    "write": "Gamma Index calculus algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "index_match_index",
+    "read": "Psi Match Rating Approach"
+  },
+  {
+    "type": "rest",
+    "from": "Rho Double Metaphone",
+    "to": "Psi Ramer–Douglas–Peucker algorithm"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Psi Sparse matrix"
+  },
+  {
+    "type": "rest",
+    "from": "Lambda Spigot algorithm",
+    "to": "Psi Unicode Collation Algorithm"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Iota Dinic's algorithm"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Iota Best Bin First"
+  },
+  {
+    "type": "queue",
+    "queue": "coppersmith_lee_algorithm",
+    "write": "Alpha Coppersmith–Winograd algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "coppersmith_lee_algorithm",
+    "read": "Iota Nicholl–Lee–Nicholl"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Iota Addition-chain exponentiation"
+  },
+  {
+    "type": "rest",
+    "from": "Delta Sethi-Ullman algorithm",
+    "to": "Iota Adaptive replacement cache"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Iota factorization"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Lempel–Ziv–Storer–Szymanski",
+    "to": "Rho Pohlig&ndash;Hellman algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Delta General Problem Solver",
+    "to": "Rho Lempel–Ziv Jeff Bonwick (LZJB)"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma lattice basis in polynomial time",
+    "to": "Rho Coloring algorithm"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Rho Video compression"
+  },
+  {
+    "type": "site",
+    "site": "apple",
+    "from": "Rho Knuth–Bendix completion algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Psi Kosaraju's algorithm",
+    "to": "Rho Cross-entropy method"
+  },
+  {
+    "type": "queue",
+    "queue": "lambda_lambda_hildreth",
+    "write": "Alpha Coppersmith–Winograd algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "lambda_lambda_hildreth",
+    "read": "Lambda Marr–Hildreth algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Nu Symmetric (secret key) encryption",
+    "to": "Lambda Unicode Collation Algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Blum Blum Shub",
+    "to": "Lambda Spigot algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma GLR parser",
+    "to": "Lambda Redundancy check"
+  },
+  {
+    "type": "rest",
+    "from": "Beta Chien search",
+    "to": "Lambda Dekker's algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "pratt_parser_delta",
+    "write": "Delta Evolutionary computation"
+  },
+  {
+    "type": "queue",
+    "queue": "pratt_parser_delta",
+    "read": "Gamma Pratt parser"
+  },
+  {
+    "type": "queue",
+    "queue": "gamma_algorithm_parser",
+    "write": "Gamma Pratt parser"
+  },
+  {
+    "type": "queue",
+    "queue": "gamma_algorithm_parser",
+    "read": "Gamma Coppersmith–Winograd algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "evolution_gamma_chi",
+    "write": "Chi Maximum parsimony (phylogenetics)"
+  },
+  {
+    "type": "queue",
+    "queue": "evolution_gamma_chi",
+    "read": "Gamma Evolution strategy"
+  },
+  {
+    "type": "rest",
+    "from": "Rho Lempel–Ziv Jeff Bonwick (LZJB)",
+    "to": "Gamma Karger's algorithm"
+  },
+  {
+    "type": "store",
+    "store": "elastic",
+    "from": "Mu Hopfield net"
+  },
+  {
+    "type": "rest",
+    "from": "Iota Addition-chain exponentiation",
+    "to": "Mu OPTICS"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Mu Antipodal"
+  },
+  {
+    "type": "site",
+    "site": "microsoft",
+    "from": "Mu Library sort"
+  },
+  {
+    "type": "queue",
+    "queue": "expectation_sukhotin_maximization",
+    "write": "Alpha Sukhotin's algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "expectation_sukhotin_maximization",
+    "read": "Chi Ordered subset expectation maximization"
+  },
+  {
+    "type": "queue",
+    "queue": "lzwl_multi_gamma",
+    "write": "Gamma Multi level feedback queue"
+  },
+  {
+    "type": "queue",
+    "queue": "lzwl_multi_gamma",
+    "read": "Chi LZWL"
+  },
+  {
+    "type": "queue",
+    "queue": "nu_algorithm_nu",
+    "write": "Nu Longest common substring problem"
+  },
+  {
+    "type": "queue",
+    "queue": "nu_algorithm_nu",
+    "read": "Chi Verhoeff algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Mu Antipodal",
+    "to": "Chi Maximum parsimony (phylogenetics)"
+  },
+  {
+    "type": "site",
+    "site": "amazon",
+    "from": "Chi Prüfer coding"
+  },
+  {
+    "type": "store",
+    "store": "elastic",
+    "from": "Alpha Paxos algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "gamma_gaussian_strategy",
+    "write": "Gamma Evolution strategy"
+  },
+  {
+    "type": "queue",
+    "queue": "gamma_gaussian_strategy",
+    "read": "Alpha Gaussian elimination"
+  },
+  {
+    "type": "rest",
+    "from": "Alpha BFGS method",
+    "to": "Alpha Differential evolution"
+  },
+  {
+    "type": "queue",
+    "queue": "alpha_alpha_bfgs",
+    "write": "Delta Shoelace algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "alpha_alpha_bfgs",
+    "read": "Alpha BFGS method"
+  },
+  {
+    "type": "rest",
+    "from": "Psi Ramer–Douglas–Peucker algorithm",
+    "to": "Alpha Sukhotin's algorithm"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Alpha Addition-chain exponentiation"
+  },
+  {
+    "type": "store",
+    "store": "memcache",
+    "from": "Alpha Pearson hashing"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Blum Blum Shub",
+    "to": "Alpha Connected-component labeling"
+  },
+  {
+    "type": "rest",
+    "from": "Gamma Evolution strategy",
+    "to": "Alpha Metropolis light transport"
+  },
+  {
+    "type": "rest",
+    "from": "Beta Fast folding algorithm",
+    "to": "Alpha Rabin–Karp string search algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "alpha_slerp_slerp",
+    "write": "Alpha Slerp"
+  },
+  {
+    "type": "queue",
+    "queue": "alpha_slerp_slerp",
+    "read": "Alpha MISER algorithm"
+  },
+  {
+    "type": "site",
+    "site": "microsoft",
+    "from": "Alpha Pratt parser"
+  },
+  {
+    "type": "queue",
+    "queue": "means_fuzzy_pratt",
+    "write": "Alpha Pratt parser"
+  },
+  {
+    "type": "queue",
+    "queue": "means_fuzzy_pratt",
+    "read": "Upsilon Fuzzy c-means"
+  },
+  {
+    "type": "site",
+    "site": "wikipedia",
+    "from": "Upsilon Smoothsort"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Upsilon Prüfer coding"
+  },
+  {
+    "type": "rest",
+    "from": "Upsilon SUBCLU",
+    "to": "Lambda SPWGNN"
+  },
+  {
+    "type": "rest",
+    "from": "Delta Graham scan",
+    "to": "Lambda Trapezoidal rule (differential equations)"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Lambda Depth-first search"
+  },
+  {
+    "type": "queue",
+    "queue": "time_shortest_nagle",
+    "write": "Sigma Shortest remaining time"
+  },
+  {
+    "type": "queue",
+    "queue": "time_shortest_nagle",
+    "read": "Beta Nagle's algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Discrete logarithm",
+    "to": "Beta Error diffusion"
+  },
+  {
+    "type": "store",
+    "store": "neo4j",
+    "from": "Beta Fast folding algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Gamma Spectral layout",
+    "to": "Beta Chien search"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Blum Blum Shub",
+    "to": "Beta Bowyer–Watson algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "beta_project_beta",
+    "write": "Alpha Texas Medication Algorithm Project"
+  },
+  {
+    "type": "queue",
+    "queue": "beta_project_beta",
+    "read": "Beta Velvet"
+  },
+  {
+    "type": "queue",
+    "queue": "discrete_mu_net",
+    "write": "Mu Hopfield net"
+  },
+  {
+    "type": "queue",
+    "queue": "discrete_mu_net",
+    "read": "Eta Discrete logarithm"
+  },
+  {
+    "type": "queue",
+    "queue": "eta_eta_shub",
+    "write": "Sigma Flashsort"
+  },
+  {
+    "type": "queue",
+    "queue": "eta_eta_shub",
+    "read": "Eta Blum Blum Shub"
+  },
+  {
+    "type": "store",
+    "store": "neo4j",
+    "from": "Eta Lempel–Ziv–Storer–Szymanski"
+  },
+  {
+    "type": "rest",
+    "from": "Upsilon Binary search algorithm",
+    "to": "Eta Fractal compression"
+  },
+  {
+    "type": "queue",
+    "queue": "speeded_robust_algorithm",
+    "write": "Sigma SURF (Speeded Up Robust Features)"
+  },
+  {
+    "type": "queue",
+    "queue": "speeded_robust_algorithm",
+    "read": "Eta Cone algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Discrete logarithm",
+    "to": "Rho Double Metaphone"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Discrete logarithm",
+    "to": "Rho Gradient descent"
+  },
+  {
+    "type": "rest",
+    "from": "Delta PageRank",
+    "to": "Rho LALR (Look-ahead LR) parser"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Alpha Delayed column generation"
+  },
+  {
+    "type": "site",
+    "site": "apple",
+    "from": "Alpha Slerp"
+  },
+  {
+    "type": "rest",
+    "from": "Nu Genetic algorithms",
+    "to": "Alpha Texas Medication Algorithm Project"
+  },
+  {
+    "type": "rest",
+    "from": "Iota Dinic's algorithm",
+    "to": "Alpha Audio"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Alpha Marching triangles"
+  },
+  {
+    "type": "rest",
+    "from": "Eta Blum Blum Shub",
+    "to": "Alpha Coppersmith–Winograd algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "exponentiation_structured_addition",
+    "write": "Iota Addition-chain exponentiation"
+  },
+  {
+    "type": "queue",
+    "queue": "exponentiation_structured_addition",
+    "read": "Sigma Structured SVM"
+  },
+  {
+    "type": "store",
+    "store": "redis",
+    "from": "Sigma Shortest remaining time"
+  },
+  {
+    "type": "rest",
+    "from": "Psi Match Rating Approach",
+    "to": "Sigma Lempel–Ziv–Oberhumer"
+  },
+  {
+    "type": "store",
+    "store": "redis",
+    "from": "Sigma GLR parser"
+  },
+  {
+    "type": "rest",
+    "from": "Epsilon Simple precedence parser",
+    "to": "Sigma Bluestein's FFT algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Rho Video compression",
+    "to": "Sigma Random walker algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "logarithm_algorithm_delta",
+    "write": "Delta Shoelace algorithm"
+  },
+  {
+    "type": "queue",
+    "queue": "logarithm_algorithm_delta",
+    "read": "Nu Discrete logarithm"
+  },
+  {
+    "type": "rest",
+    "from": "Sigma Ridder's method",
+    "to": "Nu Counting sort"
+  },
+  {
+    "type": "site",
+    "site": "google",
+    "from": "Nu Symmetric (secret key) encryption"
+  },
+  {
+    "type": "store",
+    "store": "mysql",
+    "from": "Nu Schreier–Sims algorithm"
+  },
+  {
+    "type": "rest",
+    "from": "Nu Genetic algorithms",
+    "to": "Nu Genetic algorithms"
+  },
+  {
+    "type": "rest",
+    "from": "Delta Sparse matrix",
+    "to": "Nu Gift wrapping algorithm"
+  }
+]

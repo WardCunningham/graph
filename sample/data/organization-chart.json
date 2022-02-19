@@ -1,0 +1,818 @@
+[
+  {
+    "name": "E. R. Lee",
+    "email": "erlee@email.com",
+    "manager": null,
+    "start": "2004-6-7"
+  },
+  {
+    "name": "H. R. Collins",
+    "email": "hrcollins@email.com",
+    "manager": "erlee@email.com",
+    "start": "2002-10-11"
+  },
+  {
+    "name": "W. F. Lewis",
+    "email": "wflewis@email.com",
+    "manager": "hrcollins@email.com",
+    "start": "2016-7-26"
+  },
+  {
+    "name": "T. M. Barnes",
+    "email": "tmbarnes@email.com",
+    "manager": "wflewis@email.com",
+    "start": "2012-11-12"
+  },
+  {
+    "name": "C. G. Moore",
+    "email": "cgmoore@email.com",
+    "manager": "tmbarnes@email.com",
+    "start": "2010-12-28"
+  },
+  {
+    "name": "C. J. Collins",
+    "email": "cjcollins@email.com",
+    "manager": "tmbarnes@email.com",
+    "start": "2002-9-17"
+  },
+  {
+    "name": "O. M. Cruz",
+    "email": "omcruz@email.com",
+    "manager": "tmbarnes@email.com",
+    "start": "2015-6-15"
+  },
+  {
+    "name": "A. I. Myers",
+    "email": "aimyers@email.com",
+    "manager": "tmbarnes@email.com",
+    "start": "2004-8-27"
+  },
+  {
+    "name": "C. P. Murphy",
+    "email": "cpmurphy@email.com",
+    "manager": "wflewis@email.com",
+    "start": "2002-5-15"
+  },
+  {
+    "name": "A. F. Hall",
+    "email": "afhall@email.com",
+    "manager": "cpmurphy@email.com",
+    "start": "2005-5-12"
+  },
+  {
+    "name": "E. S. Watson",
+    "email": "eswatson@email.com",
+    "manager": "cpmurphy@email.com",
+    "start": "2002-3-7"
+  },
+  {
+    "name": "E. G. Hall",
+    "email": "eghall@email.com",
+    "manager": "cpmurphy@email.com",
+    "start": "2009-8-2"
+  },
+  {
+    "name": "S. J. Baker",
+    "email": "sjbaker@email.com",
+    "manager": "cpmurphy@email.com",
+    "start": "2010-5-20"
+  },
+  {
+    "name": "A. J. Flores",
+    "email": "ajflores@email.com",
+    "manager": "hrcollins@email.com",
+    "start": "2007-2-21"
+  },
+  {
+    "name": "M. A. Baker",
+    "email": "mabaker@email.com",
+    "manager": "ajflores@email.com",
+    "start": "2012-8-22"
+  },
+  {
+    "name": "R. H. Young",
+    "email": "rhyoung@email.com",
+    "manager": "mabaker@email.com",
+    "start": "2003-12-9"
+  },
+  {
+    "name": "S. K. Nelson",
+    "email": "sknelson@email.com",
+    "manager": "mabaker@email.com",
+    "start": "2007-8-22"
+  },
+  {
+    "name": "A. L. Bennett",
+    "email": "albennett@email.com",
+    "manager": "mabaker@email.com",
+    "start": "2013-4-26"
+  },
+  {
+    "name": "I. D. Jenkins",
+    "email": "idjenkins@email.com",
+    "manager": "mabaker@email.com",
+    "start": "2000-9-26"
+  },
+  {
+    "name": "L. I. Sanders",
+    "email": "lisanders@email.com",
+    "manager": "ajflores@email.com",
+    "start": "2003-12-24"
+  },
+  {
+    "name": "R. H. Sullivan",
+    "email": "rhsullivan@email.com",
+    "manager": "lisanders@email.com",
+    "start": "2012-3-11"
+  },
+  {
+    "name": "G. K. Bennett",
+    "email": "gkbennett@email.com",
+    "manager": "lisanders@email.com",
+    "start": "2010-10-18"
+  },
+  {
+    "name": "P. M. Phillips",
+    "email": "pmphillips@email.com",
+    "manager": "lisanders@email.com",
+    "start": "2007-6-4"
+  },
+  {
+    "name": "J. E. Jones",
+    "email": "jejones@email.com",
+    "manager": "lisanders@email.com",
+    "start": "2004-10-1"
+  },
+  {
+    "name": "O. C. Cooper",
+    "email": "occooper@email.com",
+    "manager": "hrcollins@email.com",
+    "start": "2007-4-21"
+  },
+  {
+    "name": "G. S. Walker",
+    "email": "gswalker@email.com",
+    "manager": "occooper@email.com",
+    "start": "2012-3-21"
+  },
+  {
+    "name": "O. A. Davis",
+    "email": "oadavis@email.com",
+    "manager": "gswalker@email.com",
+    "start": "2002-8-4"
+  },
+  {
+    "name": "O. I. Cooper",
+    "email": "oicooper@email.com",
+    "manager": "gswalker@email.com",
+    "start": "2001-6-19"
+  },
+  {
+    "name": "N. O. Watson",
+    "email": "nowatson@email.com",
+    "manager": "gswalker@email.com",
+    "start": "2011-4-3"
+  },
+  {
+    "name": "L. K. Murphy",
+    "email": "lkmurphy@email.com",
+    "manager": "gswalker@email.com",
+    "start": "2008-6-14"
+  },
+  {
+    "name": "B. B. Clark",
+    "email": "bbclark@email.com",
+    "manager": "occooper@email.com",
+    "start": "2010-1-26"
+  },
+  {
+    "name": "D. O. Jones",
+    "email": "dojones@email.com",
+    "manager": "bbclark@email.com",
+    "start": "2006-8-8"
+  },
+  {
+    "name": "H. M. Flores",
+    "email": "hmflores@email.com",
+    "manager": "bbclark@email.com",
+    "start": "2004-11-18"
+  },
+  {
+    "name": "T. T. Harris",
+    "email": "ttharris@email.com",
+    "manager": "bbclark@email.com",
+    "start": "2013-1-19"
+  },
+  {
+    "name": "K. S. Lee",
+    "email": "kslee@email.com",
+    "manager": "bbclark@email.com",
+    "start": "2010-3-9"
+  },
+  {
+    "name": "I. R. Evans",
+    "email": "irevans@email.com",
+    "manager": "hrcollins@email.com",
+    "start": "2014-9-27"
+  },
+  {
+    "name": "S. B. Garcia",
+    "email": "sbgarcia@email.com",
+    "manager": "irevans@email.com",
+    "start": "2015-5-6"
+  },
+  {
+    "name": "G. K. Jackson",
+    "email": "gkjackson@email.com",
+    "manager": "sbgarcia@email.com",
+    "start": "2013-11-26"
+  },
+  {
+    "name": "C. E. Green",
+    "email": "cegreen@email.com",
+    "manager": "sbgarcia@email.com",
+    "start": "2007-10-21"
+  },
+  {
+    "name": "P. W. Ross",
+    "email": "pwross@email.com",
+    "manager": "sbgarcia@email.com",
+    "start": "2016-2-17"
+  },
+  {
+    "name": "P. J. Mitchell",
+    "email": "pjmitchell@email.com",
+    "manager": "sbgarcia@email.com",
+    "start": "2006-1-24"
+  },
+  {
+    "name": "B. J. Lewis",
+    "email": "bjlewis@email.com",
+    "manager": "irevans@email.com",
+    "start": "2013-10-17"
+  },
+  {
+    "name": "M. N. Ward",
+    "email": "mnward@email.com",
+    "manager": "bjlewis@email.com",
+    "start": "2011-4-25"
+  },
+  {
+    "name": "G. F. Gray",
+    "email": "gfgray@email.com",
+    "manager": "bjlewis@email.com",
+    "start": "2006-2-2"
+  },
+  {
+    "name": "P. B. Fisher",
+    "email": "pbfisher@email.com",
+    "manager": "bjlewis@email.com",
+    "start": "2009-12-23"
+  },
+  {
+    "name": "E. P. Foster",
+    "email": "epfoster@email.com",
+    "manager": "bjlewis@email.com",
+    "start": "2009-9-11"
+  },
+  {
+    "name": "N. L. Anderson",
+    "email": "nlanderson@email.com",
+    "manager": "erlee@email.com",
+    "start": "2000-9-25"
+  },
+  {
+    "name": "R. N. Rodriguez",
+    "email": "rnrodriguez@email.com",
+    "manager": "nlanderson@email.com",
+    "start": "2015-11-19"
+  },
+  {
+    "name": "F. A. Foster",
+    "email": "fafoster@email.com",
+    "manager": "rnrodriguez@email.com",
+    "start": "2007-8-26"
+  },
+  {
+    "name": "O. J. White",
+    "email": "ojwhite@email.com",
+    "manager": "fafoster@email.com",
+    "start": "2013-5-17"
+  },
+  {
+    "name": "I. R. Sanchez",
+    "email": "irsanchez@email.com",
+    "manager": "fafoster@email.com",
+    "start": "2015-9-4"
+  },
+  {
+    "name": "H. M. Williams",
+    "email": "hmwilliams@email.com",
+    "manager": "fafoster@email.com",
+    "start": "2003-3-29"
+  },
+  {
+    "name": "N. G. Bennett",
+    "email": "ngbennett@email.com",
+    "manager": "fafoster@email.com",
+    "start": "2007-5-9"
+  },
+  {
+    "name": "P. P. Barnes",
+    "email": "ppbarnes@email.com",
+    "manager": "rnrodriguez@email.com",
+    "start": "2016-1-23"
+  },
+  {
+    "name": "C. D. Brooks",
+    "email": "cdbrooks@email.com",
+    "manager": "ppbarnes@email.com",
+    "start": "2001-11-11"
+  },
+  {
+    "name": "C. W. White",
+    "email": "cwwhite@email.com",
+    "manager": "ppbarnes@email.com",
+    "start": "2006-12-5"
+  },
+  {
+    "name": "K. J. James",
+    "email": "kjjames@email.com",
+    "manager": "ppbarnes@email.com",
+    "start": "2010-3-20"
+  },
+  {
+    "name": "J. H. Robinson",
+    "email": "jhrobinson@email.com",
+    "manager": "ppbarnes@email.com",
+    "start": "2015-3-12"
+  },
+  {
+    "name": "P. B. Bennett",
+    "email": "pbbennett@email.com",
+    "manager": "nlanderson@email.com",
+    "start": "2015-9-4"
+  },
+  {
+    "name": "J. L. Davis",
+    "email": "jldavis@email.com",
+    "manager": "pbbennett@email.com",
+    "start": "2003-2-22"
+  },
+  {
+    "name": "G. D. Morris",
+    "email": "gdmorris@email.com",
+    "manager": "jldavis@email.com",
+    "start": "2009-7-24"
+  },
+  {
+    "name": "F. N. Powell",
+    "email": "fnpowell@email.com",
+    "manager": "jldavis@email.com",
+    "start": "2008-1-12"
+  },
+  {
+    "name": "I. G. Davis",
+    "email": "igdavis@email.com",
+    "manager": "jldavis@email.com",
+    "start": "2003-8-3"
+  },
+  {
+    "name": "W. J. Garcia",
+    "email": "wjgarcia@email.com",
+    "manager": "jldavis@email.com",
+    "start": "2009-11-7"
+  },
+  {
+    "name": "G. M. Scott",
+    "email": "gmscott@email.com",
+    "manager": "pbbennett@email.com",
+    "start": "2016-5-24"
+  },
+  {
+    "name": "J. T. Foster",
+    "email": "jtfoster@email.com",
+    "manager": "gmscott@email.com",
+    "start": "2011-8-8"
+  },
+  {
+    "name": "F. O. Ross",
+    "email": "foross@email.com",
+    "manager": "gmscott@email.com",
+    "start": "2016-10-27"
+  },
+  {
+    "name": "I. M. Gomez",
+    "email": "imgomez@email.com",
+    "manager": "gmscott@email.com",
+    "start": "2002-4-28"
+  },
+  {
+    "name": "J. L. Barnes",
+    "email": "jlbarnes@email.com",
+    "manager": "gmscott@email.com",
+    "start": "2015-5-9"
+  },
+  {
+    "name": "N. A. Morgan",
+    "email": "namorgan@email.com",
+    "manager": "nlanderson@email.com",
+    "start": "2008-10-6"
+  },
+  {
+    "name": "D. R. Wilson",
+    "email": "drwilson@email.com",
+    "manager": "namorgan@email.com",
+    "start": "2006-1-26"
+  },
+  {
+    "name": "N. W. Flores",
+    "email": "nwflores@email.com",
+    "manager": "drwilson@email.com",
+    "start": "2014-8-20"
+  },
+  {
+    "name": "C. H. White",
+    "email": "chwhite@email.com",
+    "manager": "drwilson@email.com",
+    "start": "2009-4-10"
+  },
+  {
+    "name": "B. H. Long",
+    "email": "bhlong@email.com",
+    "manager": "drwilson@email.com",
+    "start": "2016-9-26"
+  },
+  {
+    "name": "C. W. Powell",
+    "email": "cwpowell@email.com",
+    "manager": "drwilson@email.com",
+    "start": "2002-10-8"
+  },
+  {
+    "name": "W. M. Turner",
+    "email": "wmturner@email.com",
+    "manager": "namorgan@email.com",
+    "start": "2010-7-26"
+  },
+  {
+    "name": "T. S. Barnes",
+    "email": "tsbarnes@email.com",
+    "manager": "wmturner@email.com",
+    "start": "2014-7-5"
+  },
+  {
+    "name": "I. N. Lopez",
+    "email": "inlopez@email.com",
+    "manager": "wmturner@email.com",
+    "start": "2014-4-27"
+  },
+  {
+    "name": "T. D. Morgan",
+    "email": "tdmorgan@email.com",
+    "manager": "wmturner@email.com",
+    "start": "2013-6-29"
+  },
+  {
+    "name": "A. I. Ross",
+    "email": "aiross@email.com",
+    "manager": "wmturner@email.com",
+    "start": "2001-5-13"
+  },
+  {
+    "name": "W. C. Mitchell",
+    "email": "wcmitchell@email.com",
+    "manager": "nlanderson@email.com",
+    "start": "2004-6-6"
+  },
+  {
+    "name": "L. W. Stewart",
+    "email": "lwstewart@email.com",
+    "manager": "wcmitchell@email.com",
+    "start": "2013-11-15"
+  },
+  {
+    "name": "H. W. Morgan",
+    "email": "hwmorgan@email.com",
+    "manager": "lwstewart@email.com",
+    "start": "2006-6-24"
+  },
+  {
+    "name": "H. G. Jenkins",
+    "email": "hgjenkins@email.com",
+    "manager": "lwstewart@email.com",
+    "start": "2006-4-12"
+  },
+  {
+    "name": "D. N. Flores",
+    "email": "dnflores@email.com",
+    "manager": "lwstewart@email.com",
+    "start": "2005-3-15"
+  },
+  {
+    "name": "J. W. Roberts",
+    "email": "jwroberts@email.com",
+    "manager": "lwstewart@email.com",
+    "start": "2009-11-11"
+  },
+  {
+    "name": "L. G. Scott",
+    "email": "lgscott@email.com",
+    "manager": "wcmitchell@email.com",
+    "start": "2010-8-20"
+  },
+  {
+    "name": "W. L. Ross",
+    "email": "wlross@email.com",
+    "manager": "lgscott@email.com",
+    "start": "2010-1-14"
+  },
+  {
+    "name": "S. H. Perry",
+    "email": "shperry@email.com",
+    "manager": "lgscott@email.com",
+    "start": "2012-11-7"
+  },
+  {
+    "name": "O. R. Campbell",
+    "email": "orcampbell@email.com",
+    "manager": "lgscott@email.com",
+    "start": "2003-5-6"
+  },
+  {
+    "name": "G. J. Scott",
+    "email": "gjscott@email.com",
+    "manager": "lgscott@email.com",
+    "start": "2014-6-10"
+  },
+  {
+    "name": "P. P. Taylor",
+    "email": "pptaylor@email.com",
+    "manager": "erlee@email.com",
+    "start": "2007-3-8"
+  },
+  {
+    "name": "A. T. Jones",
+    "email": "atjones@email.com",
+    "manager": "pptaylor@email.com",
+    "start": "2012-8-19"
+  },
+  {
+    "name": "E. P. Jackson",
+    "email": "epjackson@email.com",
+    "manager": "atjones@email.com",
+    "start": "2004-12-27"
+  },
+  {
+    "name": "T. M. Torres",
+    "email": "tmtorres@email.com",
+    "manager": "epjackson@email.com",
+    "start": "2005-4-2"
+  },
+  {
+    "name": "I. O. Smith",
+    "email": "iosmith@email.com",
+    "manager": "epjackson@email.com",
+    "start": "2007-4-10"
+  },
+  {
+    "name": "D. O. Foster",
+    "email": "dofoster@email.com",
+    "manager": "epjackson@email.com",
+    "start": "2016-5-3"
+  },
+  {
+    "name": "P. P. Nguyen",
+    "email": "ppnguyen@email.com",
+    "manager": "epjackson@email.com",
+    "start": "2000-7-7"
+  },
+  {
+    "name": "L. S. Flores",
+    "email": "lsflores@email.com",
+    "manager": "atjones@email.com",
+    "start": "2012-9-17"
+  },
+  {
+    "name": "W. O. Cooper",
+    "email": "wocooper@email.com",
+    "manager": "lsflores@email.com",
+    "start": "2006-9-15"
+  },
+  {
+    "name": "C. N. Edwards",
+    "email": "cnedwards@email.com",
+    "manager": "lsflores@email.com",
+    "start": "2010-6-5"
+  },
+  {
+    "name": "M. I. Bell",
+    "email": "mibell@email.com",
+    "manager": "lsflores@email.com",
+    "start": "2007-6-19"
+  },
+  {
+    "name": "A. K. Rivera",
+    "email": "akrivera@email.com",
+    "manager": "lsflores@email.com",
+    "start": "2005-3-9"
+  },
+  {
+    "name": "I. J. Reed",
+    "email": "ijreed@email.com",
+    "manager": "pptaylor@email.com",
+    "start": "2009-8-28"
+  },
+  {
+    "name": "L. W. King",
+    "email": "lwking@email.com",
+    "manager": "ijreed@email.com",
+    "start": "2009-1-13"
+  },
+  {
+    "name": "O. W. Hernandez",
+    "email": "owhernandez@email.com",
+    "manager": "lwking@email.com",
+    "start": "2011-5-13"
+  },
+  {
+    "name": "D. A. Fisher",
+    "email": "dafisher@email.com",
+    "manager": "lwking@email.com",
+    "start": "2006-5-28"
+  },
+  {
+    "name": "J. O. Sullivan",
+    "email": "josullivan@email.com",
+    "manager": "lwking@email.com",
+    "start": "2008-5-14"
+  },
+  {
+    "name": "C. F. Torres",
+    "email": "cftorres@email.com",
+    "manager": "lwking@email.com",
+    "start": "2002-10-1"
+  },
+  {
+    "name": "D. P. Murphy",
+    "email": "dpmurphy@email.com",
+    "manager": "ijreed@email.com",
+    "start": "2016-12-8"
+  },
+  {
+    "name": "F. W. Ortiz",
+    "email": "fwortiz@email.com",
+    "manager": "dpmurphy@email.com",
+    "start": "2013-9-26"
+  },
+  {
+    "name": "F. P. King",
+    "email": "fpking@email.com",
+    "manager": "dpmurphy@email.com",
+    "start": "2014-11-24"
+  },
+  {
+    "name": "F. N. Jackson",
+    "email": "fnjackson@email.com",
+    "manager": "dpmurphy@email.com",
+    "start": "2003-3-13"
+  },
+  {
+    "name": "B. J. Perry",
+    "email": "bjperry@email.com",
+    "manager": "dpmurphy@email.com",
+    "start": "2002-6-24"
+  },
+  {
+    "name": "E. T. Anderson",
+    "email": "etanderson@email.com",
+    "manager": "pptaylor@email.com",
+    "start": "2015-12-7"
+  },
+  {
+    "name": "P. F. Nguyen",
+    "email": "pfnguyen@email.com",
+    "manager": "etanderson@email.com",
+    "start": "2006-12-5"
+  },
+  {
+    "name": "G. C. Turner",
+    "email": "gcturner@email.com",
+    "manager": "pfnguyen@email.com",
+    "start": "2014-5-26"
+  },
+  {
+    "name": "G. H. Morales",
+    "email": "ghmorales@email.com",
+    "manager": "pfnguyen@email.com",
+    "start": "2006-2-21"
+  },
+  {
+    "name": "M. P. Cruz",
+    "email": "mpcruz@email.com",
+    "manager": "pfnguyen@email.com",
+    "start": "2000-3-9"
+  },
+  {
+    "name": "D. H. Perez",
+    "email": "dhperez@email.com",
+    "manager": "pfnguyen@email.com",
+    "start": "2001-5-7"
+  },
+  {
+    "name": "H. H. Wilson",
+    "email": "hhwilson@email.com",
+    "manager": "etanderson@email.com",
+    "start": "2013-3-29"
+  },
+  {
+    "name": "O. R. Gonzalez",
+    "email": "orgonzalez@email.com",
+    "manager": "hhwilson@email.com",
+    "start": "2009-1-27"
+  },
+  {
+    "name": "P. E. Martinez",
+    "email": "pemartinez@email.com",
+    "manager": "hhwilson@email.com",
+    "start": "2011-1-3"
+  },
+  {
+    "name": "T. E. Baker",
+    "email": "tebaker@email.com",
+    "manager": "hhwilson@email.com",
+    "start": "2001-11-9"
+  },
+  {
+    "name": "H. C. Bennett",
+    "email": "hcbennett@email.com",
+    "manager": "hhwilson@email.com",
+    "start": "2003-2-6"
+  },
+  {
+    "name": "B. P. Gomez",
+    "email": "bpgomez@email.com",
+    "manager": "pptaylor@email.com",
+    "start": "2005-5-25"
+  },
+  {
+    "name": "M. F. Garcia",
+    "email": "mfgarcia@email.com",
+    "manager": "bpgomez@email.com",
+    "start": "2005-7-15"
+  },
+  {
+    "name": "P. F. Rodriguez",
+    "email": "pfrodriguez@email.com",
+    "manager": "mfgarcia@email.com",
+    "start": "2009-8-24"
+  },
+  {
+    "name": "O. B. Carter",
+    "email": "obcarter@email.com",
+    "manager": "mfgarcia@email.com",
+    "start": "2001-3-9"
+  },
+  {
+    "name": "E. D. Sullivan",
+    "email": "edsullivan@email.com",
+    "manager": "mfgarcia@email.com",
+    "start": "2010-5-14"
+  },
+  {
+    "name": "C. N. Campbell",
+    "email": "cncampbell@email.com",
+    "manager": "mfgarcia@email.com",
+    "start": "2000-4-24"
+  },
+  {
+    "name": "P. O. Reyes",
+    "email": "poreyes@email.com",
+    "manager": "bpgomez@email.com",
+    "start": "2013-3-9"
+  },
+  {
+    "name": "A. C. Williams",
+    "email": "acwilliams@email.com",
+    "manager": "poreyes@email.com",
+    "start": "2013-2-14"
+  },
+  {
+    "name": "N. F. Cox",
+    "email": "nfcox@email.com",
+    "manager": "poreyes@email.com",
+    "start": "2009-8-9"
+  },
+  {
+    "name": "W. K. Ross",
+    "email": "wkross@email.com",
+    "manager": "poreyes@email.com",
+    "start": "2000-12-29"
+  },
+  {
+    "name": "T. G. Anderson",
+    "email": "tganderson@email.com",
+    "manager": "poreyes@email.com",
+    "start": "2005-10-16"
+  }
+]

@@ -1,0 +1,1192 @@
+[
+  {
+    "name": "Delta Graham scan (staging)",
+    "load": 65.86,
+    "ping": 0.87
+  },
+  {
+    "name": "Delta Graham scan (production)",
+    "load": 1734.9,
+    "ping": 1.8
+  },
+  {
+    "name": "Delta PageRank (staging)",
+    "load": 106.68,
+    "ping": 1.56
+  },
+  {
+    "name": "Delta PageRank (production)",
+    "load": 2800.32,
+    "ping": 1.83
+  },
+  {
+    "name": "Delta General Problem Solver (staging)",
+    "load": 102.58,
+    "ping": 3.0
+  },
+  {
+    "name": "Delta General Problem Solver (production)",
+    "load": 2863.32,
+    "ping": 1.78
+  },
+  {
+    "name": "Delta Sparse matrix (staging)",
+    "load": 36.06,
+    "ping": 1.75
+  },
+  {
+    "name": "Delta Sparse matrix (production)",
+    "load": 1419.24,
+    "ping": 1.87
+  },
+  {
+    "name": "Delta Spline interpolation (staging)",
+    "load": 15.09,
+    "ping": 1.96
+  },
+  {
+    "name": "Delta Spline interpolation (production)",
+    "load": 1694.48,
+    "ping": 3.37
+  },
+  {
+    "name": "Delta Evolutionary computation (staging)",
+    "load": 85.69,
+    "ping": 1.17
+  },
+  {
+    "name": "Delta Evolutionary computation (production)",
+    "load": 2898.41,
+    "ping": 1.92
+  },
+  {
+    "name": "Epsilon Simple precedence parser (staging)",
+    "load": 110.77,
+    "ping": 1.29
+  },
+  {
+    "name": "Epsilon Simple precedence parser (production)",
+    "load": 1254.71,
+    "ping": 2.97
+  },
+  {
+    "name": "Epsilon WHIRLPOOL (staging)",
+    "load": 51.08,
+    "ping": 1.7
+  },
+  {
+    "name": "Epsilon WHIRLPOOL (production)",
+    "load": 1785.26,
+    "ping": 1.79
+  },
+  {
+    "name": "Epsilon Sieve of Eratosthenes (staging)",
+    "load": 61.79,
+    "ping": 2.21
+  },
+  {
+    "name": "Epsilon Sieve of Eratosthenes (production)",
+    "load": 2046.75,
+    "ping": 1.87
+  },
+  {
+    "name": "Epsilon Gaussian elimination (staging)",
+    "load": 105.89,
+    "ping": 0.94
+  },
+  {
+    "name": "Epsilon Gaussian elimination (production)",
+    "load": 2280.55,
+    "ping": 1.53
+  },
+  {
+    "name": "Epsilon Levenberg–Marquardt algorithm (staging)",
+    "load": 37.18,
+    "ping": 0.94
+  },
+  {
+    "name": "Epsilon Levenberg–Marquardt algorithm (production)",
+    "load": 1027.86,
+    "ping": 1.96
+  },
+  {
+    "name": "Nu Longest common substring problem (staging)",
+    "load": 20.66,
+    "ping": 2.6
+  },
+  {
+    "name": "Nu Longest common substring problem (production)",
+    "load": 429.85,
+    "ping": 1.19
+  },
+  {
+    "name": "Nu Steinhaus–Johnson–Trotter algorithm (staging)",
+    "load": 131.04,
+    "ping": 2.45
+  },
+  {
+    "name": "Nu Steinhaus–Johnson–Trotter algorithm (production)",
+    "load": 1584.73,
+    "ping": 1.66
+  },
+  {
+    "name": "Nu Laplacian smoothing (staging)",
+    "load": 44.98,
+    "ping": 1.11
+  },
+  {
+    "name": "Nu Laplacian smoothing (production)",
+    "load": 1823.31,
+    "ping": 1.09
+  },
+  {
+    "name": "Upsilon Earley parser (staging)",
+    "load": 113.21,
+    "ping": 2.03
+  },
+  {
+    "name": "Upsilon Earley parser (production)",
+    "load": 56.81,
+    "ping": 2.54
+  },
+  {
+    "name": "Upsilon SUBCLU (staging)",
+    "load": 10.88,
+    "ping": 2.56
+  },
+  {
+    "name": "Upsilon SUBCLU (production)",
+    "load": 2320.11,
+    "ping": 2.46
+  },
+  {
+    "name": "Upsilon Binary search algorithm (staging)",
+    "load": 31.62,
+    "ping": 1.21
+  },
+  {
+    "name": "Upsilon Binary search algorithm (production)",
+    "load": 2712.03,
+    "ping": 1.27
+  },
+  {
+    "name": "Sigma SURF (Speeded Up Robust Features) (staging)",
+    "load": 12.51,
+    "ping": 1.65
+  },
+  {
+    "name": "Sigma SURF (Speeded Up Robust Features) (production)",
+    "load": 861.8,
+    "ping": 0.98
+  },
+  {
+    "name": "Sigma Kruskal's algorithm (staging)",
+    "load": 96.06,
+    "ping": 3.05
+  },
+  {
+    "name": "Sigma Kruskal's algorithm (production)",
+    "load": 1658.59,
+    "ping": 3.09
+  },
+  {
+    "name": "Sigma Flashsort (staging)",
+    "load": 133.03,
+    "ping": 1.53
+  },
+  {
+    "name": "Sigma Flashsort (production)",
+    "load": 2189.38,
+    "ping": 1.8
+  },
+  {
+    "name": "Sigma Crank-Nicolson method (staging)",
+    "load": 93.68,
+    "ping": 1.7
+  },
+  {
+    "name": "Sigma Crank-Nicolson method (production)",
+    "load": 830.7,
+    "ping": 1.63
+  },
+  {
+    "name": "Sigma Ridder's method (staging)",
+    "load": 147.25,
+    "ping": 1.76
+  },
+  {
+    "name": "Sigma Ridder's method (production)",
+    "load": 1576.87,
+    "ping": 1.04
+  },
+  {
+    "name": "Sigma lattice basis in polynomial time (staging)",
+    "load": 141.8,
+    "ping": 2.43
+  },
+  {
+    "name": "Sigma lattice basis in polynomial time (production)",
+    "load": 2247.78,
+    "ping": 2.25
+  },
+  {
+    "name": "Gamma Index calculus algorithm (staging)",
+    "load": 136.33,
+    "ping": 0.93
+  },
+  {
+    "name": "Gamma Index calculus algorithm (production)",
+    "load": 674.88,
+    "ping": 1.41
+  },
+  {
+    "name": "Gamma Grover's algorithm (staging)",
+    "load": 118.9,
+    "ping": 1.21
+  },
+  {
+    "name": "Gamma Grover's algorithm (production)",
+    "load": 71.51,
+    "ping": 2.34
+  },
+  {
+    "name": "Gamma Spectral layout (staging)",
+    "load": 84.21,
+    "ping": 2.09
+  },
+  {
+    "name": "Gamma Spectral layout (production)",
+    "load": 2794.13,
+    "ping": 2.19
+  },
+  {
+    "name": "Gamma root mean squared deviation between two protein structures. (staging)",
+    "load": 141.94,
+    "ping": 0.61
+  },
+  {
+    "name": "Gamma root mean squared deviation between two protein structures. (production)",
+    "load": 2450.56,
+    "ping": 2.72
+  },
+  {
+    "name": "Gamma Multi level feedback queue (staging)",
+    "load": 144.36,
+    "ping": 1.39
+  },
+  {
+    "name": "Gamma Multi level feedback queue (production)",
+    "load": 2911.43,
+    "ping": 1.86
+  },
+  {
+    "name": "Gamma Watershed transformation (staging)",
+    "load": 112.02,
+    "ping": 0.98
+  },
+  {
+    "name": "Gamma Watershed transformation (production)",
+    "load": 30.18,
+    "ping": 2.49
+  },
+  {
+    "name": "Delta ID3 algorithm (staging)",
+    "load": 12.58,
+    "ping": 1.93
+  },
+  {
+    "name": "Delta ID3 algorithm (production)",
+    "load": 1529.76,
+    "ping": 1.75
+  },
+  {
+    "name": "Delta Sethi-Ullman algorithm (staging)",
+    "load": 1.31,
+    "ping": 2.01
+  },
+  {
+    "name": "Delta Sethi-Ullman algorithm (production)",
+    "load": 2629.36,
+    "ping": 3.27
+  },
+  {
+    "name": "Delta Shoelace algorithm (staging)",
+    "load": 55.97,
+    "ping": 1.76
+  },
+  {
+    "name": "Delta Shoelace algorithm (production)",
+    "load": 1358.18,
+    "ping": 2.39
+  },
+  {
+    "name": "Delta Mu-law algorithm (staging)",
+    "load": 45.23,
+    "ping": 1.05
+  },
+  {
+    "name": "Delta Mu-law algorithm (production)",
+    "load": 350.34,
+    "ping": 2.17
+  },
+  {
+    "name": "Delta Perceptron (staging)",
+    "load": 145.44,
+    "ping": 2.12
+  },
+  {
+    "name": "Delta Perceptron (production)",
+    "load": 886.75,
+    "ping": 1.85
+  },
+  {
+    "name": "Psi Kosaraju's algorithm (staging)",
+    "load": 48.47,
+    "ping": 2.59
+  },
+  {
+    "name": "Psi Kosaraju's algorithm (production)",
+    "load": 1599.92,
+    "ping": 1.69
+  },
+  {
+    "name": "Psi Match Rating Approach (staging)",
+    "load": 91.21,
+    "ping": 1.06
+  },
+  {
+    "name": "Psi Match Rating Approach (production)",
+    "load": 685.4,
+    "ping": 2.76
+  },
+  {
+    "name": "Psi Ramer–Douglas–Peucker algorithm (staging)",
+    "load": 87.81,
+    "ping": 1.69
+  },
+  {
+    "name": "Psi Ramer–Douglas–Peucker algorithm (production)",
+    "load": 2267.81,
+    "ping": 2.23
+  },
+  {
+    "name": "Psi Sparse matrix (staging)",
+    "load": 75.7,
+    "ping": 2.46
+  },
+  {
+    "name": "Psi Sparse matrix (production)",
+    "load": 2948.74,
+    "ping": 2.38
+  },
+  {
+    "name": "Psi Unicode Collation Algorithm (staging)",
+    "load": 65.87,
+    "ping": 1.53
+  },
+  {
+    "name": "Psi Unicode Collation Algorithm (production)",
+    "load": 679.9,
+    "ping": 1.24
+  },
+  {
+    "name": "Iota Dinic's algorithm (staging)",
+    "load": 49.84,
+    "ping": 2.94
+  },
+  {
+    "name": "Iota Dinic's algorithm (production)",
+    "load": 2008.01,
+    "ping": 2.22
+  },
+  {
+    "name": "Iota Best Bin First (staging)",
+    "load": 83.27,
+    "ping": 1.13
+  },
+  {
+    "name": "Iota Best Bin First (production)",
+    "load": 2507.95,
+    "ping": 2.81
+  },
+  {
+    "name": "Iota Nicholl–Lee–Nicholl (staging)",
+    "load": 27.66,
+    "ping": 1.78
+  },
+  {
+    "name": "Iota Nicholl–Lee–Nicholl (production)",
+    "load": 546.26,
+    "ping": 1.79
+  },
+  {
+    "name": "Iota Addition-chain exponentiation (staging)",
+    "load": 127.25,
+    "ping": 2.07
+  },
+  {
+    "name": "Iota Addition-chain exponentiation (production)",
+    "load": 2021.22,
+    "ping": 2.15
+  },
+  {
+    "name": "Iota Adaptive replacement cache (staging)",
+    "load": 99.65,
+    "ping": 2.35
+  },
+  {
+    "name": "Iota Adaptive replacement cache (production)",
+    "load": 735.04,
+    "ping": 1.73
+  },
+  {
+    "name": "Iota factorization (staging)",
+    "load": 132.08,
+    "ping": 2.41
+  },
+  {
+    "name": "Iota factorization (production)",
+    "load": 2633.0,
+    "ping": 3.07
+  },
+  {
+    "name": "Rho Pohlig&ndash;Hellman algorithm (staging)",
+    "load": 122.77,
+    "ping": 1.67
+  },
+  {
+    "name": "Rho Pohlig&ndash;Hellman algorithm (production)",
+    "load": 608.63,
+    "ping": 0.92
+  },
+  {
+    "name": "Rho Lempel–Ziv Jeff Bonwick (LZJB) (staging)",
+    "load": 2.39,
+    "ping": 2.1
+  },
+  {
+    "name": "Rho Lempel–Ziv Jeff Bonwick (LZJB) (production)",
+    "load": 31.47,
+    "ping": 1.64
+  },
+  {
+    "name": "Rho Coloring algorithm (staging)",
+    "load": 103.33,
+    "ping": 2.61
+  },
+  {
+    "name": "Rho Coloring algorithm (production)",
+    "load": 2699.6,
+    "ping": 2.51
+  },
+  {
+    "name": "Rho Video compression (staging)",
+    "load": 108.72,
+    "ping": 2.6
+  },
+  {
+    "name": "Rho Video compression (production)",
+    "load": 793.84,
+    "ping": 0.97
+  },
+  {
+    "name": "Rho Knuth–Bendix completion algorithm (staging)",
+    "load": 121.24,
+    "ping": 1.32
+  },
+  {
+    "name": "Rho Knuth–Bendix completion algorithm (production)",
+    "load": 2363.54,
+    "ping": 1.75
+  },
+  {
+    "name": "Rho Cross-entropy method (staging)",
+    "load": 107.35,
+    "ping": 1.38
+  },
+  {
+    "name": "Rho Cross-entropy method (production)",
+    "load": 238.77,
+    "ping": 2.8
+  },
+  {
+    "name": "Lambda Marr–Hildreth algorithm (staging)",
+    "load": 17.9,
+    "ping": 2.15
+  },
+  {
+    "name": "Lambda Marr–Hildreth algorithm (production)",
+    "load": 1042.85,
+    "ping": 1.36
+  },
+  {
+    "name": "Lambda Unicode Collation Algorithm (staging)",
+    "load": 91.78,
+    "ping": 1.96
+  },
+  {
+    "name": "Lambda Unicode Collation Algorithm (production)",
+    "load": 712.24,
+    "ping": 1.12
+  },
+  {
+    "name": "Lambda Spigot algorithm (staging)",
+    "load": 24.02,
+    "ping": 2.14
+  },
+  {
+    "name": "Lambda Spigot algorithm (production)",
+    "load": 1717.91,
+    "ping": 2.19
+  },
+  {
+    "name": "Lambda Redundancy check (staging)",
+    "load": 24.81,
+    "ping": 1.74
+  },
+  {
+    "name": "Lambda Redundancy check (production)",
+    "load": 761.43,
+    "ping": 1.34
+  },
+  {
+    "name": "Lambda Dekker's algorithm (staging)",
+    "load": 70.99,
+    "ping": 1.84
+  },
+  {
+    "name": "Lambda Dekker's algorithm (production)",
+    "load": 1652.25,
+    "ping": 2.89
+  },
+  {
+    "name": "Gamma Pratt parser (staging)",
+    "load": 110.91,
+    "ping": 0.72
+  },
+  {
+    "name": "Gamma Pratt parser (production)",
+    "load": 578.18,
+    "ping": 1.28
+  },
+  {
+    "name": "Gamma Coppersmith–Winograd algorithm (staging)",
+    "load": 112.58,
+    "ping": 2.03
+  },
+  {
+    "name": "Gamma Coppersmith–Winograd algorithm (production)",
+    "load": 565.31,
+    "ping": 3.38
+  },
+  {
+    "name": "Gamma Evolution strategy (staging)",
+    "load": 73.67,
+    "ping": 1.68
+  },
+  {
+    "name": "Gamma Evolution strategy (production)",
+    "load": 53.5,
+    "ping": 1.03
+  },
+  {
+    "name": "Gamma Karger's algorithm (staging)",
+    "load": 133.25,
+    "ping": 2.13
+  },
+  {
+    "name": "Gamma Karger's algorithm (production)",
+    "load": 755.74,
+    "ping": 0.74
+  },
+  {
+    "name": "Mu Hopfield net (staging)",
+    "load": 92.28,
+    "ping": 1.98
+  },
+  {
+    "name": "Mu Hopfield net (production)",
+    "load": 425.63,
+    "ping": 2.47
+  },
+  {
+    "name": "Mu OPTICS (staging)",
+    "load": 16.29,
+    "ping": 2.07
+  },
+  {
+    "name": "Mu OPTICS (production)",
+    "load": 1553.98,
+    "ping": 2.28
+  },
+  {
+    "name": "Mu Antipodal (staging)",
+    "load": 123.58,
+    "ping": 2.13
+  },
+  {
+    "name": "Mu Antipodal (production)",
+    "load": 1943.38,
+    "ping": 1.15
+  },
+  {
+    "name": "Mu Library sort (staging)",
+    "load": 32.19,
+    "ping": 1.7
+  },
+  {
+    "name": "Mu Library sort (production)",
+    "load": 614.3,
+    "ping": 2.74
+  },
+  {
+    "name": "Chi Ordered subset expectation maximization (staging)",
+    "load": 21.65,
+    "ping": 1.21
+  },
+  {
+    "name": "Chi Ordered subset expectation maximization (production)",
+    "load": 236.97,
+    "ping": 1.88
+  },
+  {
+    "name": "Chi LZWL (staging)",
+    "load": 128.91,
+    "ping": 2.3
+  },
+  {
+    "name": "Chi LZWL (production)",
+    "load": 16.7,
+    "ping": 1.38
+  },
+  {
+    "name": "Chi Verhoeff algorithm (staging)",
+    "load": 13.06,
+    "ping": 2.17
+  },
+  {
+    "name": "Chi Verhoeff algorithm (production)",
+    "load": 2248.51,
+    "ping": 3.0
+  },
+  {
+    "name": "Chi Maximum parsimony (phylogenetics) (staging)",
+    "load": 133.62,
+    "ping": 1.91
+  },
+  {
+    "name": "Chi Maximum parsimony (phylogenetics) (production)",
+    "load": 2773.18,
+    "ping": 2.77
+  },
+  {
+    "name": "Chi Prüfer coding (staging)",
+    "load": 67.22,
+    "ping": 2.72
+  },
+  {
+    "name": "Chi Prüfer coding (production)",
+    "load": 2036.25,
+    "ping": 2.55
+  },
+  {
+    "name": "Alpha Paxos algorithm (staging)",
+    "load": 13.31,
+    "ping": 1.4
+  },
+  {
+    "name": "Alpha Paxos algorithm (production)",
+    "load": 879.74,
+    "ping": 1.18
+  },
+  {
+    "name": "Alpha Gaussian elimination (staging)",
+    "load": 49.85,
+    "ping": 1.37
+  },
+  {
+    "name": "Alpha Gaussian elimination (production)",
+    "load": 1226.84,
+    "ping": 1.69
+  },
+  {
+    "name": "Alpha Differential evolution (staging)",
+    "load": 87.13,
+    "ping": 2.21
+  },
+  {
+    "name": "Alpha Differential evolution (production)",
+    "load": 2830.43,
+    "ping": 1.88
+  },
+  {
+    "name": "Alpha BFGS method (staging)",
+    "load": 10.47,
+    "ping": 2.26
+  },
+  {
+    "name": "Alpha BFGS method (production)",
+    "load": 1809.49,
+    "ping": 2.56
+  },
+  {
+    "name": "Alpha Sukhotin's algorithm (staging)",
+    "load": 77.66,
+    "ping": 0.83
+  },
+  {
+    "name": "Alpha Sukhotin's algorithm (production)",
+    "load": 249.55,
+    "ping": 1.54
+  },
+  {
+    "name": "Alpha Addition-chain exponentiation (staging)",
+    "load": 115.35,
+    "ping": 2.46
+  },
+  {
+    "name": "Alpha Addition-chain exponentiation (production)",
+    "load": 43.54,
+    "ping": 2.88
+  },
+  {
+    "name": "Alpha Pearson hashing (staging)",
+    "load": 63.43,
+    "ping": 0.91
+  },
+  {
+    "name": "Alpha Pearson hashing (production)",
+    "load": 2972.51,
+    "ping": 2.25
+  },
+  {
+    "name": "Alpha Connected-component labeling (staging)",
+    "load": 132.98,
+    "ping": 2.27
+  },
+  {
+    "name": "Alpha Connected-component labeling (production)",
+    "load": 864.83,
+    "ping": 2.56
+  },
+  {
+    "name": "Alpha Metropolis light transport (staging)",
+    "load": 82.07,
+    "ping": 1.74
+  },
+  {
+    "name": "Alpha Metropolis light transport (production)",
+    "load": 1485.25,
+    "ping": 2.18
+  },
+  {
+    "name": "Alpha Rabin–Karp string search algorithm (staging)",
+    "load": 137.31,
+    "ping": 2.41
+  },
+  {
+    "name": "Alpha Rabin–Karp string search algorithm (production)",
+    "load": 748.72,
+    "ping": 2.13
+  },
+  {
+    "name": "Alpha MISER algorithm (staging)",
+    "load": 4.48,
+    "ping": 2.17
+  },
+  {
+    "name": "Alpha MISER algorithm (production)",
+    "load": 2983.37,
+    "ping": 0.63
+  },
+  {
+    "name": "Alpha Pratt parser (staging)",
+    "load": 137.81,
+    "ping": 0.77
+  },
+  {
+    "name": "Alpha Pratt parser (production)",
+    "load": 602.83,
+    "ping": 2.32
+  },
+  {
+    "name": "Upsilon Fuzzy c-means (staging)",
+    "load": 139.45,
+    "ping": 2.36
+  },
+  {
+    "name": "Upsilon Fuzzy c-means (production)",
+    "load": 143.84,
+    "ping": 1.92
+  },
+  {
+    "name": "Upsilon Smoothsort (staging)",
+    "load": 121.31,
+    "ping": 1.46
+  },
+  {
+    "name": "Upsilon Smoothsort (production)",
+    "load": 83.02,
+    "ping": 2.02
+  },
+  {
+    "name": "Upsilon Prüfer coding (staging)",
+    "load": 69.11,
+    "ping": 1.95
+  },
+  {
+    "name": "Upsilon Prüfer coding (production)",
+    "load": 1674.76,
+    "ping": 0.74
+  },
+  {
+    "name": "Lambda SPWGNN (staging)",
+    "load": 55.75,
+    "ping": 2.96
+  },
+  {
+    "name": "Lambda SPWGNN (production)",
+    "load": 2040.47,
+    "ping": 1.96
+  },
+  {
+    "name": "Lambda Trapezoidal rule (differential equations) (staging)",
+    "load": 55.75,
+    "ping": 1.88
+  },
+  {
+    "name": "Lambda Trapezoidal rule (differential equations) (production)",
+    "load": 2556.12,
+    "ping": 3.0
+  },
+  {
+    "name": "Lambda Depth-first search (staging)",
+    "load": 70.15,
+    "ping": 0.81
+  },
+  {
+    "name": "Lambda Depth-first search (production)",
+    "load": 2010.47,
+    "ping": 1.63
+  },
+  {
+    "name": "Beta Nagle's algorithm (staging)",
+    "load": 144.95,
+    "ping": 2.28
+  },
+  {
+    "name": "Beta Nagle's algorithm (production)",
+    "load": 1532.21,
+    "ping": 1.59
+  },
+  {
+    "name": "Beta Error diffusion (staging)",
+    "load": 104.11,
+    "ping": 2.67
+  },
+  {
+    "name": "Beta Error diffusion (production)",
+    "load": 622.53,
+    "ping": 1.77
+  },
+  {
+    "name": "Beta Fast folding algorithm (staging)",
+    "load": 119.51,
+    "ping": 1.08
+  },
+  {
+    "name": "Beta Fast folding algorithm (production)",
+    "load": 941.73,
+    "ping": 3.17
+  },
+  {
+    "name": "Beta Chien search (staging)",
+    "load": 112.15,
+    "ping": 1.9
+  },
+  {
+    "name": "Beta Chien search (production)",
+    "load": 2168.95,
+    "ping": 1.81
+  },
+  {
+    "name": "Beta Bowyer–Watson algorithm (staging)",
+    "load": 77.12,
+    "ping": 2.71
+  },
+  {
+    "name": "Beta Bowyer–Watson algorithm (production)",
+    "load": 1678.65,
+    "ping": 1.3
+  },
+  {
+    "name": "Beta Velvet (staging)",
+    "load": 124.17,
+    "ping": 1.47
+  },
+  {
+    "name": "Beta Velvet (production)",
+    "load": 1082.65,
+    "ping": 2.29
+  },
+  {
+    "name": "Eta Discrete logarithm (staging)",
+    "load": 114.14,
+    "ping": 1.22
+  },
+  {
+    "name": "Eta Discrete logarithm (production)",
+    "load": 1213.35,
+    "ping": 1.54
+  },
+  {
+    "name": "Eta Blum Blum Shub (staging)",
+    "load": 142.87,
+    "ping": 2.64
+  },
+  {
+    "name": "Eta Blum Blum Shub (production)",
+    "load": 118.62,
+    "ping": 0.85
+  },
+  {
+    "name": "Eta Lempel–Ziv–Storer–Szymanski (staging)",
+    "load": 25.19,
+    "ping": 1.54
+  },
+  {
+    "name": "Eta Lempel–Ziv–Storer–Szymanski (production)",
+    "load": 1875.02,
+    "ping": 2.36
+  },
+  {
+    "name": "Eta Fractal compression (staging)",
+    "load": 133.07,
+    "ping": 1.82
+  },
+  {
+    "name": "Eta Fractal compression (production)",
+    "load": 2672.93,
+    "ping": 1.57
+  },
+  {
+    "name": "Eta Cone algorithm (staging)",
+    "load": 104.18,
+    "ping": 2.86
+  },
+  {
+    "name": "Eta Cone algorithm (production)",
+    "load": 222.84,
+    "ping": 2.52
+  },
+  {
+    "name": "Rho Double Metaphone (staging)",
+    "load": 108.46,
+    "ping": 2.05
+  },
+  {
+    "name": "Rho Double Metaphone (production)",
+    "load": 1869.97,
+    "ping": 1.71
+  },
+  {
+    "name": "Rho Gradient descent (staging)",
+    "load": 131.55,
+    "ping": 2.19
+  },
+  {
+    "name": "Rho Gradient descent (production)",
+    "load": 2040.8,
+    "ping": 2.13
+  },
+  {
+    "name": "Rho LALR (Look-ahead LR) parser (staging)",
+    "load": 106.95,
+    "ping": 2.15
+  },
+  {
+    "name": "Rho LALR (Look-ahead LR) parser (production)",
+    "load": 851.86,
+    "ping": 2.17
+  },
+  {
+    "name": "Alpha Delayed column generation (staging)",
+    "load": 128.55,
+    "ping": 2.3
+  },
+  {
+    "name": "Alpha Delayed column generation (production)",
+    "load": 2206.82,
+    "ping": 2.0
+  },
+  {
+    "name": "Alpha Slerp (staging)",
+    "load": 28.71,
+    "ping": 2.06
+  },
+  {
+    "name": "Alpha Slerp (production)",
+    "load": 812.61,
+    "ping": 2.11
+  },
+  {
+    "name": "Alpha Texas Medication Algorithm Project (staging)",
+    "load": 20.38,
+    "ping": 2.52
+  },
+  {
+    "name": "Alpha Texas Medication Algorithm Project (production)",
+    "load": 1204.07,
+    "ping": 2.91
+  },
+  {
+    "name": "Alpha Audio (staging)",
+    "load": 101.78,
+    "ping": 2.81
+  },
+  {
+    "name": "Alpha Audio (production)",
+    "load": 1174.13,
+    "ping": 1.86
+  },
+  {
+    "name": "Alpha Marching triangles (staging)",
+    "load": 80.34,
+    "ping": 2.05
+  },
+  {
+    "name": "Alpha Marching triangles (production)",
+    "load": 1646.54,
+    "ping": 2.09
+  },
+  {
+    "name": "Alpha Coppersmith–Winograd algorithm (staging)",
+    "load": 127.12,
+    "ping": 1.47
+  },
+  {
+    "name": "Alpha Coppersmith–Winograd algorithm (production)",
+    "load": 2221.09,
+    "ping": 1.02
+  },
+  {
+    "name": "Sigma Structured SVM (staging)",
+    "load": 94.22,
+    "ping": 2.23
+  },
+  {
+    "name": "Sigma Structured SVM (production)",
+    "load": 1100.44,
+    "ping": 2.09
+  },
+  {
+    "name": "Sigma Shortest remaining time (staging)",
+    "load": 70.21,
+    "ping": 1.8
+  },
+  {
+    "name": "Sigma Shortest remaining time (production)",
+    "load": 496.0,
+    "ping": 2.03
+  },
+  {
+    "name": "Sigma Lempel–Ziv–Oberhumer (staging)",
+    "load": 38.38,
+    "ping": 2.29
+  },
+  {
+    "name": "Sigma Lempel–Ziv–Oberhumer (production)",
+    "load": 1272.83,
+    "ping": 2.75
+  },
+  {
+    "name": "Sigma GLR parser (staging)",
+    "load": 23.53,
+    "ping": 1.49
+  },
+  {
+    "name": "Sigma GLR parser (production)",
+    "load": 2880.71,
+    "ping": 2.46
+  },
+  {
+    "name": "Sigma Bluestein's FFT algorithm (staging)",
+    "load": 112.94,
+    "ping": 2.22
+  },
+  {
+    "name": "Sigma Bluestein's FFT algorithm (production)",
+    "load": 1665.04,
+    "ping": 1.83
+  },
+  {
+    "name": "Sigma Random walker algorithm (staging)",
+    "load": 86.69,
+    "ping": 1.82
+  },
+  {
+    "name": "Sigma Random walker algorithm (production)",
+    "load": 2347.38,
+    "ping": 2.54
+  },
+  {
+    "name": "Nu Discrete logarithm (staging)",
+    "load": 27.87,
+    "ping": 2.51
+  },
+  {
+    "name": "Nu Discrete logarithm (production)",
+    "load": 1304.58,
+    "ping": 3.21
+  },
+  {
+    "name": "Nu Counting sort (staging)",
+    "load": 133.13,
+    "ping": 1.91
+  },
+  {
+    "name": "Nu Counting sort (production)",
+    "load": 382.31,
+    "ping": 1.94
+  },
+  {
+    "name": "Nu Symmetric (secret key) encryption (staging)",
+    "load": 63.49,
+    "ping": 2.46
+  },
+  {
+    "name": "Nu Symmetric (secret key) encryption (production)",
+    "load": 137.87,
+    "ping": 2.25
+  },
+  {
+    "name": "Nu Schreier–Sims algorithm (staging)",
+    "load": 1.25,
+    "ping": 2.5
+  },
+  {
+    "name": "Nu Schreier–Sims algorithm (production)",
+    "load": 1646.61,
+    "ping": 2.8
+  },
+  {
+    "name": "Nu Genetic algorithms (staging)",
+    "load": 139.95,
+    "ping": 1.66
+  },
+  {
+    "name": "Nu Genetic algorithms (production)",
+    "load": 2761.31,
+    "ping": 2.14
+  },
+  {
+    "name": "Nu Gift wrapping algorithm (staging)",
+    "load": 88.56,
+    "ping": 1.22
+  },
+  {
+    "name": "Nu Gift wrapping algorithm (production)",
+    "load": 183.32,
+    "ping": 2.02
+  }
+]

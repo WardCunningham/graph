@@ -1,0 +1,1336 @@
+[
+  {
+    "project": "Delta Xi",
+    "manager": "tmbarnes@email.com",
+    "programs": [
+      {
+        "name": "Delta Graham scan",
+        "description": "Quickhull",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      },
+      {
+        "name": "Delta PageRank",
+        "description": "TrustRank",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      },
+      {
+        "name": "Delta General Problem Solver",
+        "description": "a seminal theorem-proving algorithm intended to work as a universal problem solver machine.",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      },
+      {
+        "name": "Delta Sparse matrix",
+        "description": "algorithms",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      },
+      {
+        "name": "Delta Spline interpolation",
+        "description": "Reduces error with Runge's phenomenon.",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      },
+      {
+        "name": "Delta Evolutionary computation",
+        "description": "optimization inspired by biological mechanisms of evolution",
+        "team": [
+          "cgmoore@email.com",
+          "cjcollins@email.com",
+          "omcruz@email.com",
+          "aimyers@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Epsilon Phi",
+    "manager": "cpmurphy@email.com",
+    "programs": [
+      {
+        "name": "Epsilon Simple precedence parser",
+        "description": "Packrat parser: A linear time parsing algorithm supporting some context-free grammars and parsing expression grammars",
+        "team": [
+          "afhall@email.com",
+          "eswatson@email.com",
+          "eghall@email.com",
+          "sjbaker@email.com"
+        ]
+      },
+      {
+        "name": "Epsilon WHIRLPOOL",
+        "description": "Cryptographically secure pseudo-random number generators",
+        "team": [
+          "afhall@email.com",
+          "eswatson@email.com",
+          "eghall@email.com",
+          "sjbaker@email.com"
+        ]
+      },
+      {
+        "name": "Epsilon Sieve of Eratosthenes",
+        "description": "Sieve of Sundaram",
+        "team": [
+          "afhall@email.com",
+          "eswatson@email.com",
+          "eghall@email.com",
+          "sjbaker@email.com"
+        ]
+      },
+      {
+        "name": "Epsilon Gaussian elimination",
+        "description": "Gauss–Jordan elimination: solves systems of linear equations",
+        "team": [
+          "afhall@email.com",
+          "eswatson@email.com",
+          "eghall@email.com",
+          "sjbaker@email.com"
+        ]
+      },
+      {
+        "name": "Epsilon Levenberg–Marquardt algorithm",
+        "description": "An algorithm for solving nonlinear least squares problems.",
+        "team": [
+          "afhall@email.com",
+          "eswatson@email.com",
+          "eghall@email.com",
+          "sjbaker@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Nu Lambda",
+    "manager": "mabaker@email.com",
+    "programs": [
+      {
+        "name": "Nu Longest common substring problem",
+        "description": "find the longest string (or strings) that is a substring (or are substrings) of two or more strings",
+        "team": [
+          "rhyoung@email.com",
+          "sknelson@email.com",
+          "albennett@email.com",
+          "idjenkins@email.com"
+        ]
+      },
+      {
+        "name": "Nu Steinhaus–Johnson–Trotter algorithm",
+        "description": "also known as the Johnson–Trotter algorithm): generate permutations by transposing elements",
+        "team": [
+          "rhyoung@email.com",
+          "sknelson@email.com",
+          "albennett@email.com",
+          "idjenkins@email.com"
+        ]
+      },
+      {
+        "name": "Nu Laplacian smoothing",
+        "description": "an algorithm to smooth a polygonal mesh",
+        "team": [
+          "rhyoung@email.com",
+          "sknelson@email.com",
+          "albennett@email.com",
+          "idjenkins@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Upsilon Phi",
+    "manager": "lisanders@email.com",
+    "programs": [
+      {
+        "name": "Upsilon Earley parser",
+        "description": "Another O(n<sup>3</sup>) algorithm for parsing any context-free grammar",
+        "team": [
+          "rhsullivan@email.com",
+          "gkbennett@email.com",
+          "pmphillips@email.com",
+          "jejones@email.com"
+        ]
+      },
+      {
+        "name": "Upsilon SUBCLU",
+        "description": "a subspace clustering algorithm",
+        "team": [
+          "rhsullivan@email.com",
+          "gkbennett@email.com",
+          "pmphillips@email.com",
+          "jejones@email.com"
+        ]
+      },
+      {
+        "name": "Upsilon Binary search algorithm",
+        "description": "locates an item in a sorted sequence",
+        "team": [
+          "rhsullivan@email.com",
+          "gkbennett@email.com",
+          "pmphillips@email.com",
+          "jejones@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Sigma Beta",
+    "manager": "gswalker@email.com",
+    "programs": [
+      {
+        "name": "Sigma SURF (Speeded Up Robust Features)",
+        "description": "is a robust local feature detector, first presented by Herbert Bay et al. in 2006, that can be used in computer vision tasks like object recognition or 3D reconstruction. It is partly inspired by the SIFT descriptor. The standard version of SURF is several times faster than SIFT and claimed by its authors to be more robust against different image transformations than SIFT.<ref>SURF</ref><ref>http://www.vision.ee.ethz.ch/~surf/eccv06.pdf</ref><ref>http://glorfindel.mavrinac.com/~aaron/school/pdf/bay06_surf.pdf</ref>",
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Kruskal's algorithm",
+        "description": "Prim's algorithm",
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Flashsort",
+        "description": "Introsort: begin with quicksort and switch to heapsort when the recursion depth exceeds a certain level",
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Crank-Nicolson method",
+        "description": "for diffusion equations",
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Ridder's method",
+        "description": "3-point, exponential scaling",
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      },
+      {
+        "name": "Sigma lattice basis in polynomial time",
+        "description": null,
+        "team": [
+          "oadavis@email.com",
+          "oicooper@email.com",
+          "nowatson@email.com",
+          "lkmurphy@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Gamma Lambda",
+    "manager": "bbclark@email.com",
+    "programs": [
+      {
+        "name": "Gamma Index calculus algorithm",
+        "description": "Pollard's rho algorithm for logarithms",
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Grover's algorithm",
+        "description": "provides quadratic speedup for many search problems",
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Spectral layout",
+        "description": "Girvan–Newman algorithm: detect communities in complex systems",
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      },
+      {
+        "name": "Gamma root mean squared deviation between two protein structures.",
+        "description": null,
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Multi level feedback queue",
+        "description": "Rate-monotonic scheduling",
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Watershed transformation",
+        "description": "a class of algorithms based on the watershed analogy",
+        "team": [
+          "dojones@email.com",
+          "hmflores@email.com",
+          "ttharris@email.com",
+          "kslee@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Delta Epsilon",
+    "manager": "sbgarcia@email.com",
+    "programs": [
+      {
+        "name": "Delta ID3 algorithm",
+        "description": "Iterative Dichotomiser 3):  Use heuristic to generate small decision trees",
+        "team": [
+          "gkjackson@email.com",
+          "cegreen@email.com",
+          "pwross@email.com",
+          "pjmitchell@email.com"
+        ]
+      },
+      {
+        "name": "Delta Sethi-Ullman algorithm",
+        "description": "generate optimal code for arithmetic expressions",
+        "team": [
+          "gkjackson@email.com",
+          "cegreen@email.com",
+          "pwross@email.com",
+          "pjmitchell@email.com"
+        ]
+      },
+      {
+        "name": "Delta Shoelace algorithm",
+        "description": "determine the area of a polygon whose vertices are described by ordered pairs in the plane",
+        "team": [
+          "gkjackson@email.com",
+          "cegreen@email.com",
+          "pwross@email.com",
+          "pjmitchell@email.com"
+        ]
+      },
+      {
+        "name": "Delta Mu-law algorithm",
+        "description": "standard analog signal compression or companding algorithm",
+        "team": [
+          "gkjackson@email.com",
+          "cegreen@email.com",
+          "pwross@email.com",
+          "pjmitchell@email.com"
+        ]
+      },
+      {
+        "name": "Delta Perceptron",
+        "description": "the simplest kind of feedforward neural network: a linear classifier.",
+        "team": [
+          "gkjackson@email.com",
+          "cegreen@email.com",
+          "pwross@email.com",
+          "pjmitchell@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Psi Psi",
+    "manager": "bjlewis@email.com",
+    "programs": [
+      {
+        "name": "Psi Kosaraju's algorithm",
+        "description": "Tarjan's strongly connected components algorithm",
+        "team": [
+          "mnward@email.com",
+          "gfgray@email.com",
+          "pbfisher@email.com",
+          "epfoster@email.com"
+        ]
+      },
+      {
+        "name": "Psi Match Rating Approach",
+        "description": "a phonetic algorithm developed by Western Airlines",
+        "team": [
+          "mnward@email.com",
+          "gfgray@email.com",
+          "pbfisher@email.com",
+          "epfoster@email.com"
+        ]
+      },
+      {
+        "name": "Psi Ramer–Douglas–Peucker algorithm",
+        "description": "Given a 'curve' composed of line segments to find a curve not too dissimilar but that has fewer points",
+        "team": [
+          "mnward@email.com",
+          "gfgray@email.com",
+          "pbfisher@email.com",
+          "epfoster@email.com"
+        ]
+      },
+      {
+        "name": "Psi Sparse matrix",
+        "description": "algorithms",
+        "team": [
+          "mnward@email.com",
+          "gfgray@email.com",
+          "pbfisher@email.com",
+          "epfoster@email.com"
+        ]
+      },
+      {
+        "name": "Psi Unicode Collation Algorithm",
+        "description": "Xor swap algorithm: swaps the values of two variables without using a buffer",
+        "team": [
+          "mnward@email.com",
+          "gfgray@email.com",
+          "pbfisher@email.com",
+          "epfoster@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Iota Lambda",
+    "manager": "fafoster@email.com",
+    "programs": [
+      {
+        "name": "Iota Dinic's algorithm",
+        "description": "is a strongly polynomial algorithm for computing the maximum flow in a flow network.",
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      },
+      {
+        "name": "Iota Best Bin First",
+        "description": "find an approximate solution to the Nearest neighbor search problem in very-high-dimensional spaces",
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      },
+      {
+        "name": "Iota Nicholl–Lee–Nicholl",
+        "description": "Sutherland–Hodgman",
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      },
+      {
+        "name": "Iota Addition-chain exponentiation",
+        "description": "exponentiation by positive integer powers that requires a minimal number of multiplications",
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      },
+      {
+        "name": "Iota Adaptive replacement cache",
+        "description": "better performance than LRU",
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      },
+      {
+        "name": "Iota factorization",
+        "description": null,
+        "team": [
+          "ojwhite@email.com",
+          "irsanchez@email.com",
+          "hmwilliams@email.com",
+          "ngbennett@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Rho Chi",
+    "manager": "ppbarnes@email.com",
+    "programs": [
+      {
+        "name": "Rho Pohlig&ndash;Hellman algorithm",
+        "description": "Euclidean algorithm: computes the greatest common divisor",
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      },
+      {
+        "name": "Rho Lempel–Ziv Jeff Bonwick (LZJB)",
+        "description": null,
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      },
+      {
+        "name": "Rho Coloring algorithm",
+        "description": "Graph coloring algorithm.",
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      },
+      {
+        "name": "Rho Video compression",
+        "description": "Vector quantization: technique often used in lossy data compression",
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      },
+      {
+        "name": "Rho Knuth–Bendix completion algorithm",
+        "description": "for rewriting rule systems",
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      },
+      {
+        "name": "Rho Cross-entropy method",
+        "description": "a general Monte Carlo approach to combinatorial and continuous multi-extremal optimization and importance sampling",
+        "team": [
+          "cdbrooks@email.com",
+          "cwwhite@email.com",
+          "kjjames@email.com",
+          "jhrobinson@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Lambda Alpha",
+    "manager": "jldavis@email.com",
+    "programs": [
+      {
+        "name": "Lambda Marr–Hildreth algorithm",
+        "description": "an early edge detection algorithm",
+        "team": [
+          "gdmorris@email.com",
+          "fnpowell@email.com",
+          "igdavis@email.com",
+          "wjgarcia@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Unicode Collation Algorithm",
+        "description": "Xor swap algorithm: swaps the values of two variables without using a buffer",
+        "team": [
+          "gdmorris@email.com",
+          "fnpowell@email.com",
+          "igdavis@email.com",
+          "wjgarcia@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Spigot algorithm",
+        "description": "A way to compute the value of a mathematical constant without knowing preceding digits",
+        "team": [
+          "gdmorris@email.com",
+          "fnpowell@email.com",
+          "igdavis@email.com",
+          "wjgarcia@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Redundancy check",
+        "description": "s",
+        "team": [
+          "gdmorris@email.com",
+          "fnpowell@email.com",
+          "igdavis@email.com",
+          "wjgarcia@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Dekker's algorithm",
+        "description": "Lamport's Bakery algorithm",
+        "team": [
+          "gdmorris@email.com",
+          "fnpowell@email.com",
+          "igdavis@email.com",
+          "wjgarcia@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Gamma Sigma",
+    "manager": "gmscott@email.com",
+    "programs": [
+      {
+        "name": "Gamma Pratt parser",
+        "description": "Lexical analysis",
+        "team": [
+          "jtfoster@email.com",
+          "foross@email.com",
+          "imgomez@email.com",
+          "jlbarnes@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Coppersmith–Winograd algorithm",
+        "description": "square matrix multiplication",
+        "team": [
+          "jtfoster@email.com",
+          "foross@email.com",
+          "imgomez@email.com",
+          "jlbarnes@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Evolution strategy",
+        "description": "Gene expression programming",
+        "team": [
+          "jtfoster@email.com",
+          "foross@email.com",
+          "imgomez@email.com",
+          "jlbarnes@email.com"
+        ]
+      },
+      {
+        "name": "Gamma Karger's algorithm",
+        "description": "a Monte Carlo method to compute the minimum cut of a connected graph",
+        "team": [
+          "jtfoster@email.com",
+          "foross@email.com",
+          "imgomez@email.com",
+          "jlbarnes@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Mu Alpha",
+    "manager": "drwilson@email.com",
+    "programs": [
+      {
+        "name": "Mu Hopfield net",
+        "description": "a Recurrent neural network in which all connections are symmetric",
+        "team": [
+          "nwflores@email.com",
+          "chwhite@email.com",
+          "bhlong@email.com",
+          "cwpowell@email.com"
+        ]
+      },
+      {
+        "name": "Mu OPTICS",
+        "description": "a density based clustering algorithm with a visual evaluation method",
+        "team": [
+          "nwflores@email.com",
+          "chwhite@email.com",
+          "bhlong@email.com",
+          "cwpowell@email.com"
+        ]
+      },
+      {
+        "name": "Mu Antipodal",
+        "description": "antipodal pairs of points and vertices on a convex polygon or convex hull.",
+        "team": [
+          "nwflores@email.com",
+          "chwhite@email.com",
+          "bhlong@email.com",
+          "cwpowell@email.com"
+        ]
+      },
+      {
+        "name": "Mu Library sort",
+        "description": "Patience sorting",
+        "team": [
+          "nwflores@email.com",
+          "chwhite@email.com",
+          "bhlong@email.com",
+          "cwpowell@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Chi Xi",
+    "manager": "wmturner@email.com",
+    "programs": [
+      {
+        "name": "Chi Ordered subset expectation maximization",
+        "description": "OSEM): used in medical imaging for positron emission tomography, single photon emission computed tomography and X-ray computed tomography.",
+        "team": [
+          "tsbarnes@email.com",
+          "inlopez@email.com",
+          "tdmorgan@email.com",
+          "aiross@email.com"
+        ]
+      },
+      {
+        "name": "Chi LZWL",
+        "description": "syllable-based variant",
+        "team": [
+          "tsbarnes@email.com",
+          "inlopez@email.com",
+          "tdmorgan@email.com",
+          "aiross@email.com"
+        ]
+      },
+      {
+        "name": "Chi Verhoeff algorithm",
+        "description": "Context tree weighting",
+        "team": [
+          "tsbarnes@email.com",
+          "inlopez@email.com",
+          "tdmorgan@email.com",
+          "aiross@email.com"
+        ]
+      },
+      {
+        "name": "Chi Maximum parsimony (phylogenetics)",
+        "description": "an algorithm for finding the simplest phylogenetic tree to explain a given character matrix.",
+        "team": [
+          "tsbarnes@email.com",
+          "inlopez@email.com",
+          "tdmorgan@email.com",
+          "aiross@email.com"
+        ]
+      },
+      {
+        "name": "Chi Prüfer coding",
+        "description": "conversion between a labeled tree and its Prüfer sequence",
+        "team": [
+          "tsbarnes@email.com",
+          "inlopez@email.com",
+          "tdmorgan@email.com",
+          "aiross@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Alpha Gamma",
+    "manager": "lwstewart@email.com",
+    "programs": [
+      {
+        "name": "Alpha Paxos algorithm",
+        "description": "a family of protocols for solving consensus in a network of unreliable processors",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Gaussian elimination",
+        "description": "Gauss–Jordan elimination: solves systems of linear equations",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Differential evolution",
+        "description": "Dynamic Programming: problems exhibiting the properties of overlapping subproblems and optimal substructure",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      },
+      {
+        "name": "Alpha BFGS method",
+        "description": "A nonlinear optimization algorithm",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Sukhotin's algorithm",
+        "description": "a statistical classification algorithm for classifying characters in a text as vowels or consonants",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Addition-chain exponentiation",
+        "description": "exponentiation by positive integer powers that requires a minimal number of multiplications",
+        "team": [
+          "hwmorgan@email.com",
+          "hgjenkins@email.com",
+          "dnflores@email.com",
+          "jwroberts@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Alpha Omega",
+    "manager": "lgscott@email.com",
+    "programs": [
+      {
+        "name": "Alpha Pearson hashing",
+        "description": "computes 8 bit value only, optimized for 8 bit computers",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Connected-component labeling",
+        "description": "find and label disjoint regions",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Metropolis light transport",
+        "description": "Path tracing",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Rabin–Karp string search algorithm",
+        "description": "searches multiple patterns efficiently",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      },
+      {
+        "name": "Alpha MISER algorithm",
+        "description": "Monte Carlo simulation, numerical integration",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Pratt parser",
+        "description": "Lexical analysis",
+        "team": [
+          "wlross@email.com",
+          "shperry@email.com",
+          "orcampbell@email.com",
+          "gjscott@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Upsilon Delta",
+    "manager": "epjackson@email.com",
+    "programs": [
+      {
+        "name": "Upsilon Fuzzy c-means",
+        "description": "FLAME clustering (Fuzzy clustering by Local Approximation of MEmberships): define clusters in the dense parts of a dataset and perform cluster assignment solely based on the neighborhood relationships among objects",
+        "team": [
+          "tmtorres@email.com",
+          "iosmith@email.com",
+          "dofoster@email.com",
+          "ppnguyen@email.com"
+        ]
+      },
+      {
+        "name": "Upsilon Smoothsort",
+        "description": "Bitonic sorter",
+        "team": [
+          "tmtorres@email.com",
+          "iosmith@email.com",
+          "dofoster@email.com",
+          "ppnguyen@email.com"
+        ]
+      },
+      {
+        "name": "Upsilon Prüfer coding",
+        "description": "conversion between a labeled tree and its Prüfer sequence",
+        "team": [
+          "tmtorres@email.com",
+          "iosmith@email.com",
+          "dofoster@email.com",
+          "ppnguyen@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Lambda Psi",
+    "manager": "lsflores@email.com",
+    "programs": [
+      {
+        "name": "Lambda SPWGNN",
+        "description": "shortest paths in a graph with non-negative edge weights",
+        "team": [
+          "wocooper@email.com",
+          "cnedwards@email.com",
+          "mibell@email.com",
+          "akrivera@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Trapezoidal rule (differential equations)",
+        "description": "Linear multistep methods",
+        "team": [
+          "wocooper@email.com",
+          "cnedwards@email.com",
+          "mibell@email.com",
+          "akrivera@email.com"
+        ]
+      },
+      {
+        "name": "Lambda Depth-first search",
+        "description": "traverses a graph branch by branch",
+        "team": [
+          "wocooper@email.com",
+          "cnedwards@email.com",
+          "mibell@email.com",
+          "akrivera@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Beta Kappa",
+    "manager": "lwking@email.com",
+    "programs": [
+      {
+        "name": "Beta Nagle's algorithm",
+        "description": "improve the efficiency of TCP/IP networks by coalescing packets",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      },
+      {
+        "name": "Beta Error diffusion",
+        "description": "Floyd–Steinberg dithering",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      },
+      {
+        "name": "Beta Fast folding algorithm",
+        "description": "an efficient algorithm for the detection of approximately periodic events within time series data",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      },
+      {
+        "name": "Beta Chien search",
+        "description": "a recursive algorithm for determining roots of polynomials defined over a finite field",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      },
+      {
+        "name": "Beta Bowyer–Watson algorithm",
+        "description": "create voronoi diagram in any number of dimensions",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      },
+      {
+        "name": "Beta Velvet",
+        "description": "a set of algorithms manipulating de Bruijn graphs for genomic sequence assembly",
+        "team": [
+          "owhernandez@email.com",
+          "dafisher@email.com",
+          "josullivan@email.com",
+          "cftorres@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Eta Tau",
+    "manager": "dpmurphy@email.com",
+    "programs": [
+      {
+        "name": "Eta Discrete logarithm",
+        "description": "Baby-step giant-step",
+        "team": [
+          "fwortiz@email.com",
+          "fpking@email.com",
+          "fnjackson@email.com",
+          "bjperry@email.com"
+        ]
+      },
+      {
+        "name": "Eta Blum Blum Shub",
+        "description": "Lagged Fibonacci generator",
+        "team": [
+          "fwortiz@email.com",
+          "fpking@email.com",
+          "fnjackson@email.com",
+          "bjperry@email.com"
+        ]
+      },
+      {
+        "name": "Eta Lempel–Ziv–Storer–Szymanski",
+        "description": "LZSS)",
+        "team": [
+          "fwortiz@email.com",
+          "fpking@email.com",
+          "fnjackson@email.com",
+          "bjperry@email.com"
+        ]
+      },
+      {
+        "name": "Eta Fractal compression",
+        "description": "method used to compress images using fractals",
+        "team": [
+          "fwortiz@email.com",
+          "fpking@email.com",
+          "fnjackson@email.com",
+          "bjperry@email.com"
+        ]
+      },
+      {
+        "name": "Eta Cone algorithm",
+        "description": "identify surface points",
+        "team": [
+          "fwortiz@email.com",
+          "fpking@email.com",
+          "fnjackson@email.com",
+          "bjperry@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Rho Rho",
+    "manager": "pfnguyen@email.com",
+    "programs": [
+      {
+        "name": "Rho Double Metaphone",
+        "description": "an improvement on Metaphone",
+        "team": [
+          "gcturner@email.com",
+          "ghmorales@email.com",
+          "mpcruz@email.com",
+          "dhperez@email.com"
+        ]
+      },
+      {
+        "name": "Rho Gradient descent",
+        "description": "Harmony search (HS): a metaheuristic algorithm mimicking the improvisation process of musicians",
+        "team": [
+          "gcturner@email.com",
+          "ghmorales@email.com",
+          "mpcruz@email.com",
+          "dhperez@email.com"
+        ]
+      },
+      {
+        "name": "Rho LALR (Look-ahead LR) parser",
+        "description": null,
+        "team": [
+          "gcturner@email.com",
+          "ghmorales@email.com",
+          "mpcruz@email.com",
+          "dhperez@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Alpha Theta",
+    "manager": "hhwilson@email.com",
+    "programs": [
+      {
+        "name": "Alpha Delayed column generation",
+        "description": "Integer linear programming: solve linear programming problems where some or all the unknowns are restricted to integer values",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Slerp",
+        "description": "spherical linear interpolation): quaternion interpolation for the purpose of animating 3D rotation",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Texas Medication Algorithm Project",
+        "description": "Demon algorithm:  a Monte Carlo method for efficiently sampling members of a microcanonical ensemble with a given energy",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Audio",
+        "description": "and Speech compression",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Marching triangles",
+        "description": "reconstruct two-dimensional surface geometry from an unstructured point cloud",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      },
+      {
+        "name": "Alpha Coppersmith–Winograd algorithm",
+        "description": "square matrix multiplication",
+        "team": [
+          "orgonzalez@email.com",
+          "pemartinez@email.com",
+          "tebaker@email.com",
+          "hcbennett@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Sigma Pi",
+    "manager": "mfgarcia@email.com",
+    "programs": [
+      {
+        "name": "Sigma Structured SVM",
+        "description": "allows training of a classifier for general structured output labels.",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Shortest remaining time",
+        "description": "Top-nodes algorithm: resource calendar management",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Lempel–Ziv–Oberhumer",
+        "description": "LZO): speed oriented",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      },
+      {
+        "name": "Sigma GLR parser",
+        "description": "An algorithm for parsing any context-free grammar by Masaru Tomita. It is tuned for deterministic grammars, on which it performs almost linear time and O(n<sup>3</sup>) in worst case.",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Bluestein's FFT algorithm",
+        "description": "Bruun's FFT algorithm",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      },
+      {
+        "name": "Sigma Random walker algorithm",
+        "description": "Region growing",
+        "team": [
+          "pfrodriguez@email.com",
+          "obcarter@email.com",
+          "edsullivan@email.com",
+          "cncampbell@email.com"
+        ]
+      }
+    ]
+  },
+  {
+    "project": "Nu Omicron",
+    "manager": "poreyes@email.com",
+    "programs": [
+      {
+        "name": "Nu Discrete logarithm",
+        "description": "Baby-step giant-step",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      },
+      {
+        "name": "Nu Counting sort",
+        "description": "Pigeonhole sort",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      },
+      {
+        "name": "Nu Symmetric (secret key) encryption",
+        "description": "Advanced Encryption Standard (AES), winner of NIST competition, also known as Rijndael",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      },
+      {
+        "name": "Nu Schreier–Sims algorithm",
+        "description": "computing a base and strong generating set (BSGS) of a permutation group",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      },
+      {
+        "name": "Nu Genetic algorithms",
+        "description": "Fitness proportionate selection - also known as roulette-wheel selection",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      },
+      {
+        "name": "Nu Gift wrapping algorithm",
+        "description": "or Jarvis march",
+        "team": [
+          "acwilliams@email.com",
+          "nfcox@email.com",
+          "wkross@email.com",
+          "tganderson@email.com"
+        ]
+      }
+    ]
+  }
+]
