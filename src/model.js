@@ -1,3 +1,5 @@
+'use strict';
+
   export let nodes = []
   export let rels = []
 
@@ -14,4 +16,8 @@
     nodes[from].out.push(rid)
     nodes[to].in.push(rid)
     return rid
+  }
+
+  export function removeModel() {
+    nodes = []; rels = [];
   }
