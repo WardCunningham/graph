@@ -18,8 +18,9 @@ Deno.test("New Graph Has Size Zero", () => {
 
 Deno.test("Adding One Node Yields Size One", () => {
   let g = new Graph();
-  g.addNode('SampleNodeType', {})
+  g.addNode('SampleNodeType')
   assertEquals(g.size(), 1);
+  assertEquals(g.nodes[0].props, {})
 });
 
 Deno.test("Adding Two Nodes Of One Type Yields Tally Two", () => {
