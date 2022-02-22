@@ -1,12 +1,12 @@
 'use strict';
 
 export class Graph {
-  constructor() {
-    this.nodes = [];
-    this.rels = [];
+  constructor(nodes=[], rels=[]) {
+    this.nodes = nodes;
+    this.rels = rels;
   }
 
-  addNode(type, props){
+  addNode(type, props={}){
     let obj = {type, in:[], out:[], props};
     this.nodes.push(obj);
     return this.nodes.length-1;
@@ -29,4 +29,26 @@ export class Graph {
   size(){
     return this.nodes.length + this.rels.length;
   }
+
+  static load(obj) {
+    // let obj = await fetch(url).then(res => res.json())
+    return new Graph(obj.nodes, obj.rels)
+  }
+
+  static async fetch(url) {
+    let obj = await fetch(url).then(res => res.json())
+    return Graph.load(obj)
+  }
+
+  static async read(path) {
+    let json = await Deno.readTextFile(path);
+    let obj = JSON.parse(json);
+    return Graph.load(obj)
+  }
+
+  static async import(path) {
+    let module = await import(path, {assert: {type: "json"}})
+    return Graph.load(module.default)
+  }
+
 }
