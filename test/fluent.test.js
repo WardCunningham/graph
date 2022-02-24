@@ -48,4 +48,13 @@ Deno.test("Managers of Employees with Options", () => {
     assertEquals(managers.props(),['A. B. Boss']);
 })
 
+Deno.test("All Nodes With B in Name", () => {
+  let bees = r.n().filter((type,props) => props['name'].includes('B'))
+    assertEquals(bees.props('name'), ['A. B. Boss','Series B'])
+})
+
+Deno.test("All Rels With A in Role", () => {
+  let temps = r.n('Employee').i('Manager').filter((type,props) => props['role'].includes('A'))
+    assertEquals(temps.props('role'),['Acting'])
+})
 

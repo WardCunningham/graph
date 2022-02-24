@@ -100,6 +100,16 @@ export class Nodes {
   types() {
     return this.nids.map(nid => this.graph.nodes[nid].type).filter(uniq).sort()
   }
+
+  filter(f) {
+    let nodes = this.graph.nodes
+    let rels = this.graph.rels
+    let nids = this.nids.filter(nid => {
+      let node = nodes[nid]
+      return f(node.type,node.props)
+    })
+    return new Nodes(this.graph,nids)
+  }
 }
 
 export class Rels {
@@ -127,12 +137,21 @@ export class Rels {
 
   props(key='name') {
     // console.log('Rels.p',{key})
-    return this.rids.map(rid => this.graph.rels[rid].props[key]).sort().filter(uniq)
+    return this.rids.map(rid => this.graph.rels[rid].props[key]).filter(uniq).sort()
   }
 
   types() {
     return this.rids.map(rid => this.graph.rels[rid].type).filter(uniq).sort()
   }
 
+  filter(f) {
+    let nodes = this.graph.nodes
+    let rels = this.graph.rels
+    let rids = this.rids.filter(rid => {
+      let rel = rels[rid]
+      return f(rel.type,rel.props)
+    })
+    return new Rels(this.graph,rids)
+  }
 
 }
