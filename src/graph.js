@@ -103,7 +103,6 @@ export class Nodes {
 
   filter(f) {
     let nodes = this.graph.nodes
-    let rels = this.graph.rels
     let nids = this.nids.filter(nid => {
       let node = nodes[nid]
       return f(node.type,node.props)
@@ -145,7 +144,6 @@ export class Rels {
   }
 
   filter(f) {
-    let nodes = this.graph.nodes
     let rels = this.graph.rels
     let rids = this.rids.filter(rid => {
       let rel = rels[rid]
