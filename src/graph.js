@@ -57,15 +57,14 @@ export class Graph {
     let nids = Object.keys(this.nodes).map(key => +key)
     if (type) nids = nids.filter(nid => this.nodes[nid].type == type)
     for (let key in props) nids = nids.filter(nid => this.nodes[nid].props[key] == props[key])
-    return new Nodes(this, type, nids)
+    return new Nodes(this, nids)
   }
 }
 
 export class Nodes {
-  constructor (graph, type, nids) {
+  constructor (graph, nids) {
     // console.log('Nodes',{graph:graph.size(),type,nids})
     this.graph = graph
-    this.type = type
     this.nids = nids
   }
 
@@ -82,7 +81,7 @@ export class Nodes {
     let rids = this.nids.map(nid => this.graph.nodes[nid].in).flat().filter(uniq)
     if (type) rids = rids.filter(rid => this.graph.rels[rid].type == type)
     for (let key in props) rids = rids.filter(rid => this.graph.rels[rid].props[key] == props[key])
-    return new Rels(this.graph, type, rids)
+    return new Rels(this.graph, rids)
   }
 
   o(type=null, props={}) {
@@ -90,7 +89,7 @@ export class Nodes {
     let rids = this.nids.map(nid => this.graph.nodes[nid].out).flat().filter(uniq)
     if (type) rids = rids.filter(rid => this.graph.rels[rid].type == type)
     for (let key in props) rids = rids.filter(rid => this.graph.rels[rid].props[key] == props[key])
-    return new Rels(this.graph, type, rids)
+    return new Rels(this.graph, rids)
   }
 
   props(key='name') {
@@ -104,10 +103,9 @@ export class Nodes {
 }
 
 export class Rels {
-  constructor (graph, type, rids) {
+  constructor (graph, rids) {
     // console.log('Rels',{graph:graph.size(),type,rids})
     this.graph = graph
-    this.type = type
     this.rids = rids
   }
 
@@ -116,7 +114,7 @@ export class Rels {
     let nids = this.rids.map(rid => this.graph.rels[rid].from).filter(uniq)
     if (type) nids = nids.filter(nid => this.graph.nodes[nid].type == type)
     for (let key in props) nids = nids.filter(nid => this.graph.nodes[nid].props[key] == props[key])
-    return new Nodes(this.graph, type, nids)
+    return new Nodes(this.graph, nids)
   }
 
   t(type=null, props={}) {
@@ -124,7 +122,7 @@ export class Rels {
     let nids = this.rids.map(rid => this.graph.rels[rid].to).filter(uniq)
     if (type) nids = nids.filter(nid => this.graph.nodes[nid].type == type)
     for (let key in props) nids = nids.filter(nid => this.graph.nodes[nid].props[key] == props[key])
-    return new Nodes(this.graph, type, nids)
+    return new Nodes(this.graph, nids)
   }
 
   props(key='name') {
