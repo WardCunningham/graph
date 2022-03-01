@@ -1,0 +1,10 @@
+id,node_type_out,node_out,note_type_in,node_in,role_id,Description
+R1,N1,P1,N2,I1,R3,person to ideal
+R2,N1,P1,N2,I2,R3,person to ideal
+R3,N1,P1,N2,I3,R3,person to ideal
+R4,N1,P1,N3,E1,R1,person to entity
+R5,N1,P1,N3,E2,R2,person to entity
+R6,N1,P1,N#,E3,R2,person to entity
+R7,N1,P1,N4,A1,A1,person to ection
+R8,N1,P1,N4,A2,A2,person to ection
+R9,N1,P1,N4,A3,A2,person to ection
