@@ -67,7 +67,8 @@ for (let _action in action){
 // Add all relations
 let relation = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/relation.csv')
 
-// addRel(type, from, to, props={})
+// "id": "P1"
+addRel('Support', nodeId[0], nodeId[1], props={})
 //g.addRel('Hosts', e, p, {recorded:"20220225"});
 
 //console.log("TODO add relations.")
