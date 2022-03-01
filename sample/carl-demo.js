@@ -65,10 +65,20 @@ for (let _action in action){
 
 
 // Add all relations
+// TODO use more general way by reading table
 let relation = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/relation.csv')
 
-// "id": "P1"
-addRel('Support', nodeId[0], nodeId[1], props={})
+
+let havePerson = g.n('Person',{id:"P1"}).nids
+let haveIdeal = g.n('Ideal',{id:"I1"}).nids
+let haveEntity = g.n('Entity',{id:"E1"}).nids
+let haveAction = g.n('Action',{id:"A1"}).nids
+
+//console.error(havePerson[0], haveIdeal[0]);
+
+g.addRel('Support', havePerson[0], haveIdeal[0], {})
+g.addRel('Board', havePerson[0], haveEntity[0], {})
+g.addRel('Support', havePerson[0], haveAction[0], {})
 //g.addRel('Hosts', e, p, {recorded:"20220225"});
 
 //console.log("TODO add relations.")
