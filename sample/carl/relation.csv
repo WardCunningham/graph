@@ -1,4 +1,4 @@
-id,node_type_out,node_out,note_type_in,node_in,role_id,Description
+id,node_type_out,node_out,node_type_in,node_in,role_id,Description
 R1,N1,P1,N2,I1,R3,person to ideal
 R2,N1,P1,N2,I2,R3,person to ideal
 R3,N1,P1,N2,I3,R3,person to ideal
