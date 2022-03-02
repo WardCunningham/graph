@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "type": "Person",
+      "in": [],
+      "out": [
+        0,
+        1,
+        2
+      ],
+      "props": {
+        "id": "P1",
+        "name": "Carl Isom-McDaniel",
+        "caption": "Carl M."
+      }
+    },
+    {
+      "type": "Ideal",
+      "in": [
+        0
+      ],
+      "out": [],
+      "props": {
+        "id": "I1",
+        "name": "Clean Water",
+        "caption": "Clean Water"
+      }
+    },
+    {
+      "type": "Ideal",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "I2",
+        "name": "Access To Nature",
+        "caption": "Nature"
+      }
+    },
+    {
+      "type": "Ideal",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "I3",
+        "name": "Access to Accurate Info",
+        "caption": "Info"
+      }
+    },
+    {
+      "type": "Entity",
+      "in": [
+        1
+      ],
+      "out": [],
+      "props": {
+        "id": "E1",
+        "name": "Whatcom County Water District 7",
+        "caption": "WC Water 7",
+        "lat": "48.78752",
+        "lon": "-122.56894",
+        "address": "1615 Bayon Rd",
+        "city": "Bellingham",
+        "state": "WA",
+        "zip_code": "98225",
+        "website": "http://wcwd7.com/",
+        "phone": "(360) 733-5770"
+      }
+    },
+    {
+      "type": "Entity",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "E2",
+        "name": "Columbia Valley Park and Recreation District (CVPRD)",
+        "caption": "CV Park",
+        "lat": "48.917215693832",
+        "lon": "-122.13736581677",
+        "address": "6449 Mt Baker Hwy",
+        "city": "Deming",
+        "state": "WA",
+        "zip_code": "98244",
+        "website": "https://cv-prd.org/"
+      }
+    },
+    {
+      "type": "Entity",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "E3",
+        "name": "Communication Hub",
+        "caption": "Com Hub",
+        "state": "WA",
+        "notes": "Ask Carl & Marc for info"
+      }
+    },
+    {
+      "type": "Action",
+      "in": [
+        2
+      ],
+      "out": [],
+      "props": {
+        "id": "A1",
+        "name": "Innovate On Fed Wiki",
+        "caption": "Fed Wiki"
+      }
+    },
+    {
+      "type": "Action",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "A2",
+        "name": "Water System Prospective Maintenance",
+        "caption": "Water Maint"
+      }
+    },
+    {
+      "type": "Action",
+      "in": [],
+      "out": [],
+      "props": {
+        "id": "A3",
+        "name": "Management of Community Parks",
+        "caption": "Park Mgmt"
+      }
+    }
+  ],
+  "rels": [
+    {
+      "type": "Support",
+      "from": 0,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "Board",
+      "from": 0,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Support",
+      "from": 0,
+      "to": 7,
+      "props": {}
+    }
+  ]
+}
