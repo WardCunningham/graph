@@ -80,11 +80,11 @@ import {Graph} from '../src/graph.js';
     assertEquals(g.tally(), tally)
   })
 
-  Deno.test("Import from Path", async () => {
-    // note: path relative to executable as with other imports
-    let path = '../sample/data/mock-graph.json'
-    let g = await Graph.import(path)
-    assertEquals(g.tally(), tally)
-  })
+  // Deno.test("Import from Path", async () => {
+  //   // note: path relative to executable as with other imports
+  //   let path = '../sample/data/mock-graph.json'
+  //   let g = await Graph.import(path)
+  //   assertEquals(g.tally(), tally)
+  // })
 }
 

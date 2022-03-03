@@ -48,10 +48,10 @@ export class Graph {
     return Graph.load(obj)
   }
 
-  static async import(path) {
-    let module = await import(path, {assert: {type: "json"}})
-    return Graph.load(module.default)
-  }
+  // static async import(path) {
+  //   let module = await import(path, {assert: {type: "json"}})
+  //   return Graph.load(module.default)
+  // }
 
   n(type=null, props={}) {
     let nids = Object.keys(this.nodes).map(key => +key)
