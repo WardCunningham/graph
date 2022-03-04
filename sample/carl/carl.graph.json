@@ -6,7 +6,13 @@
       "out": [
         0,
         1,
-        2
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
       ],
       "props": {
         "id": "P1",
@@ -28,7 +34,9 @@
     },
     {
       "type": "Ideal",
-      "in": [],
+      "in": [
+        1
+      ],
       "out": [],
       "props": {
         "id": "I2",
@@ -38,7 +46,9 @@
     },
     {
       "type": "Ideal",
-      "in": [],
+      "in": [
+        2
+      ],
       "out": [],
       "props": {
         "id": "I3",
@@ -49,7 +59,7 @@
     {
       "type": "Entity",
       "in": [
-        1
+        3
       ],
       "out": [],
       "props": {
@@ -68,7 +78,9 @@
     },
     {
       "type": "Entity",
-      "in": [],
+      "in": [
+        4
+      ],
       "out": [],
       "props": {
         "id": "E2",
@@ -85,7 +97,9 @@
     },
     {
       "type": "Entity",
-      "in": [],
+      "in": [
+        5
+      ],
       "out": [],
       "props": {
         "id": "E3",
@@ -98,7 +112,7 @@
     {
       "type": "Action",
       "in": [
-        2
+        6
       ],
       "out": [],
       "props": {
@@ -109,7 +123,9 @@
     },
     {
       "type": "Action",
-      "in": [],
+      "in": [
+        7
+      ],
       "out": [],
       "props": {
         "id": "A2",
@@ -119,7 +135,9 @@
     },
     {
       "type": "Action",
-      "in": [],
+      "in": [
+        8
+      ],
       "out": [],
       "props": {
         "id": "A3",
@@ -136,15 +154,51 @@
       "props": {}
     },
     {
-      "type": "Board",
+      "type": "Support",
       "from": 0,
-      "to": 4,
+      "to": 2,
       "props": {}
     },
     {
       "type": "Support",
       "from": 0,
+      "to": 3,
+      "props": {}
+    },
+    {
+      "type": "Advisor",
+      "from": 0,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Board",
+      "from": 0,
+      "to": 5,
+      "props": {}
+    },
+    {
+      "type": "Board",
+      "from": 0,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Advisor",
+      "from": 0,
       "to": 7,
+      "props": {}
+    },
+    {
+      "type": "Advisor",
+      "from": 0,
+      "to": 8,
+      "props": {}
+    },
+    {
+      "type": "Advisor",
+      "from": 0,
+      "to": 9,
       "props": {}
     }
   ]
