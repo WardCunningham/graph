@@ -26,50 +26,56 @@ let action = await csv('https://raw.githubusercontent.com/WardCunningham/graph/m
 let node_type = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/node_type.csv')
 
 
+//////////////////////////////////////////////////////////////////
 // Add all nodes (rels later for now)
-// TODO get node type string from node_type table.  
 // TODO consider reading relation table for both nodes and rels
+
+let nodeTypeCaptionMap = new Map();
 let nodeMap = new Map();
 
-function addToNodes(dataTable, nodeTypeStr){
+
+function prepareNodeTypeCaptions(){
+  for (let row in node_type){
+    let nodeIdStr = (node_type[row])["id"];
+    if (nodeIdStr == null){
+      break;
+    }
+
+    nodeTypeCaptionMap.set(nodeIdStr, (node_type[row])["caption"]);
+  }
+}
+
+function addToNodes(dataTable, caption){ //, nodeTypeStr){
   for (let row in dataTable){
     let nodeIdStr = (dataTable[row])["id"];
     if (nodeIdStr == null){
       break;
     }
 
-    nodeMap.set(nodeIdStr, g.addNode(nodeTypeStr, nonnil(dataTable[row])));
+    nodeMap.set(nodeIdStr, g.addNode(caption, nonnil(dataTable[row])));
   }
 }
 
-// TODO change string to value from node_type table and hashMap
-addToNodes(person, 'Person');
-addToNodes(ideal, 'Ideal');
-addToNodes(entity, 'Entity');
-addToNodes(action, 'Action');
+prepareNodeTypeCaptions();
+addToNodes(person, nodeTypeCaptionMap.get('N1'));
+addToNodes(ideal, nodeTypeCaptionMap.get('N2'));
+addToNodes(entity, nodeTypeCaptionMap.get('N3'));
+addToNodes(action, nodeTypeCaptionMap.get('N4'));
 
+//////////////////////////////////////////////////////////////
 // Add all relations
 let relation = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/relation.csv')
+let role = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/role.csv')
 
-// TODO replace this temp way with read role file and put in map
-function roleCaption(roleId){
+let roleTypeCaptionMap = new Map();
 
-  let val = "";
-  switch(roleId) {
-    case 'R1':
-      val = 'Advisor';
-      break;
-    case 'R2':
-      val = 'Board';
-      break;
-    case 'R3':
-      val = 'Support';
-      break;
-    default:
-      val = 'DEFAULTerror'
+for (let row in role){
+  let roleIdStr = (role[row])["id"];
+  if (roleIdStr == null){
+    break;
   }
 
-  return val;
+  roleTypeCaptionMap.set(roleIdStr, (role[row])["caption"]);
 }
 
 for (let _relation in relation){
@@ -81,9 +87,9 @@ for (let _relation in relation){
   let nout = (relation[_relation])["node_out"];
   let nin = (relation[_relation])["node_in"];
   let roleId = (relation[_relation])["role_id"];
-  let caption = roleCaption(roleId);
+  let caption = roleTypeCaptionMap.get(roleId);
 
-  console.error(relId, nout, nin, roleId, caption);
+  //console.error(relId, nout, nin, roleId, caption);
 
   g.addRel(caption, nodeMap.get(nout), nodeMap.get(nin), {});
 }
