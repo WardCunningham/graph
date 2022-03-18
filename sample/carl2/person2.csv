@@ -1,2 +1,2 @@
-id,name,address,Support,Advisor,
-P1,Carl M,downtown,E1,E2,
+id,name,caption,phone,email,address,city,state,zip,Advisor,Board,Support,notes
+P1,Carl Isom-McDaniel,Carl M,,,downtown,,WA,,E1 A3,E2 E3,A1 A2,

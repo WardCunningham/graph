@@ -1,3 +1,4 @@
-id,name,website,Board,Advisor,,
-E1,Water Bueru,www.w.com,P1 P3 P7,P1,,
-E2,Fed Wiki,,,,,
+id,name,caption,address,city,state,zip_code,website,phone,lat,lon,Advisor,Board,Support,notes
+E1,Whatcom County Water District 7,WC Water 7,1615 Bayon Rd,Bellingham,WA,98225,http://wcwd7.com/,(360) 733-5770,48.78752,-122.56894,P1,,I1,
+E2,Columbia Valley Park and Recreation District (CVPRD),CV Park,6449 Mt Baker Hwy,Deming,WA,98244,https://cv-prd.org/,,48.917215693832,-122.13736581677,,P1,I2,
+E3,Communication Hub,Com Hub,,,WA,,,,,,,P1,I3,Ask Carl & Marc for info
