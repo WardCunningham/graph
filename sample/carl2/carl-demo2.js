@@ -15,7 +15,7 @@ import {Graph} from "../../src/graph.js"
 
 const g = new Graph();
 const nodeMap = new Map();  // This map may not be needed if we just use g.nodes
-const inputData = [4];
+const inputData = [];
 
 function nonnil(oldobj){
   const newobj = {};
@@ -38,14 +38,14 @@ inputData[3] = await csv(urlForData + 'action2.csv');
 //}
 
 function addToNodes(dataTable){
+  const typeStr = dataTable.columns[0];
   for (const row in dataTable){
-    const nodeIdStr = (dataTable[row])["id"];
-    if (nodeIdStr == null){
+    const externalId = (dataTable[row])[typeStr];
+    if (externalId == null){
       break;
     }
 
-    const caption = (dataTable[row])["caption"];
-    nodeMap.set(nodeIdStr, g.addNode(caption, nonnil(dataTable[row])));
+    nodeMap.set(externalId, g.addNode(typeStr, nonnil(dataTable[row])));
   }
 }
 
@@ -58,19 +58,16 @@ function addAllNodes(){
 
 function addAllRelations(){
   for (const node of g.nodes){
-    const node_id = node["props"]["id"];
-    const related_nodes_str = node["props"]["Advisor"] + " " 
-                            + node["props"]["Board"] + " " 
-                            + node["props"]["Support"];
-
-    const related_node_ids = related_nodes_str.split(" ");
-    const nout = node_id;
-    const caption = node["props"]["caption"];
-
-    for (const nin of related_node_ids){
-      if (nin != "undefined"){ // TODO prevent need for this check. See nonnil.
-        g.addRel(caption, nodeMap.get(nout), nodeMap.get(nin), {});
+    const type = Object.keys(node.props)[0];
+    const relTypes = Object.keys(node.props).slice(1).filter(word => (word.charAt(0) === word.charAt(0).toUpperCase()));
+    for (const relType of relTypes){
+      const nodeIds = node["props"][relType].split(" ");
+      for (const toNodeId of nodeIds){
+        const from_id = g.nodes.indexOf(node);
+        //g.addRel(relType, nodeMap.get(from_id), nodeMap.get(nodeId), {});
+        g.addRel(relType, from_id, nodeMap.get(toNodeId), {});
       }
+
     }
   }
 }
@@ -85,7 +82,6 @@ function outputGraphForWiki(){
 }
 
 //----------------------------------------------------
-
 //readAllInputData(inputData);  // Done inline instead
 addAllNodes();
 addAllRelations();

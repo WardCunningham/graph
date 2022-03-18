@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "type": "Carl M",
+      "type": "Person",
       "in": [
         6,
         9,
@@ -9,8 +9,8 @@
         15,
         17,
         19,
-        21,
-        24,
+        23,
+        26,
         28
       ],
       "out": [
@@ -22,7 +22,7 @@
         5
       ],
       "props": {
-        "id": "P1",
+        "Person": "P1",
         "name": "Carl Isom-McDaniel",
         "caption": "Carl M",
         "address": "downtown",
@@ -33,10 +33,10 @@
       }
     },
     {
-      "type": "Clean Water",
+      "type": "Ideal",
       "in": [
         16,
-        25
+        24
       ],
       "out": [
         6,
@@ -44,14 +44,14 @@
         8
       ],
       "props": {
-        "id": "I1",
+        "Ideal": "I1",
         "name": "Clean Water",
         "caption": "Clean Water",
         "Support": "P1 E1 A2"
       }
     },
     {
-      "type": "Nature",
+      "type": "Ideal",
       "in": [
         18,
         27
@@ -62,17 +62,17 @@
         11
       ],
       "props": {
-        "id": "I2",
+        "Ideal": "I2",
         "name": "Access To Nature",
         "caption": "Nature",
         "Support": "P1 E2 A3"
       }
     },
     {
-      "type": "Info",
+      "type": "Ideal",
       "in": [
         20,
-        22
+        21
       ],
       "out": [
         12,
@@ -80,25 +80,25 @@
         14
       ],
       "props": {
-        "id": "I3",
+        "Ideal": "I3",
         "name": "Access to Accurate Info",
         "caption": "Info",
         "Support": "P1 E3 A1"
       }
     },
     {
-      "type": "WC Water 7",
+      "type": "Entity",
       "in": [
         0,
         7,
-        26
+        25
       ],
       "out": [
         15,
         16
       ],
       "props": {
-        "id": "E1",
+        "Entity": "E1",
         "name": "Whatcom County Water District 7",
         "caption": "WC Water 7",
         "address": "1615 Bayon Rd",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "type": "CV Park",
+      "type": "Entity",
       "in": [
         2,
         10,
@@ -125,7 +125,7 @@
         18
       ],
       "props": {
-        "id": "E2",
+        "Entity": "E2",
         "name": "Columbia Valley Park and Recreation District (CVPRD)",
         "caption": "CV Park",
         "address": "6449 Mt Baker Hwy",
@@ -140,18 +140,18 @@
       }
     },
     {
-      "type": "Com Hub",
+      "type": "Entity",
       "in": [
         3,
         13,
-        23
+        22
       ],
       "out": [
         19,
         20
       ],
       "props": {
-        "id": "E3",
+        "Entity": "E3",
         "name": "Communication Hub",
         "caption": "Com Hub",
         "state": "WA",
@@ -161,7 +161,7 @@
       }
     },
     {
-      "type": "Fed Wiki",
+      "type": "Action",
       "in": [
         4,
         14
@@ -172,7 +172,7 @@
         23
       ],
       "props": {
-        "id": "A1",
+        "Action": "A1",
         "name": "Innovate On Fed Wiki",
         "caption": "Fed Wiki",
         "Support": "I3 E3",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "type": "Water Maint",
+      "type": "Action",
       "in": [
         5,
         8
@@ -191,7 +191,7 @@
         26
       ],
       "props": {
-        "id": "A2",
+        "Action": "A2",
         "name": "Water System Prospective Maintenance",
         "caption": "Water Maint",
         "Support": "I1 E1",
@@ -199,7 +199,7 @@
       }
     },
     {
-      "type": "Park Mgmt",
+      "type": "Action",
       "in": [
         1,
         11
@@ -210,7 +210,7 @@
         29
       ],
       "props": {
-        "id": "A3",
+        "Action": "A3",
         "name": "Management of Community Parks",
         "caption": "Park Mgmt",
         "Support": "I2 P1 E2"
@@ -219,181 +219,181 @@
   ],
   "rels": [
     {
-      "type": "Carl M",
+      "type": "Advisor",
       "from": 0,
       "to": 4,
       "props": {}
     },
     {
-      "type": "Carl M",
+      "type": "Advisor",
       "from": 0,
       "to": 9,
       "props": {}
     },
     {
-      "type": "Carl M",
+      "type": "Board",
       "from": 0,
       "to": 5,
       "props": {}
     },
     {
-      "type": "Carl M",
+      "type": "Board",
       "from": 0,
       "to": 6,
       "props": {}
     },
     {
-      "type": "Carl M",
+      "type": "Support",
       "from": 0,
       "to": 7,
       "props": {}
     },
     {
-      "type": "Carl M",
+      "type": "Support",
       "from": 0,
       "to": 8,
       "props": {}
     },
     {
-      "type": "Clean Water",
+      "type": "Support",
       "from": 1,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Clean Water",
+      "type": "Support",
       "from": 1,
       "to": 4,
       "props": {}
     },
     {
-      "type": "Clean Water",
+      "type": "Support",
       "from": 1,
       "to": 8,
       "props": {}
     },
     {
-      "type": "Nature",
+      "type": "Support",
       "from": 2,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Nature",
+      "type": "Support",
       "from": 2,
       "to": 5,
       "props": {}
     },
     {
-      "type": "Nature",
+      "type": "Support",
       "from": 2,
       "to": 9,
       "props": {}
     },
     {
-      "type": "Info",
+      "type": "Support",
       "from": 3,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Info",
+      "type": "Support",
       "from": 3,
       "to": 6,
       "props": {}
     },
     {
-      "type": "Info",
+      "type": "Support",
       "from": 3,
       "to": 7,
       "props": {}
     },
     {
-      "type": "WC Water 7",
+      "type": "Advisor",
       "from": 4,
       "to": 0,
       "props": {}
     },
     {
-      "type": "WC Water 7",
+      "type": "Support",
       "from": 4,
       "to": 1,
       "props": {}
     },
     {
-      "type": "CV Park",
+      "type": "Board",
       "from": 5,
       "to": 0,
       "props": {}
     },
     {
-      "type": "CV Park",
+      "type": "Support",
       "from": 5,
       "to": 2,
       "props": {}
     },
     {
-      "type": "Com Hub",
+      "type": "Board",
       "from": 6,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Com Hub",
+      "type": "Support",
       "from": 6,
       "to": 3,
       "props": {}
     },
     {
-      "type": "Fed Wiki",
-      "from": 7,
-      "to": 0,
-      "props": {}
-    },
-    {
-      "type": "Fed Wiki",
+      "type": "Support",
       "from": 7,
       "to": 3,
       "props": {}
     },
     {
-      "type": "Fed Wiki",
+      "type": "Support",
       "from": 7,
       "to": 6,
       "props": {}
     },
     {
-      "type": "Water Maint",
-      "from": 8,
+      "type": "Advisor",
+      "from": 7,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Water Maint",
+      "type": "Support",
       "from": 8,
       "to": 1,
       "props": {}
     },
     {
-      "type": "Water Maint",
+      "type": "Support",
       "from": 8,
       "to": 4,
       "props": {}
     },
     {
-      "type": "Park Mgmt",
+      "type": "Advisor",
+      "from": 8,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Support",
       "from": 9,
       "to": 2,
       "props": {}
     },
     {
-      "type": "Park Mgmt",
+      "type": "Support",
       "from": 9,
       "to": 0,
       "props": {}
     },
     {
-      "type": "Park Mgmt",
+      "type": "Support",
       "from": 9,
       "to": 5,
       "props": {}
