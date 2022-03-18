@@ -1,0 +1,402 @@
+{
+  "nodes": [
+    {
+      "type": "Carl M",
+      "in": [
+        6,
+        9,
+        12,
+        15,
+        17,
+        19,
+        21,
+        24,
+        28
+      ],
+      "out": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "props": {
+        "id": "P1",
+        "name": "Carl Isom-McDaniel",
+        "caption": "Carl M",
+        "address": "downtown",
+        "state": "WA",
+        "Advisor": "E1 A3",
+        "Board": "E2 E3",
+        "Support": "A1 A2"
+      }
+    },
+    {
+      "type": "Clean Water",
+      "in": [
+        16,
+        25
+      ],
+      "out": [
+        6,
+        7,
+        8
+      ],
+      "props": {
+        "id": "I1",
+        "name": "Clean Water",
+        "caption": "Clean Water",
+        "Support": "P1 E1 A2"
+      }
+    },
+    {
+      "type": "Nature",
+      "in": [
+        18,
+        27
+      ],
+      "out": [
+        9,
+        10,
+        11
+      ],
+      "props": {
+        "id": "I2",
+        "name": "Access To Nature",
+        "caption": "Nature",
+        "Support": "P1 E2 A3"
+      }
+    },
+    {
+      "type": "Info",
+      "in": [
+        20,
+        22
+      ],
+      "out": [
+        12,
+        13,
+        14
+      ],
+      "props": {
+        "id": "I3",
+        "name": "Access to Accurate Info",
+        "caption": "Info",
+        "Support": "P1 E3 A1"
+      }
+    },
+    {
+      "type": "WC Water 7",
+      "in": [
+        0,
+        7,
+        26
+      ],
+      "out": [
+        15,
+        16
+      ],
+      "props": {
+        "id": "E1",
+        "name": "Whatcom County Water District 7",
+        "caption": "WC Water 7",
+        "address": "1615 Bayon Rd",
+        "city": "Bellingham",
+        "state": "WA",
+        "zip_code": "98225",
+        "website": "http://wcwd7.com/",
+        "phone": "(360) 733-5770",
+        "lat": "48.78752",
+        "lon": "-122.56894",
+        "Advisor": "P1",
+        "Support": "I1"
+      }
+    },
+    {
+      "type": "CV Park",
+      "in": [
+        2,
+        10,
+        29
+      ],
+      "out": [
+        17,
+        18
+      ],
+      "props": {
+        "id": "E2",
+        "name": "Columbia Valley Park and Recreation District (CVPRD)",
+        "caption": "CV Park",
+        "address": "6449 Mt Baker Hwy",
+        "city": "Deming",
+        "state": "WA",
+        "zip_code": "98244",
+        "website": "https://cv-prd.org/",
+        "lat": "48.917215693832",
+        "lon": "-122.13736581677",
+        "Board": "P1",
+        "Support": "I2"
+      }
+    },
+    {
+      "type": "Com Hub",
+      "in": [
+        3,
+        13,
+        23
+      ],
+      "out": [
+        19,
+        20
+      ],
+      "props": {
+        "id": "E3",
+        "name": "Communication Hub",
+        "caption": "Com Hub",
+        "state": "WA",
+        "Board": "P1",
+        "Support": "I3",
+        "notes": "Ask Carl & Marc for info"
+      }
+    },
+    {
+      "type": "Fed Wiki",
+      "in": [
+        4,
+        14
+      ],
+      "out": [
+        21,
+        22,
+        23
+      ],
+      "props": {
+        "id": "A1",
+        "name": "Innovate On Fed Wiki",
+        "caption": "Fed Wiki",
+        "Support": "I3 E3",
+        "Advisor": "P1"
+      }
+    },
+    {
+      "type": "Water Maint",
+      "in": [
+        5,
+        8
+      ],
+      "out": [
+        24,
+        25,
+        26
+      ],
+      "props": {
+        "id": "A2",
+        "name": "Water System Prospective Maintenance",
+        "caption": "Water Maint",
+        "Support": "I1 E1",
+        "Advisor": "P1"
+      }
+    },
+    {
+      "type": "Park Mgmt",
+      "in": [
+        1,
+        11
+      ],
+      "out": [
+        27,
+        28,
+        29
+      ],
+      "props": {
+        "id": "A3",
+        "name": "Management of Community Parks",
+        "caption": "Park Mgmt",
+        "Support": "I2 P1 E2"
+      }
+    }
+  ],
+  "rels": [
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 9,
+      "props": {}
+    },
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 5,
+      "props": {}
+    },
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 7,
+      "props": {}
+    },
+    {
+      "type": "Carl M",
+      "from": 0,
+      "to": 8,
+      "props": {}
+    },
+    {
+      "type": "Clean Water",
+      "from": 1,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Clean Water",
+      "from": 1,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Clean Water",
+      "from": 1,
+      "to": 8,
+      "props": {}
+    },
+    {
+      "type": "Nature",
+      "from": 2,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Nature",
+      "from": 2,
+      "to": 5,
+      "props": {}
+    },
+    {
+      "type": "Nature",
+      "from": 2,
+      "to": 9,
+      "props": {}
+    },
+    {
+      "type": "Info",
+      "from": 3,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Info",
+      "from": 3,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Info",
+      "from": 3,
+      "to": 7,
+      "props": {}
+    },
+    {
+      "type": "WC Water 7",
+      "from": 4,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "WC Water 7",
+      "from": 4,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "CV Park",
+      "from": 5,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "CV Park",
+      "from": 5,
+      "to": 2,
+      "props": {}
+    },
+    {
+      "type": "Com Hub",
+      "from": 6,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Com Hub",
+      "from": 6,
+      "to": 3,
+      "props": {}
+    },
+    {
+      "type": "Fed Wiki",
+      "from": 7,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Fed Wiki",
+      "from": 7,
+      "to": 3,
+      "props": {}
+    },
+    {
+      "type": "Fed Wiki",
+      "from": 7,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Water Maint",
+      "from": 8,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Water Maint",
+      "from": 8,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "Water Maint",
+      "from": 8,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Park Mgmt",
+      "from": 9,
+      "to": 2,
+      "props": {}
+    },
+    {
+      "type": "Park Mgmt",
+      "from": 9,
+      "to": 0,
+      "props": {}
+    },
+    {
+      "type": "Park Mgmt",
+      "from": 9,
+      "to": 5,
+      "props": {}
+    }
+  ]
+}
