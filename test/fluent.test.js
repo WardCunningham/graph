@@ -53,8 +53,20 @@ Deno.test("All Nodes With B in Name", () => {
     assertEquals(bees.props('name'), ['A. B. Boss','Series B'])
 })
 
+Deno.test("Map over Nodes With B in Name", () => {
+  let bees = r.n().filter((type,props) => props['name'].includes('B'))
+  let names = bees.map(node => node.props['name'])
+    assertEquals(names, ['A. B. Boss','Series B'])
+})
+
 Deno.test("All Rels With A in Role", () => {
   let temps = r.n('Employee').i('Manager').filter((type,props) => props['role'].includes('A'))
     assertEquals(temps.props('role'),['Acting'])
+})
+
+Deno.test("Map over Rels With A in Role", () => {
+  let temps = r.n('Employee').i('Manager').filter((type,props) => props['role'].includes('A'))
+  let roles = temps.map(rel => rel.props['role'])
+    assertEquals(roles,['Acting'])
 })
 
