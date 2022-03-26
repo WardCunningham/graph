@@ -109,6 +109,15 @@ export class Nodes {
     })
     return new Nodes(this.graph,nids)
   }
+
+  map(f) {
+    let nodes = this.graph.nodes
+    let result = this.nids.map(nid => {
+      let node = nodes[nid]
+      return f(node)
+    })
+    return result
+  }
 }
 
 export class Rels {
@@ -152,4 +161,12 @@ export class Rels {
     return new Rels(this.graph,rids)
   }
 
+  map(f) {
+    let rels = this.graph.rels
+    let result = this.rids.map(rid => {
+      let rel = rels[rid]
+      return f(rel)
+    })
+    return result
+  }
 }
