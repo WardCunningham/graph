@@ -48,6 +48,16 @@ Deno.test("Managers of Employees with Options", () => {
     assertEquals(managers.props(),['A. B. Boss']);
 })
 
+Deno.test("Size of Set of Nodes or Rels", () => {
+  assertEquals(r.n().size(), 5)
+  assertEquals(r.n().i().size(), 4)
+})
+
+Deno.test("Tally of Set of Nodes or Rels", () => {
+  assertEquals(r.n().tally(),{nodes: {Employee: 3, Options: 2}})
+  assertEquals(r.n().i().tally(),{rels: {Bonus: 1, Incentive: 1, Manager: 2}})
+})
+
 Deno.test("All Nodes With B in Name", () => {
   let bees = r.n().filter((type,props) => props['name'].includes('B'))
     assertEquals(bees.props('name'), ['A. B. Boss','Series B'])
