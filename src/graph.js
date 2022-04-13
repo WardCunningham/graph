@@ -101,6 +101,15 @@ export class Nodes {
     return this.nids.map(nid => this.graph.nodes[nid].type).filter(uniq).sort()
   }
 
+  tally(){
+    const tally = list => list.reduce((s,e)=>{s[e.type] = s[e.type] ? s[e.type]+1 : 1; return s}, {});
+    return { nodes:tally(this.nids.map(nid => this.graph.nodes[nid]))};
+  }
+
+  size(){
+    return this.nids.length
+  }
+
   filter(f) {
     let nodes = this.graph.nodes
     let nids = this.nids.filter(nid => {
@@ -150,6 +159,15 @@ export class Rels {
 
   types() {
     return this.rids.map(rid => this.graph.rels[rid].type).filter(uniq).sort()
+  }
+
+  tally(){
+    const tally = list => list.reduce((s,e)=>{s[e.type] = s[e.type] ? s[e.type]+1 : 1; return s}, {});
+    return { rels:tally(this.rids.map(nid => this.graph.rels[nid]))};
+  }
+
+  size(){
+    return this.rids.length
   }
 
   filter(f) {
