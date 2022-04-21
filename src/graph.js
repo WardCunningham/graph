@@ -59,6 +59,11 @@ export class Graph {
     for (let key in props) nids = nids.filter(nid => this.nodes[nid].props[key] == props[key])
     return new Nodes(this, nids)
   }
+
+  stringify(...args) {
+    let obj = { nodes: this.nodes, rels: this.rels }
+    return JSON.stringify(obj, ...args)
+  }
 }
 
 export class Nodes {
