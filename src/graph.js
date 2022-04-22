@@ -60,6 +60,12 @@ export class Graph {
     return new Nodes(this, nids)
   }
 
+  /**
+   * Converts a graph to a JavaScript Object Notation (JSON) string using JSON.stringify.
+   @param - replacer A function that transforms the results.
+   @param - space Adds indentation, white space, and line break characters to the return-
+   * @returns {string} JSON string containing serialized graph
+  */
   stringify(...args) {
     let obj = { nodes: this.nodes, rels: this.rels }
     return JSON.stringify(obj, ...args)
