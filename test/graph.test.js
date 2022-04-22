@@ -46,3 +46,20 @@ Deno.test("Adding Three Nodes And One Rels Yields Size Four", () => {
   assertEquals(g.tally().rels['SampleRelType'], 1 );
 });
 
+Deno.test("Serialize graph", () => {
+  let g = new Graph();
+  let marc = g.addNode("Person", { name: "Marc" });
+  let ward = g.addNode("Person", { name: "Ward" });
+  let rel = g.addRel("Friend", marc, ward);
+  assertEquals(
+    g.stringify(),
+    '{"nodes":[{"type":"Person","in":[],"out":[0],"props":{"name":"Marc"}},{"type":"Person","in":[0],"out":[],"props":{"name":"Ward"}}],"rels":[{"type":"Friend","from":0,"to":1,"props":{}}]}',
+  );
+});
+
+Deno.test("Serialize graph with arguments", () => {
+  let g = new Graph();
+  let ward = g.addNode("Person", { name: "Ward" });
+  let stringifiedGraph = g.stringify(null, 2)
+  assertEquals(stringifiedGraph.split("\n").length, 13);
+});
