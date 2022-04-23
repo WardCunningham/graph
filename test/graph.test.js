@@ -57,9 +57,10 @@ Deno.test("Serialize graph", () => {
   );
 });
 
-Deno.test("Serialize graph with arguments", () => {
+Deno.test("Serialize graph with arbitrary JSON.stringify arguments", () => {
   let g = new Graph();
   let ward = g.addNode("Person", { name: "Ward" });
+
   let stringifiedGraph = g.stringify(null, 2)
-  assertEquals(stringifiedGraph.split("\n").length, 13);
+  assertEquals(stringifiedGraph, '{\n  "nodes": [\n    {\n      "type": "Person",\n      "in": [],\n      "out": [],\n      "props": {\n        "name": "Ward"\n      }\n    }\n  ],\n  "rels": []\n}')
 });
