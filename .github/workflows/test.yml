@@ -23,3 +23,5 @@ jobs:
           deno-version: ${{ matrix.deno-version }}
       - name: graph tests
         run: deno test --allow-read --allow-net
+      - name: deploy
+        run: cp src/graph.js docs/graph.js
