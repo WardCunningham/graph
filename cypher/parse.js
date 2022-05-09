@@ -9,8 +9,12 @@ export function parse(text) {
   return x.root()
 }
 
-r.root = () => x.term('match') && x.node()
-r.node = () => x.ch('(') && x.bind() && x.ch(':') && x.type() && x.ch(')')
+r.root = () => x.term('match') && x.node() && any(() => x.arrow() && x.node()) && x.eot()
+r.node = () => x.ch('(') && x.elem() && x.ch(')')
+r.arrow = () => one(() => x.left(), () => x.right())
+r.left = () => x.term('<-[') && x.elem() && x.term(']-')
+r.right = () => x.term('-[') && x.elem() && x.term(']->')
+r.elem = () => x.bind() && x.ch(':') && x.type()
 r.bind = () => x.word()
 r.type = () => x.word()
 
@@ -22,11 +26,32 @@ r.more = n => {left += right.substring(0,n); right = right.substring(n); return 
 
 r.ch = char => right.startsWith(char) && x.more(1) && x.sp()
 r.sp = () => {while(right.match(/^\s/)) x.more(1); return true}
+r.eot = () => !right.length
 
-const show = 'term,node,bind,type'.split(',')
+const show = 'node,left,right,bind,type'.split(',')
 for (const op in r) {
   x[op] = (...args) => {
     if(show.includes(op)) console.error(`${left}%c<${op}>%c${right}`,"color:red","color:black");
     return r[op](...args)}
 }
 
+// rule zero or more times
+function any (rule) {
+  const save = [left,right]
+  if (rule()) {
+    rule()
+  } else {
+    [left,right] = save
+  }
+  return true
+}
+
+// first rule of many
+function one (...rules) {
+  const save = [left,right]
+  for (const rule of rules) {
+    if(rule()) return true
+  }
+  [left,right] = save
+  false
+}

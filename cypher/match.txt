@@ -1,3 +1,4 @@
 match (e:Employee)
 match (e:Employee)-[r:Manager]->(m:Employee)
 match (m:Employee)<-[r:Manager]-(m:Employee)
+match (e:Employee)-[r:Manager]->(m:Employee)-[r2:Manager]->(m2:Employee)
