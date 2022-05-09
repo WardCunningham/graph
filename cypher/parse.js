@@ -1,3 +1,6 @@
+// Recursive descent parser for OpenCypher subset
+// Usage: import {parse} from './parse.js'; let result = parse(text)
+
 let left = '', right = ''  // text parsed and pending
 let r = {}, x = {}         // rules defined and traced
 
