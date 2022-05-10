@@ -6,7 +6,7 @@ We have considerable latatude in performance in that we will rarely parse anythi
 Initial results described here: https://github.com/WardCunningham/graph/pull/15
 
 ## Grammar Construction
-We have written a parser as a series of mutually recursive functions as one might have done in the '70s before excellent parser-generators became wide spread. We reach back because we have only short texts to parse and we want to do so taking on few, or better, no dependencies. Features of the modern environment, especially ES6 in the browser and on the server leads us into features of this language.
+We have written a parser as a series of mutually recursive functions as one might have done in the '70s before excellent parser-generators became wide spread. We reach back because we have only short texts to parse and we want to do so taking on few, or better, no dependencies. Features of the modern environment, especially ES6 in the browser and on the server leads us into features of this implementation.
 
 A parser can return a variety of results depending on what happens as each function completes. So far we are content with a simple boolean, did or did not the input meet the expectations of the parser. The parser itself uses this signal to guide the parse through alternatives that are permitted in the language we parse.
 
@@ -24,18 +24,18 @@ We support grammar developent with traces of the parser working (where x for exe
 
 
 ## Tracing the Runnning Parser
-We have demonstrated we can extract more informaton by wrapping every function with some data collection. So far this is just enough to sow the progress of the parse through sample text. Consider this Cypher query:
+We have demonstrated we can extract more informaton by wrapping every function with some data collection. So far this is just enough to show the progress of the parse through sample text. Consider this Cypher query:
 ```
 match (e:Employee)-[r:Manager]->(m:Employee)
 ```
-This transcript shows the parser unning by showing the names of key functions (red) as they are about to parse the text to their right.
+This transcript shows the parser's path by showing the names of key functions (red) as they attempt to parse the text to their right.
 
 ![parse trace](https://user-images.githubusercontent.com/12127/167546955-c43ebdd7-1484-4832-bb25-7009e25ba435.png)
 
 You can see two places where the parser tries to match a relation, first looking for one pointing left, then backing up to try again pointing right. In the first case the right-pointing relation is found so parsing continues. In the second case neither alternative is found as the parser is bumping up against the end of text which is also an acceptable parse so the parser responds: true.
 
 ## Backtracking Functions
-In some cases we need to step outside the sequential evaluation of parsing functions represented by long strings connected with the && operators. For this we use axiliary functions that take arrow functions as their arguments. This lets us save the parsing state, try a function, and optioinally backup and try another.
+In some cases we need to step outside the sequential evaluation of parsing functions represented by long strings connected with the && operators. For this we use axiliary functions that take arrow functions as their arguments. This lets us save the parsing state, try a function, and optionally backup and try another.
 
 For example the `any` function (often represented as * in other grammars) is useful for parsing lists separated by some connecting symbol. In Cypher this occures as we chain through nodes connected by relations. A more common case in parsing would be a comma separated list of words.
 ```
@@ -55,7 +55,7 @@ const save = [left,right]
 [left,right] = save
 ```
 ## Pretty Printed Grammar
-We estimate that we might be a quarter of the way through defining parsing rules for the Cypher subset we require. As we get further along we will find all of our functional annotations interferring with our ability to see how we are progressing. We pretty-print our source code by erassing most of the annotations we have been adding.
+We estimate that we might be a quarter of the way through defining parsing rules for the Cypher subset we require. As we get further along we will surely find all of our functional annotations interferring with our ability to see how our design is progressing. Thus we pretty-print our source code by erassing most of the annotations we have been adding.
 
 At the time of this writing we have at least one example of everything we expect to need to compleate our parse. The non-terminal portion of the grammar is as follows. Recall the source from [github](https://github.com/WardCunningham/graph/blob/755c7a536a6b11c12038eedd8aa953db52fcb2ef/cypher/parse.js#L11-L20).
 ```
