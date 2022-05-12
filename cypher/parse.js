@@ -3,23 +3,27 @@
 
 let r = {}, x = {}               // rules defined and traced
 let left = '', right = ''        // text parsed and pending
-let branch = [], tree = branch   // abstract syntax tree
+let branch = []                  // abstract syntax tree in progress
+
+export const tree = branch
 
 export function parse(text) {
   left = ''; right = text
-  tree = branch = []
-  const success = x.root()
-  console.dir(tree, {depth:9})
+  branch = []
+  tree.splice(0, tree.length, branch)
+  const success = x.match()
+  console.dir(tree, {depth:15})
   return success
 }
 
 // Non-Terminal Symbols
 
-r.root = () => x.sp() && x.term('match') && x.node() && any(() => x.arrow() && x.node()) && x.eot()
+r.match = () => x.sp() && x.term('match') && x.node() && x.chain() && x.eot()
 r.node = () => x.ch('(') && x.elem() && x.ch(')')
-r.arrow = () => one(() => x.left(), () => x.right())
-r.left = () => x.term('<-') && x.ch('[') && x.elem() && x.ch(']') && x.ch('-')
-r.right = () => x.ch('-') && x.ch('[') && x.elem() && x.ch(']') && x.term('->')
+r.chain = () => any(() => x.rel() && x.node() && x.chain())
+r.rel = () => one(() => x.in(), () => x.out())
+r.in = () => x.term('<-') && x.ch('[') && x.elem() && x.ch(']') && x.ch('-')
+r.out = () => x.ch('-') && x.ch('[') && x.elem() && x.ch(']') && x.term('->')
 r.elem = () => x.bind() && x.ch(':') && x.type()
 r.bind = () => x.word()
 r.type = () => x.word()
@@ -34,10 +38,10 @@ r.eot = () => !right.length
 
 // Parse Instrumentation
 
-const show = 'node,left,right,bind,type'.split(',')
+const show = 'node,in,out,bind,type'.split(',')
 for (const op in r) {
   x[op] = (...args) => {
-    if(true || show.includes(op)) console.error(`${left}%c<${op}>%c${right}`,"color:red","color:black");
+    if(show.includes(op)) console.error(`${left}%c<${op}>%c${right}`,"color:red","color:black");
     const here = branch
     branch = [op]
     const success = r[op](...args)

@@ -1,6 +1,0 @@
-match (e:Employee)
-match (e:Employee)-[r:Manager]->(m:Employee)
-match (m:Employee)<-[r:Manager]-(m:Employee)
-match (m:Employee)<-[r:Manager]-(m:Employee) nak
-match (e:Employee)-[r:Manager]->(m:Employee)-[r2:Manager]->(m2:Employee)
- match ( a : A ) - [ r : R ] -> ( b : B ) 
