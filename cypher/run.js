@@ -8,10 +8,16 @@ console.error(graph.tally())
 import { parse, tree } from './parse.js'
 
 const cypher =
-`match (proj:Project) -[r1:Manager]-> (mngr:Employee)
+// `match (proj:Project) -[r1:Manager]-> (mngr:Employee)
+// match (mngr:Employee) <-[r1:Manager]- (proj:Project)
+// match (proj:Project) -[r1:Manager]-> (mngr:Employee) -[r2:Manager]-> (exec:Employee)
+// match (exec:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
+`match (proj:Project) -[r1:Manager]->(mngr:Employee)
 match (mngr:Employee) <-[r1:Manager]- (proj:Project)
-match (proj:Project) -[r1:Manager]-> (mngr:Employee) -[r2:Manager]-> (exec:Employee)
-match (exec:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
+match (proj:Project) -[r1:Manager]->(mngr:Employee)-[r2:Manager]-> (boss:Employee)
+match (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)
+match (proj:Project) -[r1:Manager]-> (mngr:Employee)  -[r2:Manager]-> (boss:Employee)  -[r3:Manager]-> (exec:Employee)
+match (exec:Employee) <-[r3:Manager]- (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
 
 
 for (const query of cypher.split(/\n+/)) {
@@ -81,8 +87,9 @@ function apply(graph, code) {
       if (code.chain.rel) {
         const rids = node[code.chain.rel.dir]
         rids.forEach(rid => {
+          maybe = {...maybe}
           if (rels[rid].type == code.chain.rel.type) {
-            maybe[code.chain.rel.bind] = rels.indexOf(rels[rid])
+            maybe[code.chain.rel.bind] = rid
             const dir = code.chain.rel.dir == 'in' ? 'from' : 'to'
             chain(nodes[rels[rid][dir]], code.chain, maybe)
           }
