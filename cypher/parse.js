@@ -38,7 +38,7 @@ r.eot = () => !right.length
 
 // Parse Instrumentation
 
-const show = 'node,in,out,bind,type'.split(',')
+const show = 'node,rel,bind,type'.split(',')
 for (const op in r) {
   x[op] = (...args) => {
     if(show.includes(op)) console.error(`${left}%c<${op}>%c${right}`,"color:red","color:black");

@@ -8,18 +8,25 @@ console.error(graph.tally())
 import { parse, tree } from './parse.js'
 
 const cypher =
-`match (proj:Project)-[r1:Manager]->(mngr:Employee)-[r2:Manager]->(exec:Employee)`
+`match (proj:Project) -[r1:Manager]-> (mngr:Employee)
+match (mngr:Employee) <-[r1:Manager]- (proj:Project)
+match (proj:Project) -[r1:Manager]-> (mngr:Employee) -[r2:Manager]-> (exec:Employee)
+match (exec:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
+
 
 for (const query of cypher.split(/\n+/)) {
   console.error()
-  console.error(query)
-  if(parse(query))
-    gen(0,tree[0][0])
-  else
+  console.error(query,"\n")
+  if(parse(query)) {
+    const code = gen(0,tree[0][0],{})
+    console.dir(code, {depth:15})
+    const results = apply(graph,code)
+    console.table(results)
+  } else
     console.error('parse failed')
 }
 
-function gen(level, tree) {
+function gen(level, tree, code) {
   const tab = () => ' |'.repeat(level)
   switch (tree[0]) {
     case 'sp':
@@ -29,16 +36,26 @@ function gen(level, tree) {
     case 'bind':
     case 'type':
       console.error(tab(), tree[0], `"${tree[1][1]}"`)
+      code[tree[0]] = tree[1][1]
       break
-    case 'match':
     case 'node':
     case 'chain':
     case 'rel':
+      console.error(tab(), tree[0])
+      let sub = {}
+      code[tree[0]] = sub
+      for (const branch of tree.slice(1)) gen(level+1,branch,sub)
+      break
     case 'in':
     case 'out':
+      console.error(tab(), tree[0])
+      code['dir'] = tree[0]
+      for (const branch of tree.slice(1)) gen(level+1,branch,code)
+      break
+    case 'match':
     case 'elem':
       console.error(tab(), tree[0])
-      for (const branch of tree.slice(1)) gen(level+1,branch)
+      for (const branch of tree.slice(1)) gen(level+1,branch,code)
       break
     case 'eot':
       console.error(tab(), 'end')
@@ -46,23 +63,8 @@ function gen(level, tree) {
     default:
       console.error(tab(), 'unknown', tree[0])
   }
+  return code
 }
-
-const code = {
-  node:{bind:'proj', type:'Project'},
-  chain:{
-    rel:{bind:'r1', type:'Manager', dir:'out'},
-    node:{bind:'mngr', type:'Employee'},
-    chain:{
-      rel:{bind:'r2', type:'Manager', dir:'out'},
-      node:{bind:'exec', type:'Employee'},
-      chain:{}
-    }
-  }
-}
-
-console.error()
-console.table(apply(graph, code))
 
 function apply(graph, code) {
   const nodes = graph.nodes
@@ -80,8 +82,9 @@ function apply(graph, code) {
         const rids = node[code.chain.rel.dir]
         rids.forEach(rid => {
           if (rels[rid].type == code.chain.rel.type) {
-            // maybe[code.chain.rel.bind] = rels[rid]
-            chain(nodes[rels[rid]['to']], code.chain, maybe)
+            maybe[code.chain.rel.bind] = rels.indexOf(rels[rid])
+            const dir = code.chain.rel.dir == 'in' ? 'from' : 'to'
+            chain(nodes[rels[rid][dir]], code.chain, maybe)
           }
         })
       } else {
