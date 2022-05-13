@@ -8,24 +8,22 @@ console.error(graph.tally())
 import { parse, tree } from './parse.js'
 
 const cypher =
-// `match (proj:Project) -[r1:Manager]-> (mngr:Employee)
+// `match (proj:Project) -[r1:Manager]->(mngr:Employee)
 // match (mngr:Employee) <-[r1:Manager]- (proj:Project)
-// match (proj:Project) -[r1:Manager]-> (mngr:Employee) -[r2:Manager]-> (exec:Employee)
-// match (exec:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
-`match (proj:Project) -[r1:Manager]->(mngr:Employee)
-match (mngr:Employee) <-[r1:Manager]- (proj:Project)
-match (proj:Project) -[r1:Manager]->(mngr:Employee)-[r2:Manager]-> (boss:Employee)
-match (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)
-match (proj:Project) -[r1:Manager]-> (mngr:Employee)  -[r2:Manager]-> (boss:Employee)  -[r3:Manager]-> (exec:Employee)
-match (exec:Employee) <-[r3:Manager]- (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
-
+// match (proj:Project) -[r1:Manager]->(mngr:Employee)-[r2:Manager]-> (boss:Employee)
+// match (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)
+// match (proj:Project) -[r1:Manager]-> (mngr:Employee)  -[r2:Manager]-> (boss:Employee)  -[r3:Manager]-> (exec:Employee)
+// match (exec:Employee) <-[r3:Manager]- (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
+`match (mngr: Employee {name: "B. B. Clark"}) -[r:Manager]-> (stuff)
+match (mngr: Employee {name: "B. B. Clark"}) <-[r:Manager]- (stuff)
+match (mngr: Employee {name: "B. B. Clark"}) -[r:Manager]- (stuff)`
 
 for (const query of cypher.split(/\n+/)) {
   console.error()
   console.error(query,"\n")
   if(parse(query)) {
     const code = gen(0,tree[0][0],{})
-    console.dir(code, {depth:15})
+    // console.dir(code, {depth:15})
     const results = apply(graph,code)
     console.table(results)
   } else
@@ -44,6 +42,10 @@ function gen(level, tree, code) {
       console.error(tab(), tree[0], `"${tree[1][1]}"`)
       code[tree[0]] = tree[1][1]
       break
+    case 'prop':
+      console.error(tab(), tree[0], `"${tree[2][1]}"`, tree[4][1][2])
+      code[tree[0]] = [tree[2][1], tree[4][1][2]]
+      break
     case 'node':
     case 'chain':
     case 'rel':
@@ -54,6 +56,7 @@ function gen(level, tree, code) {
       break
     case 'in':
     case 'out':
+    case 'both':
       console.error(tab(), tree[0])
       code['dir'] = tree[0]
       for (const branch of tree.slice(1)) gen(level+1,branch,code)
@@ -82,21 +85,28 @@ function apply(graph, code) {
   return results
 
   function chain(node, code, maybe) {
-    if (node.type == code.node.type) {
+    if ((!code.node.type || node.type == code.node.type) &&
+        (!code.node.prop || node.props[code.node.prop[0]] == code.node.prop[1])) {
       maybe[code.node.bind] = node.props.name
       if (code.chain.rel) {
-        const rids = node[code.chain.rel.dir]
-        rids.forEach(rid => {
-          maybe = {...maybe}
-          if (rels[rid].type == code.chain.rel.type) {
-            maybe[code.chain.rel.bind] = rid
-            const dir = code.chain.rel.dir == 'in' ? 'from' : 'to'
-            chain(nodes[rels[rid][dir]], code.chain, maybe)
-          }
-        })
+        // const rids = node[code.chain.rel.dir]
+        if (['in','both'].includes(code.chain.rel.dir))
+          links(node.in, 'from')
+        if (['out','both'].includes(code.chain.rel.dir))
+          links(node.out, 'to')
       } else {
         results.push(maybe)
       }
+    }
+
+    function links(rids, dir) {
+      rids.forEach(rid => {
+        if (rels[rid].type == code.chain.rel.type) {
+          maybe = {...maybe}
+          maybe[code.chain.rel.bind] = rid
+          chain(nodes[rels[rid][dir]], code.chain, maybe)
+        }
+      })
     }
   }
 }
