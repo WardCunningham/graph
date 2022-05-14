@@ -16,7 +16,8 @@ const cypher =
 // match (exec:Employee) <-[r3:Manager]- (boss:Employee) <-[r2:Manager]- (mngr:Employee) <-[r1:Manager]- (proj:Project)`
 `match (mngr: Employee {name: "B. B. Clark"}) -[r:Manager]-> (stuff)
 match (mngr: Employee {name: "B. B. Clark"}) <-[r:Manager]- (stuff)
-match (mngr: Employee {name: "B. B. Clark"}) -[r:Manager]- (stuff)`
+match (mngr: Employee {name: "B. B. Clark"}) -[r:Manager]- (stuff)
+match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:Traffic{environment:"production"}]-> (stat)`
 
 for (const query of cypher.split(/\n+/)) {
   console.error()
@@ -87,7 +88,8 @@ function apply(graph, code) {
   function chain(node, code, maybe) {
     if ((!code.node.type || node.type == code.node.type) &&
         (!code.node.prop || node.props[code.node.prop[0]] == code.node.prop[1])) {
-      maybe[code.node.bind] = node.props.name
+      if (code.node.bind)
+        maybe[code.node.bind] = node.props.name
       if (code.chain.rel) {
         // const rids = node[code.chain.rel.dir]
         if (['in','both'].includes(code.chain.rel.dir))
@@ -101,9 +103,11 @@ function apply(graph, code) {
 
     function links(rids, dir) {
       rids.forEach(rid => {
-        if (rels[rid].type == code.chain.rel.type) {
+        if ((!code.chain.rel.type || rels[rid].type == code.chain.rel.type) &&
+           (!code.chain.rel.prop || rels[rid].props[code.chain.rel.prop[0]] == code.chain.rel.prop[1])) {
           maybe = {...maybe}
-          maybe[code.chain.rel.bind] = rid
+          if (code.chain.rel.bind)
+            maybe[code.chain.rel.bind] = rid
           chain(nodes[rels[rid][dir]], code.chain, maybe)
         }
       })

@@ -19,13 +19,13 @@ export function parse(text) {
 // Non-Terminal Symbols
 
 r.match = () => x.sp() && x.term('match') && x.node() && x.chain() && x.eot()
-r.node = () => x.ch('(') && x.elem() && opt(() => x.prop()) && x.ch(')')
+r.node = () => x.ch('(') && x.elem()  && x.ch(')')
 r.chain = () => any(() => x.rel() && x.node() && x.chain())
 r.rel = () => one(() => x.in(), () => x.out(), () => x.both())
 r.in = () => x.term('<-') && x.ch('[') && x.elem() && x.ch(']') && x.ch('-')
 r.out = () => x.ch('-') && x.ch('[') && x.elem() && x.ch(']') && x.term('->')
 r.both = () => x.ch('-') && x.ch('[') && x.elem() && x.ch(']') && x.ch('-')
-r.elem = () => x.bind() && opt(() => x.ch(':') && x.type())
+r.elem = () => opt(() => x.bind()) && opt(() => x.ch(':') && x.type()) && opt(() => x.prop())
 r.prop = () => x.ch('{') && x.word() && x.ch(':')  && x.expr() && x.ch('}')
 r.expr = () => x.strn()
 r.bind = () => x.word()
