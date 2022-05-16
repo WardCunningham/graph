@@ -7,7 +7,7 @@ export function search (graph, cypher) {
   return apply(graph, code)
 }
 
-function parse(text) {
+export function parse(text, log=()=>{}) {
   const r = {}, x = {}               // rules defined and traced
   let left = '', right = text      // text parsed and pending
   let branch = []                  // abstract syntax tree in progress
@@ -42,7 +42,7 @@ function parse(text) {
   const show = 'match,node,rel,bind,type,prop,expr'.split(',')
   for (const op in r) {
     x[op] = (...args) => {
-      // if(show.includes(op)) console.error(`${left}%c<${op}>%c${right}`,"color:red","color:black");
+      log(`${left}%c${op}%c${right}`,"color:red","color:black");
       const here = branch
       branch = [op]
       const success = r[op](...args)
@@ -104,10 +104,8 @@ function parse(text) {
   return tree
 }
 
-function gen(level, tree, code) {
-  const tab = (...args) => {
-    // console.log(' |'.repeat(level),...args)
-  }
+export function gen(level, tree, code, log=()=>{}) {
+  const tab = () => ' |'.repeat(level)
   switch (tree[0]) {
     case 'sp':
     case 'ch':
@@ -115,38 +113,38 @@ function gen(level, tree, code) {
       break
     case 'bind':
     case 'type':
-      tab(tree[0], `"${tree[1][1]}"`)
+      log(tab(), tree[0], `"${tree[1][1]}"`)
       code[tree[0]] = tree[1][1]
       break
     case 'prop':
-      tab(tree[0], `"${tree[2][1]}"`, tree[4][1][2])
+      log(tab(), tree[0], `"${tree[2][1]}"`, tree[4][1][2])
       code[tree[0]] = [tree[2][1], tree[4][1][2]]
       break
     case 'node':
     case 'rel':
     case 'chain': 
-      tab(tree[0])
+      log(tab(), tree[0])
       {const sub = {}
       code[tree[0]] = sub
-      for (const branch of tree.slice(1)) gen(level+1,branch,sub)}
+      for (const branch of tree.slice(1)) gen(level+1,branch,sub,log)}
       break
     case 'in':
     case 'out':
     case 'both':
-      tab(tree[0])
+      log(tab(), tree[0])
       code['dir'] = tree[0]
-      for (const branch of tree.slice(1)) gen(level+1,branch,code)
+      for (const branch of tree.slice(1)) gen(level+1,branch,code,log)
       break
     case 'match':
     case 'elem':
-      tab(tree[0])
-      for (const branch of tree.slice(1)) gen(level+1,branch,code)
+      log(tab(), tree[0])
+      for (const branch of tree.slice(1)) gen(level+1,branch,code,log)
       break
     case 'eot':
-      tab('end')
+      log(tab(), 'end')
       break
     default:
-      tab('unknown', tree[0])
+      log(tab(), 'unknown', tree[0])
   }
   return code
 }
