@@ -15,7 +15,7 @@
 <h3>Code</h3>
   <pre id=gen></pre>
 <style>
-  textarea {padding:8px;}
+  textarea {padding:8px; max-width: 100%}
   #trace, #parse {margin-top: 0}
   .fade {
     max-height: 300px;
@@ -35,6 +35,20 @@
 
 <script type=module>
   import { parse, gen } from './cypher.js'
+
+
+  window.trace.addEventListener('click',(event)=>
+    event.target.parentElement.classList.toggle('fade'))
+  window.parse.addEventListener('click',(event)=>
+    event.target.parentElement.classList.toggle('fade'))
+
+  window.input.addEventListener('keydown', (event) => {
+    const keyCode = event.which || event.keyCode;
+    if (keyCode === 13 && !event.shiftKey) {
+        event.preventDefault();
+        reparse(event)
+    }
+  })
 
   const source = await fetch('./cypher.js').then(res => res.text())
   for (let line of source.split(/\n/)) {
@@ -58,28 +72,13 @@
     trace()
   }
 
-  window.input.addEventListener('keydown', (event) => {
-    // Get the code of pressed key
-    const keyCode = event.which || event.keyCode;
-    if (keyCode === 13 && !event.shiftKey) {
-        event.preventDefault();
-        window.doparse(event)
-    }
-});
-
-  window.doparse = async function () {
+  async function reparse () {
     window.trace.innerText = ''
     window.parse.innerText = ''
     window.gen.innerText = ''
     await new Promise(resolve => setTimeout(resolve, 300))
     trace()
   }
-
-  window.trace.addEventListener('click',(event)=>
-    event.target.parentElement.classList.toggle('fade'))
-  window.parse.addEventListener('click',(event)=>
-    event.target.parentElement.classList.toggle('fade'))
-
 
   function trace() {
     const query = window.input.value
