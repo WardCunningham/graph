@@ -1,9 +1,10 @@
 
-export function search (graph, cypher) {
+export function search (graph, cypher, opt={}) {
   const tree = parse(cypher)
   // console.dir(tree, {depth:15})
   const code = gen(0,tree[0][0],{})
   // console.log(code)
+  check(graph.tally(),code,opt.errors)
   return apply(graph, code)
 }
 
@@ -149,7 +150,24 @@ export function gen(level, tree, code, log=()=>{}) {
   return code
 }
 
-function apply(graph, code) {
+export function check(tally, code, errors) {
+  if(code?.node?.type && errors) {
+    if(!tally.nodes[code.node.type]) {
+      errors.push(`No node of type "${code.node.type}" in the graph.`)
+    }
+  }
+  if(code?.rel?.type && errors) {
+    if(!tally.rels[code.rel.type]) {
+      errors.push(`No relation of type "${code.rel.type}" in the graph.`)
+    }
+  }
+  if(Object.keys(code.chain).length) {
+    check(tally,code.chain, errors)
+  }
+
+}
+
+export function apply(graph, code) {
   const nodes = graph.nodes
   const rels = graph.rels
   const results = []
