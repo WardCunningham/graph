@@ -1,5 +1,7 @@
 'use strict';
 
+import * as cypher from './cypher.js'
+
 const uniq = (value, index, self) => self.indexOf(value) === index
 
 export class Graph {
@@ -70,7 +72,25 @@ export class Graph {
     const obj = { nodes: this.nodes, rels: this.rels }
     return JSON.stringify(obj, ...args)
   }
+
+
+  search (query, opt={}) {
+    const tree = cypher.parse(query)
+    // console.dir(tree, {depth:15})
+    const code = cypher.gen(0,tree[0][0],{})
+    // console.log(code)
+    cypher.check(this.tally(),code,opt.errors)
+    return cypher.apply(this, code)
+  }
+
 }
+
+
+
+
+
+
+// Fluent Interface (deprecated?)
 
 export class Nodes {
   constructor (graph, nids) {
