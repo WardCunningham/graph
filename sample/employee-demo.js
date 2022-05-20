@@ -14,16 +14,16 @@ console.log({nodes,rels})
 
 // B U I L D
 
-let text = await Deno.readTextFile("./data/organization-chart.json")
-let peeps = {}
-let org = JSON.parse(text)
-for (let peep of org) {
+const text = await Deno.readTextFile("./data/organization-chart.json")
+const peeps = {}
+const org = JSON.parse(text)
+for (const peep of org) {
   peeps[peep.email] = addnode('Employee',peep)
 }
-for (let peep of org) {
-  let peepid = peeps[peep.email]
+for (const peep of org) {
+  const peepid = peeps[peep.email]
   if(peep.manager) {
-    let bossid = peeps[peep.manager]
+    const bossid = peeps[peep.manager]
     addrel('Manager',peepid,bossid)
   }
 }
@@ -31,12 +31,12 @@ for (let peep of org) {
 
 // Q U E R Y
 
-let table = []
-let folks = nodes.filter(node => node.props.name.includes('Flores'))
-for (let employee of folks) {
-  let out = employee.out[0] 
-  let to = rels[out].to
-  let boss = nodes[to]
+const table = []
+const folks = nodes.filter(node => node.props.name.includes('Flores'))
+for (const employee of folks) {
+  const out = employee.out[0] 
+  const to = rels[out].to
+  const boss = nodes[to]
   table.push({
     employee:employee.props.name,
     boss:boss.props.name

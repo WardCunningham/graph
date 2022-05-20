@@ -22,8 +22,8 @@ Deno.test("Match a Simple Node", () => {
 
 Deno.test("Match Two Node", () => {
   const graph = new Graph()
-  const w = graph.addNode('Dev',{name:"Ward"})
-  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addNode('Dev',{name:"Ward"})
+  graph.addNode('Dev',{name:"Kelley"})
   const query = 'match (coder:Dev)'
   const result = graph.search(query)
   assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])

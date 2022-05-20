@@ -31,7 +31,6 @@ export function parse(text, log=()=>{}) {
 
   // Parse Instrumentation
 
-  const show = 'match,node,rel,bind,type,prop,expr'.split(',')
   for (const op in r) {
     x[op] = (...args) => {
       log(`${left}%c${op}%c${right}`,"color:red","color:black");
