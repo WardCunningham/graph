@@ -1,0 +1,106 @@
+<h3>Grammar</h3>
+  <pre id=pretty></pre>
+<h3>Query</h3>
+  <textarea id=input rows=5 cols=80 placeholder="cypher query"></textarea><br>
+<h3>Trace</h3>
+  <div class=fade>
+    <pre id=trace></pre>
+    <span class=more></span>
+  </div>
+<h3>Parse</h3>
+  <div class=fade>
+    <pre id=parse></pre>
+    <span class=more></span>
+  </div>
+<h3>Code</h3>
+  <pre id=gen></pre>
+<style>
+  textarea {padding:8px; max-width: 100%}
+  #trace, #parse {margin-top: 0}
+  .fade {
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  .fade .more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 30px 0; 
+    background-image: linear-gradient(to bottom, transparent, white);
+  }
+</style>
+
+<script type=module>
+  import { parse, gen } from './cypher.js'
+
+
+  window.trace.addEventListener('click',(event)=>
+    event.target.parentElement.classList.toggle('fade'))
+  window.parse.addEventListener('click',(event)=>
+    event.target.parentElement.classList.toggle('fade'))
+
+  window.input.addEventListener('keydown', (event) => {
+    const keyCode = event.which || event.keyCode;
+    if (keyCode === 13 && !event.shiftKey) {
+        event.preventDefault();
+        reparse(event)
+    }
+  })
+
+  const source = await fetch('./cypher.js').then(res => res.text())
+  for (let line of source.split(/\n/)) {
+    if(line.match(/^\s+r\.\w+ = \(\) =>/)) {
+      line = line.replace(/\(\) => /g,'')
+      line = line.replace(/[rx]\./g,'')
+      line = line.replace(/&& /g,'')
+      line = line.replace(/\(\)/g,'')
+      line = line.replace(/(ch|term)\(('.*?')\)/g,"$2")
+      window.pretty.innerHTML += line.replace(/\b(any|one|opt)\b/g,"<font color=red>$1</font>") + "<br>"   
+    }
+  }
+
+  const search = location.search.slice(1)
+  if (search) {
+    try {
+      window.input.value = atob(search)
+    } catch (e) {
+     window.input.value = decodeURIComponent(search)
+    }
+    trace()
+  }
+
+  async function reparse () {
+    window.trace.innerText = ''
+    window.parse.innerText = ''
+    window.gen.innerText = ''
+    await new Promise(resolve => setTimeout(resolve, 300))
+    trace()
+  }
+
+  function trace() {
+    const query = window.input.value
+    const tree = parse(query,log)
+
+    function log (text) {
+      const html = text.replace(/\%c/,"<font color=red>&lt;").replace(/\%c/,"&gt;</font>") + "<br>"
+      window.trace.innerHTML += html
+    }
+
+    window.parse.innerHTML = JSON.stringify(tree[0][0])
+      .replace(/,\["(sp|ch)",/g,"[$1")
+      .replace(/\[sp""\]/g,"")
+      .replace(/,\[/g,",\n[")
+      .replace(/"(node|rel)"/g,"\"<font color=red>$1</font>\"")
+
+    const code = 
+    gen(0, tree[0][0], {}, print)
+
+    function print (...args) {
+      window.gen.innerHTML += args.join(' ').replace(/\b(node|rel)\b/,"<font color=red>$1</font>") + "\n"
+    }
+  }
+
+</script>
