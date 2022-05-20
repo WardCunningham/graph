@@ -2,7 +2,6 @@
 // deno run --allow-read run.js
 
 import { Graph } from '../src/graph.js'
-import { search } from './cypher.js'
 
 const graph = await Graph.read('../sample/data/mock-graph.json')
 console.error(graph.tally())
@@ -15,7 +14,7 @@ match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:
 
 for (const query of queries.split(/\n+/)) {
   console.error(query)
-  console.table(format(search(graph,query)))
+  console.table(format(graph.search(query)))
 }
 
 function format(results) {
