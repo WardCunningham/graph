@@ -1,13 +1,4 @@
 
-export function search (graph, cypher, opt={}) {
-  const tree = parse(cypher)
-  // console.dir(tree, {depth:15})
-  const code = gen(0,tree[0][0],{})
-  // console.log(code)
-  check(graph.tally(),code,opt.errors)
-  return apply(graph, code)
-}
-
 export function parse(text, log=()=>{}) {
   const r = {}, x = {}               // rules defined and traced
   let left = '', right = text      // text parsed and pending
