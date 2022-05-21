@@ -59,23 +59,23 @@ Deno.test("Tally of Set of Nodes or Rels", () => {
 })
 
 Deno.test("All Nodes With B in Name", () => {
-  const bees = g.n().filter((_type,props) => props['name'].includes('B'))
+  const bees = g.n().filter((_,props) => props['name'].includes('B'))
     assertEquals(bees.props('name'), ['A. B. Boss','Series B'])
 })
 
 Deno.test("Map over Nodes With B in Name", () => {
-  const bees = g.n().filter((_type,props) => props['name'].includes('B'))
+  const bees = g.n().filter((_,props) => props['name'].includes('B'))
   const names = bees.map(node => node.props['name'])
     assertEquals(names, ['A. B. Boss','Series B'])
 })
 
 Deno.test("All Rels With A in Role", () => {
-  const temps = g.n('Employee').i('Manager').filter((_type,props) => props['role'].includes('A'))
+  const temps = g.n('Employee').i('Manager').filter((_,props) => props['role'].includes('A'))
     assertEquals(temps.props('role'),['Acting'])
 })
 
 Deno.test("Map over Rels With A in Role", () => {
-  const temps = g.n('Employee').i('Manager').filter((_type,props) => props['role'].includes('A'))
+  const temps = g.n('Employee').i('Manager').filter((_,props) => props['role'].includes('A'))
   const roles = temps.map(rel => rel.props['role'])
     assertEquals(roles,['Acting'])
 })
