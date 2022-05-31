@@ -15,7 +15,12 @@ match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:
 
 for (const query of queries.split(/\n+/)) {
   console.error(query)
-  console.table(format(search(graph,query)))
+  console.table(format(graph.search(query,{log})))
+}
+
+function log(text) {
+  const trace = text.replace(/\%c/,"ZZZ<").replace(/\%c/,">ZZZ").replace(/ZZZ/g,"%c")
+  console.log(trace,"color:red","color:black")
 }
 
 function format(results) {
