@@ -4,10 +4,10 @@ import {Graph} from '../src/graph.js';
 {
   // test that assertEquals looks deep into our objects
 
-  let a = new Graph()
+  const a = new Graph()
   a.addNode('Alpha',{count:3})
 
-  let b = new Graph()
+  const b = new Graph()
   b.addNode('Alpha',{count:4})
 
   Deno.test("Same Size", () => {
@@ -44,8 +44,8 @@ import {Graph} from '../src/graph.js';
   // http://ward.dojo.fed.wiki/transform-to-nodes-and-rels.html
   // https://deno.com/blog/v1.17#import-assertions-and-json-modules
 
-  let url = 'http://ward.dojo.fed.wiki/assets/pages/mock-graph-data/graphs/graph.json'
-  let tally =
+  const url = 'http://ward.dojo.fed.wiki/assets/pages/mock-graph-data/graphs/graph.json'
+  const tally =
     {
       nodes: {
         Employee: 136,
@@ -63,20 +63,20 @@ import {Graph} from '../src/graph.js';
     }
 
   Deno.test("Load from Object", async () => {
-    let obj = await fetch(url).then(res => res.json())
-    let g = Graph.load(obj)
+    const obj = await fetch(url).then(res => res.json())
+    const g = Graph.load(obj)
     assertEquals(g.tally(), tally)
   })
 
   Deno.test("Fetch from URL", async () => {
-    let g = await Graph.fetch(url)
+    const g = await Graph.fetch(url)
     assertEquals(g.tally(), tally)
   })
 
   Deno.test("Read from Path", async () => {
     // note: path relative to current working directory
-    let path = './sample/data/mock-graph.json'
-    let g = await Graph.read(path)
+    const path = './sample/data/mock-graph.json'
+    const g = await Graph.read(path)
     assertEquals(g.tally(), tally)
   })
 

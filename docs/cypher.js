@@ -1,15 +1,13 @@
 
 export function parse(text, log=()=>{}) {
-  const r = {}, x = {}             // rules defined and traced
+  const r = {}, x = {}               // rules defined and traced
   let left = '', right = text      // text parsed and pending
   let branch = []                  // abstract syntax tree in progress
   const tree = [branch]
 
   // Non-Terminal Symbols
 
-  r.query = () => x.sp() && one(()=>x.optnl(),()=>x.match()) && x.eot()
-  r.optnl = () => x.term('optional') && x.term('match') && x.node() && x.chain()
-  r.match = () => x.term('match') && x.node() && x.chain()
+  r.match = () => x.sp() && x.term('match') && x.node() && x.chain() && x.eot()
   r.node = () => x.ch('(') && x.elem()  && x.ch(')')
   r.chain = () => any(() => x.rel() && x.node() && x.chain())
   r.rel = () => one(() => x.in(), () => x.out(), () => x.both())
@@ -93,7 +91,7 @@ export function parse(text, log=()=>{}) {
     false
   }
 
-  x.query()
+  x.match()
   return tree
 }
 
@@ -128,8 +126,6 @@ export function gen(level, tree, code, log=()=>{}) {
       code['dir'] = tree[0]
       for (const branch of tree.slice(1)) gen(level+1,branch,code,log)
       break
-    case 'query':
-    case 'optnl':
     case 'match':
     case 'elem':
       log(tab(), tree[0])

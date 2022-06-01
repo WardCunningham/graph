@@ -58,7 +58,6 @@ function addAllNodes(){
 
 function addAllRelations(){
   for (const node of g.nodes){
-    const type = Object.keys(node.props)[0];
     const relTypes = Object.keys(node.props).slice(1).filter(word => (word.charAt(0) === word.charAt(0).toUpperCase()));
     for (const relType of relTypes){
       const nodeIds = node["props"][relType].split(" ");
