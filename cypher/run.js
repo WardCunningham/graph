@@ -2,7 +2,6 @@
 // deno run --allow-read run.js
 
 import { Graph } from '../src/graph.js'
-import { search } from './cypher.js'
 
 const graph = await Graph.read('../sample/data/mock-graph.json')
 console.error(graph.tally())
@@ -11,16 +10,21 @@ const queries =
 `match (mngr: Employee {name: "B. B. Clark"}) -[:Manager]-> (stuff)
 match (mngr: Employee {name: "B. B. Clark"}) <-[:Manager]- (stuff)
 match (mngr: Employee {name: "B. B. Clark"}) -[:Manager]- (stuff)
-match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:Traffic{environment:"production"}]-> (stat)`
+match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:Traffic{environment:"production"}]-> (stat)
+optional match (mngr: Employee {name: "H. G. Cunningham"})`
 
 for (const query of queries.split(/\n+/)) {
   console.error(query)
   console.table(format(graph.search(query,{log})))
 }
 
-function log(text) {
-  const trace = text.replace(/\%c/,"ZZZ<").replace(/\%c/,">ZZZ").replace(/ZZZ/g,"%c")
-  console.log(trace,"color:red","color:black")
+function log(...args) {
+  if(args[0].match(/%c/)) {
+    const trace = args[0].replace(/\%c/,"ZZZ<").replace(/\%c/,">ZZZ").replace(/ZZZ/g,"%c")
+    console.log(trace,"color:red","color:black")
+  } else {
+    console.log(...args)
+  }
 }
 
 function format(results) {

@@ -76,9 +76,9 @@ export class Graph {
 
   search (query, opt={}) {
     const tree = cypher.parse(query,opt.log)
-    // console.dir(tree, {depth:15})
-    const code = cypher.gen(0,tree[0][0],{})
-    // console.log(code)
+    console.dir(tree, {depth:15})
+    const code = cypher.gen(0,tree[0][0],{},opt.log)
+    console.log(code)
     cypher.check(this.tally(),code,opt.errors)
     return cypher.apply(this, code)
   }
