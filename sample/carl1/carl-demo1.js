@@ -5,8 +5,8 @@ import {csv} from "https://cdn.skypack.dev/d3-fetch@3"
 import {Graph} from "../src/graph.js"
 
 function nonnil(oldobj){
-  let newobj = {};
-  for (let key in oldobj){
+  const newobj = {};
+  for (const key in oldobj){
     if (oldobj[key]){
       newobj[key] = oldobj[key];
     }
@@ -15,28 +15,28 @@ function nonnil(oldobj){
   return newobj;
 }
 
-let g = new Graph()
+const g = new Graph()
 
 // Open all data files for nodes
-let person = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/person.csv');
-let ideal = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/ideal.csv')
+const person = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/person.csv');
+const ideal = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/ideal.csv')
 //console.error(ideal);
-let entity = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/entity.csv')
-let action = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/action.csv')
-let node_type = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/node_type.csv')
+const entity = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/entity.csv')
+const action = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/action.csv')
+const node_type = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/node_type.csv')
 
 
 //////////////////////////////////////////////////////////////////
 // Add all nodes (rels later for now)
 // TODO consider reading relation table for both nodes and rels
 
-let nodeTypeCaptionMap = new Map();
-let nodeMap = new Map();
+const nodeTypeCaptionMap = new Map();
+const nodeMap = new Map();
 
 
 function prepareNodeTypeCaptions(){
-  for (let row in node_type){
-    let nodeIdStr = (node_type[row])["id"];
+  for (const row in node_type){
+    const nodeIdStr = (node_type[row])["id"];
     if (nodeIdStr == null){
       break;
     }
@@ -46,8 +46,8 @@ function prepareNodeTypeCaptions(){
 }
 
 function addToNodes(dataTable, caption){ //, nodeTypeStr){
-  for (let row in dataTable){
-    let nodeIdStr = (dataTable[row])["id"];
+  for (const row in dataTable){
+    const nodeIdStr = (dataTable[row])["id"];
     if (nodeIdStr == null){
       break;
     }
@@ -64,13 +64,13 @@ addToNodes(action, nodeTypeCaptionMap.get('N4'));
 
 //////////////////////////////////////////////////////////////
 // Add all relations
-let relation = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/relation.csv')
-let role = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/role.csv')
+const relation = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/relation.csv')
+const role = await csv('https://raw.githubusercontent.com/WardCunningham/graph/main/sample/carl/role.csv')
 
-let roleTypeCaptionMap = new Map();
+const roleTypeCaptionMap = new Map();
 
-for (let row in role){
-  let roleIdStr = (role[row])["id"];
+for (const row in role){
+  const roleIdStr = (role[row])["id"];
   if (roleIdStr == null){
     break;
   }
@@ -78,16 +78,16 @@ for (let row in role){
   roleTypeCaptionMap.set(roleIdStr, (role[row])["caption"]);
 }
 
-for (let _relation in relation){
+for (const _relation in relation){
   if ((relation[_relation])["id"] == null){
     break;
   }
 
-  let relId = (relation[_relation])["id"];
-  let nout = (relation[_relation])["node_out"];
-  let nin = (relation[_relation])["node_in"];
-  let roleId = (relation[_relation])["role_id"];
-  let caption = roleTypeCaptionMap.get(roleId);
+  //const relId = (relation[_relation])["id"];
+  const nout = (relation[_relation])["node_out"];
+  const nin = (relation[_relation])["node_in"];
+  const roleId = (relation[_relation])["role_id"];
+  const caption = roleTypeCaptionMap.get(roleId);
 
   //console.error(relId, nout, nin, roleId, caption);
 
@@ -116,7 +116,7 @@ g.addRel('Support', havePerson[0], haveAction[0], {})
 
 //////////////////////////////////////////////////////
 
-let json = JSON.stringify({
+const json = JSON.stringify({
   nodes: g.nodes,
   rels: g.rels
 },null,2)

@@ -48,19 +48,9 @@ Deno.test("Match a Simple Node", () => {
 
 Deno.test("Match Two Node", () => {
   const graph = new Graph()
-  const _w = graph.addNode('Dev',{name:"Ward"})
-  const _k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addNode('Dev',{name:"Ward"})
+  graph.addNode('Dev',{name:"Kelley"})
   const query = 'match (coder:Dev)'
-  const result = graph.search(query)
-  assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])
-})
-
-Deno.test("Match Two Related Node", () => {
-  const graph = new Graph()
-  const w = graph.addNode('Dev',{name:"Ward"})
-  const k = graph.addNode('Dev',{name:"Kelley"})
-  graph.addRel('Friends',w,k)
-  const query = 'match (coder:Dev)-[]-(friend)'
   const result = graph.search(query)
   assertEquals(result.length,2)
   assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])
