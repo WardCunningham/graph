@@ -7,7 +7,7 @@ export function parse(text, log=()=>{}) {
 
   // Non-Terminal Symbols
 
-  r.query = () => x.sp() && one(()=>x.optnl(),()=>x.match()) && x.eot()
+  r.query = () => x.sp() && any(()=>one(()=>x.optnl(),()=>x.match())) && x.eot()
   r.optnl = () => x.term('optional') && x.term('match') && x.node() && x.chain()
   r.match = () => x.term('match') && x.node() && x.chain()
   r.node = () => x.ch('(') && x.elem()  && x.ch(')')
@@ -129,8 +129,12 @@ export function gen(level, tree, code, log=()=>{}) {
       code['dir'] = tree[0]
       for (const branch of tree.slice(1)) gen(level+1,branch,code,log)
       break
-    case 'query':
     case 'optnl':
+      log(tab(), tree[0])
+      for (const branch of tree.slice(1)) gen(level+1,branch,code,log)
+      code.node.optional = true
+      break
+    case 'query':
     case 'match':
     case 'elem':
       log(tab(), tree[0])

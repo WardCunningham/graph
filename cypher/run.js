@@ -11,7 +11,10 @@ const queries =
 match (mngr: Employee {name: "B. B. Clark"}) <-[:Manager]- (stuff)
 match (mngr: Employee {name: "B. B. Clark"}) -[:Manager]- (stuff)
 match (mngr: Employee {name: "B. B. Clark"}) -[]- (:Project) -[]- (:Service) -[:Traffic{environment:"production"}]-> (stat)
-optional match (mngr: Employee {name: "H. G. Cunningham"})`
+optional match (mngr: Employee {name: "H. G. Cunningham"})
+match (r:Researcher)-[:Supervises]->(s:Student)
+match (r:Researcher) match (r)-[:Supervises]->(s:Student)
+`
 
 for (const query of queries.split(/\n+/)) {
   console.error(query)
