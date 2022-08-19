@@ -81,3 +81,48 @@ Deno.test("Distinct Count Number of Related Node", () => {
   const result = agg(rows)
   assertEquals(result, {coders:2, friends:2})
 })
+
+Deno.test("Distinct Count Number of Directly Related Node", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addRel('Friends',w,k)
+
+  const query = 'match (coder:Dev)-[]->(friend)'
+  // return count(distinct coder.name) as coders,  count(distinct friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:new Set(), friends:new Set()}
+    for (const row of rows) {
+      result.coders.add(row.coder.props.name)
+      result.friends.add(row.friend.props.name)
+    }
+    return {coders:result.coders.size, friends:result.friends.size}
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:1, friends:1})
+})
+
+Deno.test("Collect Distinct Node Names for From and To of a Relation", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  const m = graph.addNode('Doc',{name:"Marc"})
+  graph.addRel('Friends',w,m)
+  graph.addRel('Friends',w,k)
+
+  const query = 'match (coder:Dev)-[]->(friend)'
+  // return collect(distinct coder.name) as coders,  collect(distinct friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:new Set(), friends:new Set()}
+    for (const row of rows) {
+      result.coders.add(row.coder.props.name)
+      result.friends.add(row.friend.props.name)
+    }
+    // https://deno.land/manual/testing/assertions
+    return {coders:[...result.coders].sort(), friends:[...result.friends].sort()}
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:['Ward'], friends:['Kelley','Marc']})
+})
