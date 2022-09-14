@@ -29,7 +29,7 @@ Deno.test("Match Two Node", () => {
   assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])
 })
 
-Deno.test("Match Two Related Node", () => {
+Deno.test("Match Two Related Node, With Present but Empty Relation", () => {
   const graph = new Graph()
   const w = graph.addNode('Dev',{name:"Ward"})
   const k = graph.addNode('Dev',{name:"Kelley"})
@@ -39,4 +39,102 @@ Deno.test("Match Two Related Node", () => {
   assertEquals(result.length,2)
   assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])
   assertEquals(result.map(row => row.friend.props.name),["Kelley","Ward"])
+})
+
+Deno.test("Match Two Related Node", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addRel('Friends',w,k)
+  const query = 'match (coder:Dev)--(friend)'
+  const result = graph.search(query)
+  assertEquals(result.length,2)
+  assertEquals(result.map(row => row.coder.props.name),["Ward","Kelley"])
+  assertEquals(result.map(row => row.friend.props.name),["Kelley","Ward"])
+})
+
+Deno.test("Simple Count Number of Related Node", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addRel('Friends',w,k)
+  const query = 'match (coder:Dev)--(friend)'
+  // return count(coder.name) as coders,  count(friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:0, friends:0}
+    for (const row of rows) {
+      if(row.coder) result.coders += 1
+      if(row.friend) result.friends += 1
+    }
+    return result
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:2, friends:2})
+})
+
+Deno.test("Distinct Count Number of Related Node", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addRel('Friends',w,k)
+
+  const query = 'match (coder:Dev)--(friend)'
+  // return count(distinct coder.name) as coders,  count(distinct friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:new Set(), friends:new Set()}
+    for (const row of rows) {
+      result.coders.add(row.coder.props.name)
+      result.friends.add(row.friend.props.name)
+    }
+    return {coders:result.coders.size, friends:result.friends.size}
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:2, friends:2})
+})
+
+Deno.test("Distinct Count Number of Directly Related Node", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  graph.addRel('Friends',w,k)
+
+  const query = 'match (coder:Dev)-->(friend)'
+  // return count(distinct coder.name) as coders,  count(distinct friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:new Set(), friends:new Set()}
+    for (const row of rows) {
+      result.coders.add(row.coder.props.name)
+      result.friends.add(row.friend.props.name)
+    }
+    return {coders:result.coders.size, friends:result.friends.size}
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:1, friends:1})
+})
+
+Deno.test("Collect Distinct Node Names for From and To of a Relation", () => {
+  const graph = new Graph()
+  const w = graph.addNode('Dev',{name:"Ward"})
+  const k = graph.addNode('Dev',{name:"Kelley"})
+  const m = graph.addNode('Doc',{name:"Marc"})
+  graph.addRel('Friends',w,m)
+  graph.addRel('Friends',w,k)
+
+  const query = 'match (coder:Dev)-->(friend)'
+  // return collect(distinct coder.name) as coders,  collect(distinct friend.name) as friends
+  const rows = graph.search(query)
+  const agg = rows => {
+    const result = {coders:new Set(), friends:new Set()}
+    for (const row of rows) {
+      result.coders.add(row.coder.props.name)
+      result.friends.add(row.friend.props.name)
+    }
+    // https://deno.land/manual/testing/assertions
+    return {coders:[...result.coders].sort(), friends:[...result.friends].sort()}
+  }
+  const result = agg(rows)
+  assertEquals(result, {coders:['Ward'], friends:['Kelley','Marc']})
 })
