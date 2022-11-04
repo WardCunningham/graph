@@ -1,1 +1,26 @@
-Publication site for Graph module
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Lightweight Property Graph as Javascript Module</h1>
+    <h3>Example</h3>
+    <p>Create an empty graph</p>
+    <pre><code>
+      import {Graph} from 'https://wardcunningham.github.io/graph/graph.js'
+      const graph = new Graph()
+    </code></pre>
+    <p>Add nodes to the graph, remember node ids.</p>
+    <pre><code>
+      const repo = graph.addNode('Repo',{url:'https://github.com/WardCunningham/graph/'})
+      const docs = graph.addNode('Docs',{url:'https://wardcunningham.github.io/graph/'})
+    </code></pre>
+    <p>Add relation to the graph, connect remembered nodes by id.</p>
+    <pre><code>
+      graph.addRel('Hosts',repo,docs,{})
+    </code></pre>
+    <p>Convert graph to JSON formatted and indented text.</p>
+    <pre><code>
+      const text = graph.stringify(null,2)
+    </code></pre>
+  </body>
+</html>
