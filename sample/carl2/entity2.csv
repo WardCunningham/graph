@@ -1,4 +1,0 @@
-Entity,name,caption,address,city,state,zip_code,website,phone,lat,lon,Advisor,Board,Support,notes
-E1,Whatcom County Water District 13,WC Water 13,532 Sprague Valley Dr,Maple Falls,WA,98266,http://www.wcwd13.com/,3605991801,48.930306,-122.2128521,P1,,I1,
-E2,Columbia Valley Park and Recreation District (CVPRD),CV Park,6449 Mt Baker Hwy,Deming,WA,98244,https://cv-prd.org/,,48.917215693832,-122.13736581677,,P1,I2,
-E3,Communication Hub,Com Hub,,,WA,,,,,,,P1,I3,Ask Carl & Marc for info
