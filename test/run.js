@@ -1,9 +1,9 @@
 // parse each of many test expressions
-// deno run --allow-read run.js
+// deno run --allow-read test/run.js
 
 import { Graph } from '../src/graph.js'
 
-const graph = await Graph.read('../sample/data/mock-graph.json')
+const graph = await Graph.read('./sample/data/mock-graph.json')
 console.error(graph.tally())
 
 const queries =
