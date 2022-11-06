@@ -4,12 +4,15 @@
   <body>
     <style>
       body {font-family: system-ui; padding: 8px;}
-      pre {white-space: pre-wrap;}
+      pre, p {white-space: pre-wrap;}
+      p {max-width: 600px;}
     </style>
 
     <h1>Property Graphs as Javascript Module</h1>
+    <p>Federated Wiki represents a page as a relatively flat JSON structure where detailed elements are interpreted with optional plugins. Two fairly recent plugins have dramatically increased wiki's representational and computational capabilities: Assets for files and Frames for scripts. In this environment we've sought to extend CSV tables and JSON trees with a file based property graph format as easily read and manipulated in modern Javascript.</p>
 
     <h3>Example: Create a Graph</h3>
+    <p>A Graph contains two arrays: nodes and rels, each with type and properties and each referring to the other with integer ids.</p>
 
     <p>Create an empty graph.</p>
     <pre><code class='prefix'>
@@ -70,6 +73,7 @@
     </svg>
 
     <h3>Example: Query a Graph</h3>
+    <p>We parse and execute a small portion of the Cypher query language. This finds and binds temporary variables to individual nodes and rels then returned in an array of matches. The parse <a href=doctor.html>doctor</a> provides guidance writing queries within our slowly expanding subset.</p>
 
     <p>Match any node <i>n</i>. <button>try it</button></p>
     <pre><code>
