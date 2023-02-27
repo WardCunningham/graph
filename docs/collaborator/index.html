@@ -1,1 +1,74 @@
-<p>watch this space</p>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+  <script src="https://unpkg.com/@hpcc-js/wasm@1.20.1/dist/index.min.js"></script>
+  <script> var hpccWasm = window["@hpcc-js/wasm"]; </script>
+  <script src="https://cdn.jsdelivr.net/gh/dash14/svg-pan-zoom/dist/svg-pan-zoom.min.js"></script>
+</head>
+<div id="target" ondrop="drop(event)" ondragover="over(event)" ondragenter="over(event)"></div>
+
+<script type=module>
+  import {Graph} from 'https://wardcunningham.github.io/graph/graph.js'
+  import {composite} from './composite.js'
+  import {dotify} from './dotify.js'
+  import {hoverbold} from './hoverbold.js'
+
+  const beam = await fetch('./SituatedInstitutions.jsonl')
+    .then(req => req.text())
+    .then(text => text.trim()
+      .split(/\n/)
+      .map(line => JSON.parse(line))
+      .map(({name,graph}) => ({name,graph:new Graph(graph.nodes, graph.rels)})))
+  console.log({beam})
+
+  let drawing = false
+  let panSVG = null
+  const panZoom = {}
+  async function display(chosen) {
+    if(!drawing){
+      drawing = true
+      const complex = composite(chosen)
+      try {
+        if (document.querySelector('#target svg')) {
+          panZoom.pan = panSVG.getPan()
+          panZoom.zoom = panSVG.getZoom()
+          panZoom.size = { 
+              width: document.querySelector('#target svg').width.baseVal.valueInSpecifiedUnits, 
+              height: document.querySelector('#target svg').height.baseVal.valueInSpecifiedUnits
+            }
+        }
+        const dot = dotify(complex)
+        window.dot = dot
+        hpccWasm.graphviz.layout(window.dot, "svg", "dot").then(svg => {
+          target.innerHTML = svg;
+          drawing = false
+          hoverbold(target)
+          const targetBounds = { width: document.querySelector('#target').clientWidth, height: document.querySelector('#target').clientHeight } 
+          const svgBounds = { width: document.querySelector('#target svg').clientWidth, height: document.querySelector('#target svg').clientHeight }
+          let svgElement = document.querySelector('#target svg')
+          panSVG = svgPanZoom(svgElement)
+          document.querySelector('#target svg').style.height = "100%"
+          document.querySelector('#target svg').style.width = "100%"
+          if (targetBounds.width < svgBounds.width || targetBounds.height < svgBounds.height) {
+            panSVG.resize()
+          }
+          panSVG.fit()
+          panSVG.center()
+          if (panZoom.size && 
+              panZoom.size.width == document.querySelector('#target svg').width.baseVal.valueInSpecifiedUnits &&
+              panZoom.size.height == document.querySelector('#target svg').height.baseVal.valueInSpecifiedUnits) {
+            panSVG.zoom(panZoom.zoom)
+            panSVG.pan(panZoom.pan)
+          }
+        })
+      } catch (err) {
+        console.log('display error', err)
+        drawing = false
+      }
+    } else {
+      console.log('display: skipping', chosen)
+    }
+  }
+
+  display(beam)
+</script>
