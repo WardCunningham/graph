@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "type": "URL",
+      "in": [],
+      "out": [
+        0
+      ],
+      "props": {
+        "name": "https://en.wikipedia.org/wiki/Wiki",
+        "url": "https://en.wikipedia.org/wiki/Wiki"
+      }
+    },
+    {
+      "type": "URL",
+      "in": [
+        0
+      ],
+      "out": [],
+      "props": {
+        "name": "https://en.wikipedia.org/wiki/Online",
+        "url": "https://en.wikipedia.org/wiki/Online"
+      }
+    },
+    {
+      "type": "URL",
+      "in": [],
+      "out": [],
+      "props": {
+        "name": "https://en.wikipedia.org/wiki/Online_and_offline",
+        "url": "https://en.wikipedia.org/wiki/Online_and_offline"
+      }
+    }
+  ],
+  "rels": [
+    {
+      "type": "same tab",
+      "from": 0,
+      "to": 1,
+      "props": {
+        "which": "click on page"
+      }
+    }
+  ]
+}
