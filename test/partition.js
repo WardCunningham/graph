@@ -12,32 +12,10 @@
  function partitions(input) {
    const output = [] // graphs
    let doing = {} // nid => new nid
-   const checkpoint = () => {
-     console.log(output
-       .map(graph => `${print(graph.nodes)}\n\n${print(graph.rels)}`)
-       .join("\n\n")+"\n"+('-'.repeat(60)))
-   }
-   const nodes = input.nodes
-   const rels = input.rels
-   const todo = [...Array(nodes.length).keys()]
+   let todo = [...Array(input.nodes.length).keys()]
      .map(n => [n,Math.random()])
      .sort((a,b)=>a[1]-b[1])
      .map(v=>v[0])
-
-   const copy = nid => {
-     if(nid in doing) {
-       console.log('copied before', nid, 'doing', doing)
-       return}
-     console.log('copy start', nid, 'doing', doing)
-     todo.splice(todo.indexOf(nid),1)
-     const node = nodes[nid]
-     doing[nid] = output[0].addNode(node.type,node.props)
-     for (const rid of node.out) copy(rels[rid].to)
-     for (const rid of node.in) copy(rels[rid].from)
-     console.log('linking',nid,'to',node.out.map(rid => rels[rid].to))
-     for (const rid of node.out) output[0].addRel('',doing[nid],doing[rels[rid].to],{})
-     checkpoint()
-   }
 
    console.log('order todo',todo)
    while(todo.length) {
@@ -46,13 +24,14 @@
        console.log('did',nid,'already')
        continue
      }
-     const node = nodes[nid]
+     const node = input.nodes[nid]
      const title = node.props.name.replaceAll("\n"," ")
      if (node.in.length + node.out.length) {
        console.log('doing',nid,title)
        output.unshift(new Graph())
-       doing = {}
-       copy(nid)     
+       const done = input.copy(nid,output[0])
+       todo = todo.filter(nid => !done.includes(nid))
+       console.log(`${print(output[0].nodes)}\n\n${print(output[0].rels)}`,"\n")
      }
      else
        console.log('skipping',nid,title)

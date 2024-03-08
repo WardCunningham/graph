@@ -55,6 +55,28 @@ export class Graph {
   //   return Graph.load(module.default)
   // }
 
+  copy(nid,output) {
+    const doing = {}
+    const done = []
+
+    const nodecopy = nid => {
+      if(nid in doing) {
+        console.log('copied before', nid, 'doing', doing)
+        return}
+      console.log('copy start', nid, 'doing', doing)
+      done.push(nid)
+      const node = this.nodes[nid]
+      doing[nid] = output.addNode(node.type,node.props)
+      for (const rid of node.out) nodecopy(this.rels[rid].to)
+      for (const rid of node.in) nodecopy(this.rels[rid].from)
+      console.log('linking',nid,'to',node.out.map(rid => this.rels[rid].to))
+      for (const rid of node.out) output.addRel('',doing[nid],doing[this.rels[rid].to],{})
+    }
+
+    nodecopy(nid)
+    return done
+  } 
+
   n(type=null, props={}) {
     let nids = Object.keys(this.nodes).map(key => +key)
     if (type) nids = nids.filter(nid => this.nodes[nid].type == type)
