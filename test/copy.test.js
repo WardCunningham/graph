@@ -2,6 +2,10 @@
 
 import {assertEquals } from "https://deno.land/std@0.126.0/testing/asserts.ts";
 import {Graph} from '../src/graph.js';
+const short = props => props.name.split(/\n/)[0]
+const nameof = (graph,nid) => short(graph.nodes[nid].props)
+const names = graph => graph.nodes.map(node => short(node.props)).sort()
+const relations = graph => graph.rels.map(rel => `${nameof(graph,rel.from)} -> ${nameof(graph,rel.to)}`).sort()
 
 // Tests for copying subtrees from this sample input
 
@@ -24,5 +28,32 @@ const input = await Graph.fetch(url)
 
 Deno.test("We have expected input", async () => {
   assertEquals(input.nodes.length, 7);
-  assertEquals(input.rels.length, 5)
+  assertEquals(input.rels.length, 5);
+  assertEquals(names(input), ["Indexing","Mixing","Search","Sites","Solo","Transmission","Watch",]);
+  assertEquals(relations(input), ["Mixing -> Transmission","Mixing -> Watch","Search -> Sites","Search -> Solo","Transmission -> Mixing"]);
+});
+Deno.test("We have right nodes and rels in a copy", async () => {
+  const cluster = new Graph()
+  input.copy(0,cluster)
+  assertEquals(names(cluster), ["Mixing","Transmission","Watch",]);
+  assertEquals(relations(cluster), ["Mixing -> Transmission","Mixing -> Watch","Transmission -> Mixing"]);
+});
+Deno.test("We have aliased props in the copy", async () => {
+  const local = Graph.load(JSON.parse(input.stringify()))
+  assertEquals(names(local), ["Indexing","Mixing","Search","Sites","Solo","Transmission","Watch"]);
+  const cluster = new Graph()
+  local.copy(0,cluster)
+  cluster.nodes[0].props.name = 'Hello'
+  assertEquals(names(cluster), ["Hello","Transmission","Watch"]);
+  assertEquals(names(local), ["Hello","Indexing","Search","Sites","Solo","Transmission","Watch"]);
+});
+Deno.test("We don't have aliased relations in the copy", async () => {
+  const local = Graph.load(JSON.parse(input.stringify()))
+  const cluster = new Graph()
+  local.copy(0,cluster)
+  cluster.addRel("",0,cluster.addNode("Page",{name:"Good Bye"}))
+  assertEquals(names(local), ["Indexing","Mixing","Search","Sites","Solo","Transmission","Watch"]);
+  assertEquals(names(cluster), ["Good Bye","Mixing","Transmission","Watch"]);
+  assertEquals(relations(local), ["Mixing -> Transmission","Mixing -> Watch","Search -> Sites","Search -> Solo","Transmission -> Mixing"]);
+  assertEquals(relations(cluster), ["Mixing -> Good Bye","Mixing -> Transmission","Mixing -> Watch","Transmission -> Mixing"]);
 });
