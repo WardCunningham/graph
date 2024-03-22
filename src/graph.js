@@ -60,22 +60,36 @@ export class Graph {
     const done = []
 
     const nodecopy = nid => {
-      if(nid in doing) {
-        // console.log('copied before', nid, 'doing', doing)
-        return}
-      // console.log('copy start', nid, 'doing', doing)
+      if(nid in doing) return
       done.push(nid)
       const node = this.nodes[nid]
       doing[nid] = output.addNode(node.type,node.props)
       for (const rid of node.out) nodecopy(this.rels[rid].to)
       for (const rid of node.in) nodecopy(this.rels[rid].from)
-      // console.log('linking',nid,'to',node.out.map(rid => this.rels[rid].to))
       for (const rid of node.out) output.addRel('',doing[nid],doing[this.rels[rid].to],{})
     }
 
     nodecopy(nid)
     return done
-  } 
+  }
+
+  clusters() {
+    const result = []
+    const todo = [...this.nodes.keys()]
+    const doit = nid => {
+      const graph = new Graph()
+      const done = this.copy(nid,graph)
+      for (const nid of done) {
+        const index = todo.indexOf(nid)
+        todo.splice(index, 1)
+      }
+      return graph
+    }
+    while(todo.length){
+      result.push(doit(todo[0]))
+    }
+    return result
+  }
 
   n(type=null, props={}) {
     let nids = Object.keys(this.nodes).map(key => +key)

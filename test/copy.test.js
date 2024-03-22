@@ -57,3 +57,13 @@ Deno.test("We don't have aliased relations in the copy", async () => {
   assertEquals(relations(local), ["Mixing -> Transmission","Mixing -> Watch","Search -> Sites","Search -> Solo","Transmission -> Mixing"]);
   assertEquals(relations(cluster), ["Mixing -> Good Bye","Mixing -> Transmission","Mixing -> Watch","Transmission -> Mixing"]);
 });
+
+Deno.test("We can find all of the clusters and copy each one", async () => {
+  const norm = aa => aa.map(a=>names(a)).sort((a,b) => a[0]<b[0] ? 1 : -1)
+  const local = Graph.load(JSON.parse(input.stringify()))
+  const result = local.clusters()
+  assertEquals(result.length,3)
+  const want = [["Mixing","Transmission","Watch"],["Search","Sites","Solo"],["Indexing"]].sort((a,b) => a[0]<b[0] ? 1 : -1)
+  assertEquals(norm(result),want)
+
+});
