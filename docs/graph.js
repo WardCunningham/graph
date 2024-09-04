@@ -16,7 +16,13 @@ export class Graph {
     return this.nodes.length-1;
   }
 
+  addUniqNode(type, props={}) {
+    const nid = this.nodes.findIndex(node => node.type == type && node.props?.name == props?.name)
+    return nid >= 0 ? nid : this.addNode(type, props)
+  }
+
   addRel(type, from, to, props={}) {
+    if (from == null || to == null) return null
     const obj = {type, from, to, props};
     this.rels.push(obj);
     const rid = this.rels.length-1;
